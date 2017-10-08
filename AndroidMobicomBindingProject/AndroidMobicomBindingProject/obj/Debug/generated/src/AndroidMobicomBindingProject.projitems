@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);ANDROID_1;ANDROID_2;ANDROID_3;ANDROID_4;ANDROID_5;ANDROID_6;ANDROID_7;ANDROID_8;ANDROID_9;ANDROID_10;ANDROID_11;ANDROID_12;ANDROID_13;ANDROID_14;ANDROID_15;ANDROID_16;ANDROID_17;ANDROID_18;ANDROID_19;ANDROID_20;ANDROID_21;ANDROID_22;ANDROID_23;ANDROID_24;ANDROID_25</DefineConstants>
+  </PropertyGroup>
+  <!-- Classes -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.BuildConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Call.CallService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Commons.Core.Utils.DateUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Commons.Core.Utils.DBUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Commons.Core.Utils.LocationInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Commons.Core.Utils.LocationUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Commons.Core.Utils.PermissionsUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Commons.Core.Utils.SntpClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Commons.Core.Utils.Support.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Commons.Core.Utils.Utils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Commons.Image.BitmapDecodingException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Commons.Image.ImageCache.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Commons.Image.ImageUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Commons.Image.PhotoDecodeRunnable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Emoticon.EmoticonUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Emoticon.IEmojiconHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Encryption.EncryptionUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.File.FilePathFinder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.File.FileUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.File.LocalStorageProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Json.AnnotationExclusionStrategy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Json.ArrayAdapterFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Json.ExcludeAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Json.GsonUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Json.IExclude.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Json.JsonMarker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Json.JsonParcelableMarker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.People.Channel.Channel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.People.Channel.ChannelMetadata.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.People.Channel.ChannelUserMapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.People.Channel.ChannelUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.People.Channel.Conversation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.People.Contact.Contact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.People.Contact.ContactUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.People.IOnContactsInteractionListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.People.ISearchListFragment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicommons.Personalization.PersonalizedMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Java.Interop.__TypeRegistrations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\__NamespaceMapping__.cs" />
+  </ItemGroup>
+  <!-- Enums -->
+  <ItemGroup />
+</Project>

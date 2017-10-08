@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidBindingProject", "AndroidBindingProject\AndroidBindingProject.csproj", "{7A77D1A2-67DA-4288-8559-4F2C0EFD9701}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidMobicomBindingProject", "..\AndroidMobicomBindingProject\AndroidMobicomBindingProject\AndroidMobicomBindingProject.csproj", "{EB6BCAC0-3309-4F91-AE1A-CBDC4C108AF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidMobicomkitBinding", "AndroidMobicomkitBinding\AndroidMobicomkitBinding.csproj", "{BE596FF9-99D6-4B09-8407-D9BFBC45B2AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A77D1A2-67DA-4288-8559-4F2C0EFD9701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A77D1A2-67DA-4288-8559-4F2C0EFD9701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A77D1A2-67DA-4288-8559-4F2C0EFD9701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A77D1A2-67DA-4288-8559-4F2C0EFD9701}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB6BCAC0-3309-4F91-AE1A-CBDC4C108AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB6BCAC0-3309-4F91-AE1A-CBDC4C108AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB6BCAC0-3309-4F91-AE1A-CBDC4C108AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB6BCAC0-3309-4F91-AE1A-CBDC4C108AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE596FF9-99D6-4B09-8407-D9BFBC45B2AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE596FF9-99D6-4B09-8407-D9BFBC45B2AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE596FF9-99D6-4B09-8407-D9BFBC45B2AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE596FF9-99D6-4B09-8407-D9BFBC45B2AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

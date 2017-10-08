@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	
+  <remove-node path="/api/package[@name='com.applozic.mobicommons.commons.image']/class[@name='ImageLoader']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicommons.json']/class[@name='ArrayAdapter']" />
+
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+</metadata>

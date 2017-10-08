@@ -1,0 +1,1772 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<api>
+  <package name="com.applozic.mobicommons">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="true" name="BuildConfig" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="BuildConfig" static="false" type="com.applozic.mobicommons.BuildConfig" visibility="public">
+      </constructor>
+      <field deprecated="not deprecated" final="true" name="APPLICATION_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;com.applozic.mobicommons&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="BUILD_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;release&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="DEBUG" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="FLAVOR" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="VERSION_CODE" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="VERSION_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;4.93&quot;" visibility="public" volatile="false">
+      </field>
+    </class>
+  </package>
+  <package name="com.applozic.mobicommons.call">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="CallService" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="CallService" static="false" type="com.applozic.mobicommons.call.CallService" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="cancelCall" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </method>
+    </class>
+  </package>
+  <package name="com.applozic.mobicommons.commons.core.utils">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="DBUtils" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="DBUtils" static="false" type="com.applozic.mobicommons.commons.core.utils.DBUtils" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="existsColumnInTable" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.database.sqlite.SQLiteDatabase">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isTableEmpty" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.database.sqlite.SQLiteDatabase">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isTableExists" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.database.sqlite.SQLiteDatabase">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="DateUtils" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="DateUtils" static="false" type="com.applozic.mobicommons.commons.core.utils.DateUtils" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="daysBetween" native="false" return="long" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.util.Date">
+        </parameter>
+        <parameter name="p1" type="java.util.Date">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDate" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDateAndTimeForLastSeen" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDateAndTimeInDefaultFormat" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDatePart" native="false" return="java.util.Calendar" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.util.Date">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getFormattedDate" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getFormattedDateAndTime" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getTimeDiffFromUtc" native="false" return="long" static="true" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isSameDay" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isYesterday" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Long">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.applozic.mobicommons.json.JsonMarker" extends-generic-aware="com.applozic.mobicommons.json.JsonMarker" final="false" name="LocationInfo" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="LocationInfo" static="false" type="com.applozic.mobicommons.commons.core.utils.LocationInfo" visibility="public">
+        <parameter name="p0" type="double">
+        </parameter>
+        <parameter name="p1" type="double">
+        </parameter>
+      </constructor>
+      <field deprecated="not deprecated" final="false" name="lat" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="false" name="lon" static="false" transient="false" type="double" type-generic-aware="double" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="LocationUtils" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="LocationUtils" static="false" type="com.applozic.mobicommons.commons.core.utils.LocationUtils" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAddress" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.location.Location">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLocationFromMessage" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="loadStaticMap" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PermissionsUtils" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="PermissionsUtils" static="false" type="com.applozic.mobicommons.commons.core.utils.PermissionsUtils" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="checkSelfForCallPermission" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="checkSelfForCameraPermission" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="checkSelfForContactPermission" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="checkSelfForStoragePermission" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="checkSelfPermissionForAudioRecording" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="checkSelfPermissionForLocation" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isAudioRecordingPermissionGranted" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isCallPermissionGranted" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isCameraPermissionGranted" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="requestPermissions" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+        <parameter name="p1" type="java.lang.String[]">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="shouldShowRequestForAudioPermission" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="shouldShowRequestForCallPermission" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="shouldShowRequestForCameraPermission" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="shouldShowRequestForContactPermission" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="shouldShowRequestForLocationPermission" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="shouldShowRequestForStoragePermission" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="verifyPermissions" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="int[]">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="false" name="PERMISSIONS_LOCATION" static="true" transient="false" type="java.lang.String[]" type-generic-aware="java.lang.String[]" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="false" name="PERMISSIONS_RECORD_AUDIO" static="true" transient="false" type="java.lang.String[]" type-generic-aware="java.lang.String[]" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="false" name="PERMISSIONS_STORAGE" static="true" transient="false" type="java.lang.String[]" type-generic-aware="java.lang.String[]" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="false" name="PERMISSION_CALL" static="true" transient="false" type="java.lang.String[]" type-generic-aware="java.lang.String[]" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="false" name="PERMISSION_CAMERA" static="true" transient="false" type="java.lang.String[]" type-generic-aware="java.lang.String[]" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="false" name="PERMISSION_CONTACT" static="true" transient="false" type="java.lang.String[]" type-generic-aware="java.lang.String[]" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REQUEST_AUDIO_RECORD" static="true" transient="false" type="int" type-generic-aware="int" value="3" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REQUEST_CALL_PHONE" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REQUEST_CAMERA" static="true" transient="false" type="int" type-generic-aware="int" value="5" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REQUEST_CAMERA_FOR_PROFILE_PHOTO" static="true" transient="false" type="int" type-generic-aware="int" value="7" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REQUEST_CONTACT" static="true" transient="false" type="int" type-generic-aware="int" value="6" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REQUEST_LOCATION" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REQUEST_PHONE_STATE" static="true" transient="false" type="int" type-generic-aware="int" value="2" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REQUEST_STORAGE" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REQUEST_STORAGE_FOR_PROFILE_PHOTO" static="true" transient="false" type="int" type-generic-aware="int" value="8" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="SntpClient" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="SntpClient" static="false" type="com.applozic.mobicommons.commons.core.utils.SntpClient" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getNtpTime" native="false" return="long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getNtpTimeReference" native="false" return="long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getRoundTripTime" native="false" return="long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="requestTime" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Support" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="Support" static="false" type="com.applozic.mobicommons.commons.core.utils.Support" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSupportContact" native="false" return="com.applozic.mobicommons.people.contact.Contact" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSupportNumber" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isSupportNumber" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="SUPPORT_INTENT_KEY" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;SUPPORT_INTENT_KEY&quot;" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Utils" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="dpToPx" native="false" return="int" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="enableStrictMode" native="false" return="void" static="true" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAppVersion" native="false" return="int" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeviceInformation" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLauncherIcon" native="false" return="int" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMetaDataValue" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMetaDataValueForReceiver" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMetaDataValueForResources" native="false" return="java.lang.Integer" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getStyleString" native="false" return="java.lang.CharSequence" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getStyleStringForMessage" native="false" return="java.lang.CharSequence" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getStyledStringForChannel" native="false" return="java.lang.CharSequence" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getStyledStringForContact" native="false" return="java.lang.CharSequence" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getTimeDurationInFormat" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getUserImageUri" native="false" return="android.net.Uri" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="hasFroyo" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="hasGingerbread" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="hasHoneycomb" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="hasHoneycombMR1" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="hasICS" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="hasKitkat" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="hasLollipop" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="hasMarshmallow" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="hasNougat" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isBetweenGingerBreadAndKitKat" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isInternetAvailable" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isNetworkAvailable" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="makePlaceHolders" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="printLog" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="pxToDp" native="false" return="int" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="toggleSoftKeyBoard" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+        <parameter name="p1" type="boolean">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="Utils.1" static="true" visibility="">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </class>
+  </package>
+  <package name="com.applozic.mobicommons.commons.image">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Throwable" extends-generic-aware="java.lang.Throwable" final="false" name="BitmapDecodingException" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="BitmapDecodingException" static="false" type="com.applozic.mobicommons.commons.image.BitmapDecodingException" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ImageCache" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="addBitmapToCache" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="android.graphics.Bitmap">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="calculateMemCacheSize" native="false" return="int" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="float">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="findOrCreateRetainFragment" native="false" return="com.applozic.mobicommons.commons.image.ImageCache.RetainFragment" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.support.v4.app.FragmentManager">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getBitmapFromMemCache" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getBitmapSize" native="false" return="int" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.graphics.Bitmap">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getInstance" native="false" return="com.applozic.mobicommons.commons.image.ImageCache" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.support.v4.app.FragmentManager">
+        </parameter>
+        <parameter name="p1" type="float">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.support.v4.util.LruCache" extends-generic-aware="android.support.v4.util.LruCache&lt;java.lang.String, android.graphics.Bitmap&gt;" final="false" name="ImageCache.1" static="false" visibility="">
+      <method abstract="false" deprecated="not deprecated" final="false" name="sizeOf" native="false" return="int" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="android.graphics.Bitmap">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.support.v4.app.Fragment" extends-generic-aware="android.support.v4.app.Fragment" final="false" name="ImageCache.RetainFragment" static="true" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="ImageCache.RetainFragment" static="false" type="com.applozic.mobicommons.commons.image.ImageCache.RetainFragment" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getObject" native="false" return="java.lang.Object" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setObject" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Object">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.graphics.drawable.BitmapDrawable" extends-generic-aware="android.graphics.drawable.BitmapDrawable" final="false" name="ImageLoader.AsyncDrawable" static="true" visibility="">
+      <constructor deprecated="not deprecated" final="false" name="ImageLoader.AsyncDrawable" static="false" type="com.applozic.mobicommons.commons.image.ImageLoader.AsyncDrawable" visibility="public">
+        <parameter name="p0" type="android.content.res.Resources">
+        </parameter>
+        <parameter name="p1" type="android.graphics.Bitmap">
+        </parameter>
+        <parameter name="p2" type="com.applozic.mobicommons.commons.image.ImageLoader.BitmapWorkerTask">
+        </parameter>
+      </constructor>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.os.AsyncTask" extends-generic-aware="android.os.AsyncTask&lt;java.lang.Object, java.lang.Void, android.graphics.Bitmap&gt;" final="false" name="ImageLoader.BitmapWorkerTask" static="false" visibility="">
+      <constructor deprecated="not deprecated" final="false" name="ImageLoader.BitmapWorkerTask" static="false" type="com.applozic.mobicommons.commons.image.ImageLoader.BitmapWorkerTask" visibility="public">
+        <parameter name="p1" type="android.widget.ImageView">
+        </parameter>
+        <parameter name="p2" type="android.widget.TextView">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="ImageLoader.BitmapWorkerTask" static="false" type="com.applozic.mobicommons.commons.image.ImageLoader.BitmapWorkerTask" visibility="public">
+        <parameter name="p1" type="android.widget.ImageView">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="ImageLoader.BitmapWorkerTask" static="false" type="com.applozic.mobicommons.commons.image.ImageLoader.BitmapWorkerTask" visibility="public">
+        <parameter name="p1" type="android.widget.ImageView">
+        </parameter>
+        <parameter name="p2" type="android.widget.ProgressBar">
+        </parameter>
+        <parameter name="p3" type="android.widget.TextView">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="ImageLoader.BitmapWorkerTask" static="false" type="com.applozic.mobicommons.commons.image.ImageLoader.BitmapWorkerTask" visibility="public">
+        <parameter name="p1" type="android.widget.ImageView">
+        </parameter>
+        <parameter name="p2" type="android.widget.ProgressBar">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="doInBackground" native="false" return="android.graphics.Bitmap" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="java.lang.Object...">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCancelled" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="android.graphics.Bitmap">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onPostExecute" native="false" return="void" static="false" synchronized="false" visibility="protected">
+        <parameter name="p0" type="android.graphics.Bitmap">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ImageUtils" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="ImageUtils" static="false" type="com.applozic.mobicommons.commons.image.ImageUtils" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="addImageToGallery" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="android.content.Context">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="calculateInSampleSize" native="false" return="int" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.graphics.BitmapFactory.Options">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getBitMapFromLocalPath" native="false" return="android.graphics.Bitmap" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getImageRotatedBitmap" native="false" return="android.graphics.Bitmap" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.graphics.Bitmap">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getImageUri" native="false" return="android.net.Uri" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.graphics.Bitmap">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLargestScreenDimension" native="false" return="int" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.app.Activity">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPreview" native="false" return="android.graphics.Bitmap" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="saveImageToInternalStorage" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.io.File">
+        </parameter>
+        <parameter name="p1" type="android.graphics.Bitmap">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PhotoDecodeRunnable" static="false" visibility="public">
+      <implements name="java.lang.Runnable" name-generic-aware="java.lang.Runnable">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="PhotoDecodeRunnable" static="false" type="com.applozic.mobicommons.commons.image.PhotoDecodeRunnable" visibility="public">
+        <parameter name="p0" type="com.applozic.mobicommons.commons.image.PhotoDecodeRunnable.TaskRunnableDecodeMethods">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="run" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+      <field deprecated="not deprecated" final="true" name="DECODE_STATE_COMPLETED" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="DECODE_STATE_FAILED" static="true" transient="false" type="int" type-generic-aware="int" value="-1" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="DECODE_STATE_STARTED" static="true" transient="false" type="int" type-generic-aware="int" value="0" visibility="public" volatile="false">
+      </field>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="PhotoDecodeRunnable.TaskRunnableDecodeMethods" static="true" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="getLocalPath" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getTargetHeight" native="false" return="int" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="getTargetWidth" native="false" return="int" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="handleDecodeState" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="setImage" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.graphics.Bitmap">
+        </parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="setImageDecodeThread" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Thread">
+        </parameter>
+      </method>
+    </interface>
+  </package>
+  <package name="com.applozic.mobicommons.emoticon">
+    <interface abstract="true" deprecated="not deprecated" final="false" name="EmojiconHandler" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="addEmojis" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.text.Spannable">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+      </method>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EmoticonUtils" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="EmoticonUtils" static="false" type="com.applozic.mobicommons.emoticon.EmoticonUtils" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSmiledText" native="false" return="android.text.Spannable" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="java.lang.CharSequence">
+        </parameter>
+        <parameter name="p2" type="com.applozic.mobicommons.emoticon.EmojiconHandler">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="spannableFactory" static="true" transient="false" type="android.text.Spannable.Factory" type-generic-aware="android.text.Spannable.Factory" visibility="public" volatile="false">
+      </field>
+    </class>
+  </package>
+  <package name="com.applozic.mobicommons.encryption">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="EncryptionUtils" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="EncryptionUtils" static="false" type="com.applozic.mobicommons.encryption.EncryptionUtils" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="decrypt" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <exception name="Exception" type="java.lang.Exception">
+        </exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="encrypt" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <exception name="Exception" type="java.lang.Exception">
+        </exception>
+      </method>
+    </class>
+  </package>
+  <package name="com.applozic.mobicommons.file">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="FilePathFinder" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="FilePathFinder" static="false" type="com.applozic.mobicommons.file.FilePathFinder" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDataColumn" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.net.Uri">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+        <parameter name="p3" type="java.lang.String[]">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPath" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isDownloadsDocument" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isExternalStorageDocument" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isMediaDocument" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="mf_szGetRealPathFromURI" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.net.Uri">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="FileUtils" static="false" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="calculateInSampleSize" native="false" return="int" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.graphics.BitmapFactory.Options">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="compressImageFiles" native="false" return="java.io.File" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="createGetContentIntent" native="false" return="android.content.Intent" static="true" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDataColumn" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.net.Uri">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+        <parameter name="p3" type="java.lang.String[]">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getExtension" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getFile" native="false" return="java.io.File" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getFileFormat" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getFileName" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getFileName" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLastModifiedFile" native="false" return="java.io.File" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMimeType" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMimeType" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.io.File">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMimeType" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMimeTypeByContentUriOrOther" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getName" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPath" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPathWithoutFilename" native="false" return="java.io.File" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.io.File">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPreview" native="false" return="android.graphics.Bitmap" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPreview" native="false" return="android.graphics.Bitmap" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+        <parameter name="p3" type="boolean">
+        </parameter>
+        <parameter name="p4" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getReadableFileSize" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSize" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getThumbnail" native="false" return="android.graphics.Bitmap" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getThumbnail" native="false" return="android.graphics.Bitmap" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.net.Uri">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getThumbnail" native="false" return="android.graphics.Bitmap" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="java.io.File">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getUri" native="false" return="android.net.Uri" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.io.File">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isContentScheme" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isDownloadsDocument" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isExternalStorageDocument" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isFileExist" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isGooglePhotosUri" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isLocal" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isLocalStorageDocument" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isMaxUploadSizeReached" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="android.net.Uri">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isMediaDocument" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isMediaUri" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="loadRestrictedWordsFile" native="false" return="java.util.List&lt;java.lang.String&gt;" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="loadSettingsJsonFile" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="HIDDEN_PREFIX" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;.&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="MIME_TYPE_APP" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;application/*&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="MIME_TYPE_AUDIO" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;audio/*&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="MIME_TYPE_IMAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;image/*&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="MIME_TYPE_TEXT" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;text/*&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="MIME_TYPE_VIDEO" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;video/*&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="false" name="sComparator" static="true" transient="false" type="java.util.Comparator" type-generic-aware="java.util.Comparator&lt;java.io.File&gt;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="false" name="sDirFilter" static="true" transient="false" type="java.io.FileFilter" type-generic-aware="java.io.FileFilter" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="false" name="sFileFilter" static="true" transient="false" type="java.io.FileFilter" type-generic-aware="java.io.FileFilter" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="FileUtils.1" static="true" visibility="">
+      <implements name="java.io.FileFilter" name-generic-aware="java.io.FileFilter">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="accept" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.io.File">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="FileUtils.2" static="true" visibility="">
+      <implements name="java.io.FileFilter" name-generic-aware="java.io.FileFilter">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="accept" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.io.File">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="FileUtils.3" static="true" visibility="">
+      <implements name="java.util.Comparator" name-generic-aware="java.util.Comparator&lt;java.io.File&gt;">
+      </implements>
+      <method abstract="false" deprecated="not deprecated" final="false" name="compare" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.io.File">
+        </parameter>
+        <parameter name="p1" type="java.io.File">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="compare" native="false" return="int" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Object">
+        </parameter>
+        <parameter name="p1" type="java.lang.Object">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="android.provider.DocumentsProvider" extends-generic-aware="android.provider.DocumentsProvider" final="false" name="LocalStorageProvider" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="LocalStorageProvider" static="false" type="com.applozic.mobicommons.file.LocalStorageProvider" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="onCreate" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="openDocument" native="false" return="android.os.ParcelFileDescriptor" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="android.os.CancellationSignal">
+        </parameter>
+        <exception name="FileNotFoundException" type="java.io.FileNotFoundException">
+        </exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="queryChildDocuments" native="false" return="android.database.Cursor" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String[]">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+        <exception name="FileNotFoundException" type="java.io.FileNotFoundException">
+        </exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="queryDocument" native="false" return="android.database.Cursor" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String[]">
+        </parameter>
+        <exception name="FileNotFoundException" type="java.io.FileNotFoundException">
+        </exception>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="queryRoots" native="false" return="android.database.Cursor" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String[]">
+        </parameter>
+        <exception name="FileNotFoundException" type="java.io.FileNotFoundException">
+        </exception>
+      </method>
+      <field deprecated="not deprecated" final="true" name="AUTHORITY" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;com.ianhanniballake.localstorage.documents&quot;" visibility="public" volatile="false">
+      </field>
+    </class>
+  </package>
+  <package name="com.applozic.mobicommons.json">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="AnnotationExclusionStrategy" static="false" visibility="public">
+      <implements name="com.google.gson.ExclusionStrategy" name-generic-aware="com.google.gson.ExclusionStrategy">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="AnnotationExclusionStrategy" static="false" type="com.applozic.mobicommons.json.AnnotationExclusionStrategy" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="shouldSkipClass" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Class&lt;?&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="shouldSkipField" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.google.gson.FieldAttributes">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ArrayAdapterFactory" static="false" visibility="public">
+      <implements name="com.google.gson.TypeAdapterFactory" name-generic-aware="com.google.gson.TypeAdapterFactory">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="ArrayAdapterFactory" static="false" type="com.applozic.mobicommons.json.ArrayAdapterFactory" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="create" native="false" return="com.google.gson.TypeAdapter&lt;T&gt;" static="false" synchronized="false" visibility="public">
+        <typeParameters>
+          <typeParameter name="T" />
+        </typeParameters>
+        <parameter name="p0" type="com.google.gson.Gson">
+        </parameter>
+        <parameter name="p1" type="com.google.gson.reflect.TypeToken&lt;T&gt;">
+        </parameter>
+      </method>
+    </class>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="Exclude" static="false" visibility="public">
+      <implements name="java.lang.annotation.Annotation" name-generic-aware="java.lang.annotation.Annotation">
+      </implements>
+    </interface>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="GsonUtils" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="GsonUtils" static="false" type="com.applozic.mobicommons.json.GsonUtils" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getJsonFromObject" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Object">
+        </parameter>
+        <parameter name="p1" type="java.lang.reflect.Type">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getJsonWithExposeFromObject" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Object">
+        </parameter>
+        <parameter name="p1" type="java.lang.reflect.Type">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getObjectFromJson" native="false" return="java.lang.Object" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.reflect.Type">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getObjectListFromJson" native="false" return="java.lang.Object" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.reflect.Type">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="JsonMarker" static="false" visibility="public">
+      <implements name="java.io.Serializable" name-generic-aware="java.io.Serializable">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="JsonMarker" static="false" type="com.applozic.mobicommons.json.JsonMarker" visibility="public">
+      </constructor>
+    </class>
+    <class abstract="true" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="JsonParcelableMarker" static="false" visibility="public">
+      <implements name="android.os.Parcelable" name-generic-aware="android.os.Parcelable">
+      </implements>
+      <constructor deprecated="not deprecated" final="false" name="JsonParcelableMarker" static="false" type="com.applozic.mobicommons.json.JsonParcelableMarker" visibility="public">
+      </constructor>
+    </class>
+  </package>
+  <package name="com.applozic.mobicommons.people">
+    <interface abstract="true" deprecated="not deprecated" final="false" name="OnContactsInteractionListener" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onContactSelected" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onCustomContactSelected" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.applozic.mobicommons.people.contact.Contact">
+        </parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onGroupSelected" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.applozic.mobicommons.people.channel.Channel">
+        </parameter>
+      </method>
+      <method abstract="true" deprecated="not deprecated" final="false" name="onSelectionCleared" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+    </interface>
+    <interface abstract="true" deprecated="not deprecated" final="false" name="SearchListFragment" static="false" visibility="public">
+      <method abstract="true" deprecated="not deprecated" final="false" name="onQueryTextChange" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+    </interface>
+  </package>
+  <package name="com.applozic.mobicommons.people.channel">
+    <class abstract="false" deprecated="not deprecated" extends="com.applozic.mobicommons.json.JsonMarker" extends-generic-aware="com.applozic.mobicommons.json.JsonMarker" final="false" name="Channel" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="Channel" static="false" type="com.applozic.mobicommons.people.channel.Channel" visibility="public">
+        <parameter name="p0" type="java.lang.Integer">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="Channel" static="false" type="com.applozic.mobicommons.people.channel.Channel" visibility="public">
+        <parameter name="p0" type="java.lang.Integer">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="Channel" static="false" type="com.applozic.mobicommons.people.channel.Channel" visibility="public">
+        <parameter name="p0" type="java.lang.Integer">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+        <parameter name="p3" type="java.lang.Short">
+        </parameter>
+        <parameter name="p4" type="int">
+        </parameter>
+        <parameter name="p5" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="Channel" static="false" type="com.applozic.mobicommons.people.channel.Channel" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAdminKey" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getClientGroupId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContacts" native="false" return="java.util.List&lt;com.applozic.mobicommons.people.contact.Contact&gt;" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getConversationPxy" native="false" return="com.applozic.mobicommons.people.channel.Conversation" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeletedAtTime" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getImageUrl" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getKey" native="false" return="java.lang.Integer" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLocalImageUri" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMetadata" native="false" return="java.util.Map&lt;java.lang.String, java.lang.String&gt;" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getNotificationAfterTime" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getType" native="false" return="java.lang.Short" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getUnreadCount" native="false" return="int" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getUserCount" native="false" return="int" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isBroadcastMessage" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isDeleted" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isNotificationMuted" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setAdminKey" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setClientGroupId" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setContacts" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.util.List&lt;com.applozic.mobicommons.people.contact.Contact&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setConversationPxy" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.applozic.mobicommons.people.channel.Conversation">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setDeletedAtTime" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setImageUrl" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setKey" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Integer">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setLocalImageUri" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setMetadata" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.String&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setName" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setNotificationAfterTime" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setType" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Short">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setUnreadCount" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setUserCount" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.applozic.mobicommons.people.channel.Channel.GroupType&gt;" final="true" name="Channel.GroupType" static="true" visibility="public">
+      <method abstract="false" deprecated="not deprecated" final="false" name="getValue" native="false" return="java.lang.Short" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.applozic.mobicommons.people.channel.Channel.GroupType" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.applozic.mobicommons.people.channel.Channel.GroupType[]" static="true" synchronized="false" visibility="public">
+      </method>
+      <field deprecated="not deprecated" final="true" name="BROADCAST" static="true" transient="false" type="com.applozic.mobicommons.people.channel.Channel.GroupType" type-generic-aware="com.applozic.mobicommons.people.channel.Channel.GroupType" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="BROADCAST_ONE_BY_ONE" static="true" transient="false" type="com.applozic.mobicommons.people.channel.Channel.GroupType" type-generic-aware="com.applozic.mobicommons.people.channel.Channel.GroupType" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="CONTACT_GROUP" static="true" transient="false" type="com.applozic.mobicommons.people.channel.Channel.GroupType" type-generic-aware="com.applozic.mobicommons.people.channel.Channel.GroupType" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="GROUPOFTWO" static="true" transient="false" type="com.applozic.mobicommons.people.channel.Channel.GroupType" type-generic-aware="com.applozic.mobicommons.people.channel.Channel.GroupType" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="OPEN" static="true" transient="false" type="com.applozic.mobicommons.people.channel.Channel.GroupType" type-generic-aware="com.applozic.mobicommons.people.channel.Channel.GroupType" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="PRIVATE" static="true" transient="false" type="com.applozic.mobicommons.people.channel.Channel.GroupType" type-generic-aware="com.applozic.mobicommons.people.channel.Channel.GroupType" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="PUBLIC" static="true" transient="false" type="com.applozic.mobicommons.people.channel.Channel.GroupType" type-generic-aware="com.applozic.mobicommons.people.channel.Channel.GroupType" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="SELF" static="true" transient="false" type="com.applozic.mobicommons.people.channel.Channel.GroupType" type-generic-aware="com.applozic.mobicommons.people.channel.Channel.GroupType" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="SELLER" static="true" transient="false" type="com.applozic.mobicommons.people.channel.Channel.GroupType" type-generic-aware="com.applozic.mobicommons.people.channel.Channel.GroupType" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="VIRTUAL" static="true" transient="false" type="com.applozic.mobicommons.people.channel.Channel.GroupType" type-generic-aware="com.applozic.mobicommons.people.channel.Channel.GroupType" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.applozic.mobicommons.json.JsonMarker" extends-generic-aware="com.applozic.mobicommons.json.JsonMarker" final="false" name="ChannelMetadata" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="ChannelMetadata" static="false" type="com.applozic.mobicommons.people.channel.ChannelMetadata" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getAddMemberMessage" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getCreateGroupMessage" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDeletedGroupMessage" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getGroupIconChangeMessage" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getGroupLeftMessage" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getGroupNameChangeMessage" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getHideMetaDataNotification" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getJoinMemberMessage" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getRemoveMemberMessage" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setAddMemberMessage" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCreateGroupMessage" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setDeletedGroupMessage" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setGroupIconChangeMessage" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setGroupLeftMessage" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setGroupNameChangeMessage" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setHideMetaDataNotification" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setJoinMemberMessage" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setRemoveMemberMessage" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="ADD_MEMBER_MESSAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;ADD_MEMBER_MESSAGE&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="ADMIN_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;:adminName&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="CREATE_GROUP_MESSAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;CREATE_GROUP_MESSAGE&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="DELETED_GROUP_MESSAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;DELETED_GROUP_MESSAGE&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="GROUP_ICON_CHANGE_MESSAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;GROUP_ICON_CHANGE_MESSAGE&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="GROUP_LEFT_MESSAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;GROUP_LEFT_MESSAGE&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="GROUP_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;:groupName&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="GROUP_NAME_CHANGE_MESSAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;GROUP_NAME_CHANGE_MESSAGE&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="HIDE_METADATA_NOTIFICATION" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;HIDE&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="JOIN_MEMBER_MESSAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;JOIN_MEMBER_MESSAGE&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="REMOVE_MEMBER_MESSAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;REMOVE_MEMBER_MESSAGE&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="USER_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;:userName&quot;" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.applozic.mobicommons.json.JsonMarker" extends-generic-aware="com.applozic.mobicommons.json.JsonMarker" final="false" name="ChannelUserMapper" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="ChannelUserMapper" static="false" type="com.applozic.mobicommons.people.channel.ChannelUserMapper" visibility="public">
+        <parameter name="p0" type="java.lang.Integer">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="ChannelUserMapper" static="false" type="com.applozic.mobicommons.people.channel.ChannelUserMapper" visibility="public">
+        <parameter name="p0" type="java.lang.Integer">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="int">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="ChannelUserMapper" static="false" type="com.applozic.mobicommons.people.channel.ChannelUserMapper" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getKey" native="false" return="java.lang.Integer" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getStatus" native="false" return="short" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getUnreadCount" native="false" return="int" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getUserKey" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setKey" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Integer">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setStatus" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="short">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setUnreadCount" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="int">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setUserKey" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ChannelUtils" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="ChannelUtils" static="false" type="com.applozic.mobicommons.people.channel.ChannelUtils" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="fetchGroup" native="false" return="com.applozic.mobicommons.people.channel.Channel" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="java.lang.Integer">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="fetchGroup" native="false" return="com.applozic.mobicommons.people.channel.Channel" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="java.lang.Integer">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getChannelTitleName" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.applozic.mobicommons.people.channel.Channel">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getWithUserId" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="com.applozic.mobicommons.people.channel.Channel">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isAdminUserId" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="com.applozic.mobicommons.people.channel.Channel">
+        </parameter>
+      </method>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="com.applozic.mobicommons.json.JsonMarker" extends-generic-aware="com.applozic.mobicommons.json.JsonMarker" final="false" name="Conversation" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="Conversation" static="false" type="com.applozic.mobicommons.people.channel.Conversation" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getApplicationKey" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getGroupId" native="false" return="java.lang.Integer" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getId" native="false" return="java.lang.Integer" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSenderUserName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getSupportIds" native="false" return="java.util.List&lt;java.lang.String&gt;" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getTopicDetail" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getTopicId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getTopicLocalImageUri" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getUserId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isClosed" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isCreated" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setApplicationKey" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setClosed" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setCreated" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setGroupId" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Integer">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setId" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Integer">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setReceiverSmsFormat" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSenderSmsFormat" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSenderUserName" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSmsFormat" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setSupportIds" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.util.List&lt;java.lang.String&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setTopicDetail" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setTopicId" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setTopicLocalImageUri" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setUserId" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="FALL_BACK_TEMPLATE_KEY" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;fallBackTemplate&quot;" visibility="public" volatile="false">
+      </field>
+      <field deprecated="not deprecated" final="true" name="USER_ID_KEY" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;userId&quot;" visibility="public" volatile="false">
+      </field>
+    </class>
+  </package>
+  <package name="com.applozic.mobicommons.people.contact">
+    <class abstract="false" deprecated="not deprecated" extends="com.applozic.mobicommons.json.JsonMarker" extends-generic-aware="com.applozic.mobicommons.json.JsonMarker" final="false" name="Contact" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="Contact" static="false" type="com.applozic.mobicommons.people.contact.Contact" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="Contact" static="false" type="com.applozic.mobicommons.people.contact.Contact" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="Contact" static="false" type="com.applozic.mobicommons.people.contact.Contact" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.util.List&lt;java.lang.String&gt;">
+        </parameter>
+        <parameter name="p2" type="java.util.List&lt;java.lang.String&gt;">
+        </parameter>
+        <parameter name="p3" type="long">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="Contact" static="false" type="com.applozic.mobicommons.people.contact.Contact" visibility="public">
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="Contact" static="false" type="com.applozic.mobicommons.people.contact.Contact" visibility="public">
+        <parameter name="p0" type="long">
+        </parameter>
+      </constructor>
+      <constructor deprecated="not deprecated" final="false" name="Contact" static="false" type="com.applozic.mobicommons.people.contact.Contact" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getApplicationId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContactId" native="false" return="long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContactIds" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContactNumber" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContactNumbers" native="false" return="java.util.List&lt;java.lang.String&gt;" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContactType" native="false" return="short" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getDisplayName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getEmailId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getEmailIds" native="false" return="java.util.List&lt;java.lang.String&gt;" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getFirstName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getFormattedContactNumber" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getFullName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getImageURL" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLastName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLastSeenAt" native="false" return="long" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getLocalImageUrl" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getMiddleName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPhoneNumbers" native="false" return="java.util.Map&lt;java.lang.String, java.lang.String&gt;" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getStatus" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getUnreadCount" native="false" return="java.lang.Integer" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getUserId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getUserTypeId" native="false" return="java.lang.Short" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getrDrawableName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="hasMultiplePhoneNumbers" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isBlocked" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isBlockedBy" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isChecked" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isConnected" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isDrawableResources" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isOnline" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="processContactNumbers" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="processFullName" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setApplicationId" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setBlocked" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setBlockedBy" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setChecked" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setConnected" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="boolean">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setContactId" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setContactNumber" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setContactNumbers" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.util.List&lt;java.lang.String&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setContactType" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="short">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setEmailId" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setEmailIds" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.util.List&lt;java.lang.String&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setFirstName" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setFormattedContactNumber" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setFullName" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setImageURL" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setLastName" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setLastSeenAt" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setLocalImageUrl" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setMiddleName" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setPhoneNumbers" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.String&gt;">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setStatus" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setUnreadCount" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Integer">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setUserId" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="setUserTypeId" native="false" return="void" static="false" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.Short">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="toggleChecked" native="false" return="void" static="false" synchronized="false" visibility="public">
+      </method>
+      <field deprecated="not deprecated" final="true" name="R_DRAWABLE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;R.drawable&quot;" visibility="public" volatile="false">
+      </field>
+    </class>
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ContactUtils" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="ContactUtils" static="false" type="com.applozic.mobicommons.people.contact.ContactUtils" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContact" native="false" return="com.applozic.mobicommons.people.contact.Contact" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="java.lang.Long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContact" native="false" return="com.applozic.mobicommons.people.contact.Contact" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContact" native="false" return="com.applozic.mobicommons.people.contact.Contact" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+        <parameter name="p2" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContactByEmailId" native="false" return="com.applozic.mobicommons.people.contact.Contact" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContactId" native="false" return="java.lang.Long" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.ContentResolver">
+        </parameter>
+        <parameter name="p1" type="android.net.Uri">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContactId" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="android.content.ContentResolver">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContactNumberByContactId" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getContacts" native="false" return="java.util.List&lt;com.applozic.mobicommons.people.contact.Contact&gt;" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.ContentResolver">
+        </parameter>
+        <parameter name="p1" type="android.content.Context">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="getPhoneNumbers" native="false" return="java.util.Map&lt;java.lang.String, java.lang.String&gt;" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.content.Context">
+        </parameter>
+        <parameter name="p1" type="long">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="loadContactPhoto" native="false" return="android.graphics.Bitmap" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.net.Uri">
+        </parameter>
+        <parameter name="p1" type="int">
+        </parameter>
+        <parameter name="p2" type="android.app.Activity">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="startContactAddActivity" native="false" return="void" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="android.support.v4.app.FragmentActivity">
+        </parameter>
+      </method>
+      <field deprecated="not deprecated" final="true" name="UNKNOWN_NUMBER" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;UNKNOWN&quot;" visibility="public" volatile="false">
+      </field>
+    </class>
+  </package>
+  <package name="com.applozic.mobicommons.personalization">
+    <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PersonalizedMessage" static="false" visibility="public">
+      <constructor deprecated="not deprecated" final="false" name="PersonalizedMessage" static="false" type="com.applozic.mobicommons.personalization.PersonalizedMessage" visibility="public">
+      </constructor>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isFromTemplate" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="isPersonalized" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+      </method>
+      <method abstract="false" deprecated="not deprecated" final="false" name="prepareMessageFromTemplate" native="false" return="java.lang.String" static="true" synchronized="false" visibility="public">
+        <parameter name="p0" type="java.lang.String">
+        </parameter>
+        <parameter name="p1" type="com.applozic.mobicommons.people.contact.Contact">
+        </parameter>
+      </method>
+    </class>
+  </package>
+</api>

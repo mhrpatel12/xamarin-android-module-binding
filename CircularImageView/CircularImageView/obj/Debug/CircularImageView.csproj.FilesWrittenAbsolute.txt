@@ -1,0 +1,6 @@
+/Users/Adarsh/Projects/CircularImageView/CircularImageView/obj/Debug/MonoAndroid,Version=v7.0.AssemblyAttribute.cs
+/Users/Adarsh/Projects/CircularImageView/CircularImageView/obj/Debug/CircularImageView.obj.Debug.__AndroidLibraryProjects__.zip
+/Users/Adarsh/Projects/CircularImageView/CircularImageView/bin/Debug/CircularImageView.dll.mdb
+/Users/Adarsh/Projects/CircularImageView/CircularImageView/bin/Debug/CircularImageView.dll
+/Users/Adarsh/Projects/CircularImageView/CircularImageView/obj/Debug/CircularImageView.dll
+/Users/Adarsh/Projects/CircularImageView/CircularImageView/obj/Debug/CircularImageView.dll.mdb

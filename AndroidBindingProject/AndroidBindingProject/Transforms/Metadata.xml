@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+	-->
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.conversation.activity']/class[@name='ChannelInfoActivity']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.conversation.activity']/class[@name='MobiComAttachmentSelectorActivity']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.conversation']/class[@name='DeleteConversationAsyncTask']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.conversation.fragment']/class[@name='MessageInfoFragment']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.conversation.fragment']/class[@name='MobiComConversationFragment']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.conversation.fragment']/class[@name='MobiComQuickConversationFragment']" />
+	
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.people.channel']/class[@name='ChannelFragment']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.people.contact']/class[@name='AppContactFragment']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.people.contact']/class[@name='ContactSelectionFragment']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.people.fragment']/class[@name='ContactsListFragment']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.people.fragment']/class[@name='MobiComQuickConversationFragment']" />
+   <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.people.activity']/class[@name='MobiComKitPeopleActivity']" />
+
+	
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='AlSyncAccountStatusTask']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='ApplozicAddMemberToMultipleChannels']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='ApplozicChannelAddMemberTask']" />
+	<remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='AlChannelAddMemberTask']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='ApplozicChannelCreateTask']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='ApplozicChannelLeaveMember']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='ApplozicChannelNameUpdateTask']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='ApplozicChannelRemoveMemberTask']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='ApplozicConversationCreateTask']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.conversation.activity']/class[@name='ConversationActivity.SyncAccountStatusAsyncTask']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='AlChannelCreateAsyncTask']" />
+
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='ApplozicAddMemberToContactGroupTask']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='ApplozicChannelInfoUpdateTask']" />
+  <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='ApplozicGetMemberFromContactGroupTask']" />
+
+   <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.conversation.adapter']/class[@name='QuickConversationAdapter']" />
+
+  <!--
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+</metadata>
