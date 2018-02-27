@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidMobicomBindingProjec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidMobicomkitBinding", "AndroidMobicomkitBinding\AndroidMobicomkitBinding.csproj", "{BE596FF9-99D6-4B09-8407-D9BFBC45B2AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQTT", "MQTT\MQTT.csproj", "{257A091C-95A0-4E26-BE4A-7B6567DA4602}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,5 +27,9 @@ Global
 		{BE596FF9-99D6-4B09-8407-D9BFBC45B2AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE596FF9-99D6-4B09-8407-D9BFBC45B2AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE596FF9-99D6-4B09-8407-D9BFBC45B2AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{257A091C-95A0-4E26-BE4A-7B6567DA4602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{257A091C-95A0-4E26-BE4A-7B6567DA4602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{257A091C-95A0-4E26-BE4A-7B6567DA4602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{257A091C-95A0-4E26-BE4A-7B6567DA4602}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

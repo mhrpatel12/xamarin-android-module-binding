@@ -58,8 +58,8 @@ namespace Com.Applozic.Mobicomkit {
 				}
 			}
 		}
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/ApplozicClient", ref java_class_handle);
 			}
@@ -380,6 +380,40 @@ namespace Com.Applozic.Mobicomkit {
 			}
 		}
 
+		static Delegate cb_isCustomStorageServiceEnabled;
+#pragma warning disable 0169
+		static Delegate GetIsCustomStorageServiceEnabledHandler ()
+		{
+			if (cb_isCustomStorageServiceEnabled == null)
+				cb_isCustomStorageServiceEnabled = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, bool>) n_IsCustomStorageServiceEnabled);
+			return cb_isCustomStorageServiceEnabled;
+		}
+
+		static bool n_IsCustomStorageServiceEnabled (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.ApplozicClient __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return __this.IsCustomStorageServiceEnabled;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_isCustomStorageServiceEnabled;
+		public virtual unsafe bool IsCustomStorageServiceEnabled {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='ApplozicClient']/method[@name='isCustomStorageServiceEnabled' and count(parameter)=0]"
+			[Register ("isCustomStorageServiceEnabled", "()Z", "GetIsCustomStorageServiceEnabledHandler")]
+			get {
+				if (id_isCustomStorageServiceEnabled == IntPtr.Zero)
+					id_isCustomStorageServiceEnabled = JNIEnv.GetMethodID (class_ref, "isCustomStorageServiceEnabled", "()Z");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isCustomStorageServiceEnabled);
+					else
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isCustomStorageServiceEnabled", "()Z"));
+				} finally {
+				}
+			}
+		}
+
 		static Delegate cb_isHandleDial;
 #pragma warning disable 0169
 		static Delegate GetIsHandleDialHandler ()
@@ -652,6 +686,74 @@ namespace Com.Applozic.Mobicomkit {
 			}
 		}
 
+		static Delegate cb_isStorageServiceEnabled;
+#pragma warning disable 0169
+		static Delegate GetIsStorageServiceEnabledHandler ()
+		{
+			if (cb_isStorageServiceEnabled == null)
+				cb_isStorageServiceEnabled = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, bool>) n_IsStorageServiceEnabled);
+			return cb_isStorageServiceEnabled;
+		}
+
+		static bool n_IsStorageServiceEnabled (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.ApplozicClient __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return __this.IsStorageServiceEnabled;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_isStorageServiceEnabled;
+		public virtual unsafe bool IsStorageServiceEnabled {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='ApplozicClient']/method[@name='isStorageServiceEnabled' and count(parameter)=0]"
+			[Register ("isStorageServiceEnabled", "()Z", "GetIsStorageServiceEnabledHandler")]
+			get {
+				if (id_isStorageServiceEnabled == IntPtr.Zero)
+					id_isStorageServiceEnabled = JNIEnv.GetMethodID (class_ref, "isStorageServiceEnabled", "()Z");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isStorageServiceEnabled);
+					else
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isStorageServiceEnabled", "()Z"));
+				} finally {
+				}
+			}
+		}
+
+		static Delegate cb_isUnreadCountBadgeEnabled;
+#pragma warning disable 0169
+		static Delegate GetIsUnreadCountBadgeEnabledHandler ()
+		{
+			if (cb_isUnreadCountBadgeEnabled == null)
+				cb_isUnreadCountBadgeEnabled = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, bool>) n_IsUnreadCountBadgeEnabled);
+			return cb_isUnreadCountBadgeEnabled;
+		}
+
+		static bool n_IsUnreadCountBadgeEnabled (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.ApplozicClient __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return __this.IsUnreadCountBadgeEnabled;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_isUnreadCountBadgeEnabled;
+		public virtual unsafe bool IsUnreadCountBadgeEnabled {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='ApplozicClient']/method[@name='isUnreadCountBadgeEnabled' and count(parameter)=0]"
+			[Register ("isUnreadCountBadgeEnabled", "()Z", "GetIsUnreadCountBadgeEnabledHandler")]
+			get {
+				if (id_isUnreadCountBadgeEnabled == IntPtr.Zero)
+					id_isUnreadCountBadgeEnabled = JNIEnv.GetMethodID (class_ref, "isUnreadCountBadgeEnabled", "()Z");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isUnreadCountBadgeEnabled);
+					else
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isUnreadCountBadgeEnabled", "()Z"));
+				} finally {
+				}
+			}
+		}
+
 		static Delegate cb_getMessageMetaData;
 #pragma warning disable 0169
 		static Delegate GetGetMessageMetaDataHandler ()
@@ -715,6 +817,140 @@ namespace Com.Applozic.Mobicomkit {
 						return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getMessageMetaDataServiceName), JniHandleOwnership.TransferLocalRef);
 					else
 						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMessageMetaDataServiceName", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+		}
+
+		static Delegate cb_isNotificationStacking;
+#pragma warning disable 0169
+		static Delegate GetIsNotificationStackingHandler ()
+		{
+			if (cb_isNotificationStacking == null)
+				cb_isNotificationStacking = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, bool>) n_IsNotificationStacking);
+			return cb_isNotificationStacking;
+		}
+
+		static bool n_IsNotificationStacking (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.ApplozicClient __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return __this.NotificationStacking;
+		}
+#pragma warning restore 0169
+
+		static Delegate cb_setNotificationStacking_Z;
+#pragma warning disable 0169
+		static Delegate GetSetNotificationStacking_ZHandler ()
+		{
+			if (cb_setNotificationStacking_Z == null)
+				cb_setNotificationStacking_Z = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, bool>) n_SetNotificationStacking_Z);
+			return cb_setNotificationStacking_Z;
+		}
+
+		static void n_SetNotificationStacking_Z (IntPtr jnienv, IntPtr native__this, bool p0)
+		{
+			global::Com.Applozic.Mobicomkit.ApplozicClient __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			__this.NotificationStacking = p0;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_isNotificationStacking;
+		static IntPtr id_setNotificationStacking_Z;
+		public virtual unsafe bool NotificationStacking {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='ApplozicClient']/method[@name='isNotificationStacking' and count(parameter)=0]"
+			[Register ("isNotificationStacking", "()Z", "GetIsNotificationStackingHandler")]
+			get {
+				if (id_isNotificationStacking == IntPtr.Zero)
+					id_isNotificationStacking = JNIEnv.GetMethodID (class_ref, "isNotificationStacking", "()Z");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isNotificationStacking);
+					else
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isNotificationStacking", "()Z"));
+				} finally {
+				}
+			}
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='ApplozicClient']/method[@name='setNotificationStacking' and count(parameter)=1 and parameter[1][@type='boolean']]"
+			[Register ("setNotificationStacking", "(Z)V", "GetSetNotificationStacking_ZHandler")]
+			set {
+				if (id_setNotificationStacking_Z == IntPtr.Zero)
+					id_setNotificationStacking_Z = JNIEnv.GetMethodID (class_ref, "setNotificationStacking", "(Z)V");
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (value);
+
+					if (((object) this).GetType () == ThresholdType)
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setNotificationStacking_Z, __args);
+					else
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setNotificationStacking", "(Z)V"), __args);
+				} finally {
+				}
+			}
+		}
+
+		static Delegate cb_getVibrationOnNotification;
+#pragma warning disable 0169
+		static Delegate GetGetVibrationOnNotificationHandler ()
+		{
+			if (cb_getVibrationOnNotification == null)
+				cb_getVibrationOnNotification = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, bool>) n_GetVibrationOnNotification);
+			return cb_getVibrationOnNotification;
+		}
+
+		static bool n_GetVibrationOnNotification (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.ApplozicClient __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return __this.VibrationOnNotification;
+		}
+#pragma warning restore 0169
+
+		static Delegate cb_setVibrationOnNotification_Z;
+#pragma warning disable 0169
+		static Delegate GetSetVibrationOnNotification_ZHandler ()
+		{
+			if (cb_setVibrationOnNotification_Z == null)
+				cb_setVibrationOnNotification_Z = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, bool>) n_SetVibrationOnNotification_Z);
+			return cb_setVibrationOnNotification_Z;
+		}
+
+		static void n_SetVibrationOnNotification_Z (IntPtr jnienv, IntPtr native__this, bool p0)
+		{
+			global::Com.Applozic.Mobicomkit.ApplozicClient __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			__this.VibrationOnNotification = p0;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getVibrationOnNotification;
+		static IntPtr id_setVibrationOnNotification_Z;
+		public virtual unsafe bool VibrationOnNotification {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='ApplozicClient']/method[@name='getVibrationOnNotification' and count(parameter)=0]"
+			[Register ("getVibrationOnNotification", "()Z", "GetGetVibrationOnNotificationHandler")]
+			get {
+				if (id_getVibrationOnNotification == IntPtr.Zero)
+					id_getVibrationOnNotification = JNIEnv.GetMethodID (class_ref, "getVibrationOnNotification", "()Z");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_getVibrationOnNotification);
+					else
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getVibrationOnNotification", "()Z"));
+				} finally {
+				}
+			}
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='ApplozicClient']/method[@name='setVibrationOnNotification' and count(parameter)=1 and parameter[1][@type='boolean']]"
+			[Register ("setVibrationOnNotification", "(Z)V", "GetSetVibrationOnNotification_ZHandler")]
+			set {
+				if (id_setVibrationOnNotification_Z == IntPtr.Zero)
+					id_setVibrationOnNotification_Z = JNIEnv.GetMethodID (class_ref, "setVibrationOnNotification", "(Z)V");
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (value);
+
+					if (((object) this).GetType () == ThresholdType)
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setVibrationOnNotification_Z, __args);
+					else
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setVibrationOnNotification", "(Z)V"), __args);
 				} finally {
 				}
 			}
@@ -819,6 +1055,39 @@ namespace Com.Applozic.Mobicomkit {
 			}
 		}
 
+		static Delegate cb_enableCustomStorageService;
+#pragma warning disable 0169
+		static Delegate GetEnableCustomStorageServiceHandler ()
+		{
+			if (cb_enableCustomStorageService == null)
+				cb_enableCustomStorageService = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_EnableCustomStorageService);
+			return cb_enableCustomStorageService;
+		}
+
+		static IntPtr n_EnableCustomStorageService (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.ApplozicClient __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.ToLocalJniHandle (__this.EnableCustomStorageService ());
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_enableCustomStorageService;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='ApplozicClient']/method[@name='enableCustomStorageService' and count(parameter)=0]"
+		[Register ("enableCustomStorageService", "()Lcom/applozic/mobicomkit/ApplozicClient;", "GetEnableCustomStorageServiceHandler")]
+		public virtual unsafe global::Com.Applozic.Mobicomkit.ApplozicClient EnableCustomStorageService ()
+		{
+			if (id_enableCustomStorageService == IntPtr.Zero)
+				id_enableCustomStorageService = JNIEnv.GetMethodID (class_ref, "enableCustomStorageService", "()Lcom/applozic/mobicomkit/ApplozicClient;");
+			try {
+
+				if (((object) this).GetType () == ThresholdType)
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_enableCustomStorageService), JniHandleOwnership.TransferLocalRef);
+				else
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "enableCustomStorageService", "()Lcom/applozic/mobicomkit/ApplozicClient;")), JniHandleOwnership.TransferLocalRef);
+			} finally {
+			}
+		}
+
 		static Delegate cb_enableNotification;
 #pragma warning disable 0169
 		static Delegate GetEnableNotificationHandler ()
@@ -881,6 +1150,39 @@ namespace Com.Applozic.Mobicomkit {
 					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_enableShowMyContacts), JniHandleOwnership.TransferLocalRef);
 				else
 					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "enableShowMyContacts", "()Lcom/applozic/mobicomkit/ApplozicClient;")), JniHandleOwnership.TransferLocalRef);
+			} finally {
+			}
+		}
+
+		static Delegate cb_enableShowUnreadCountBadge;
+#pragma warning disable 0169
+		static Delegate GetEnableShowUnreadCountBadgeHandler ()
+		{
+			if (cb_enableShowUnreadCountBadge == null)
+				cb_enableShowUnreadCountBadge = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_EnableShowUnreadCountBadge);
+			return cb_enableShowUnreadCountBadge;
+		}
+
+		static IntPtr n_EnableShowUnreadCountBadge (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.ApplozicClient __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.ToLocalJniHandle (__this.EnableShowUnreadCountBadge ());
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_enableShowUnreadCountBadge;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='ApplozicClient']/method[@name='enableShowUnreadCountBadge' and count(parameter)=0]"
+		[Register ("enableShowUnreadCountBadge", "()Lcom/applozic/mobicomkit/ApplozicClient;", "GetEnableShowUnreadCountBadgeHandler")]
+		public virtual unsafe global::Com.Applozic.Mobicomkit.ApplozicClient EnableShowUnreadCountBadge ()
+		{
+			if (id_enableShowUnreadCountBadge == IntPtr.Zero)
+				id_enableShowUnreadCountBadge = JNIEnv.GetMethodID (class_ref, "enableShowUnreadCountBadge", "()Lcom/applozic/mobicomkit/ApplozicClient;");
+			try {
+
+				if (((object) this).GetType () == ThresholdType)
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_enableShowUnreadCountBadge), JniHandleOwnership.TransferLocalRef);
+				else
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "enableShowUnreadCountBadge", "()Lcom/applozic/mobicomkit/ApplozicClient;")), JniHandleOwnership.TransferLocalRef);
 			} finally {
 			}
 		}
@@ -1315,6 +1617,41 @@ namespace Com.Applozic.Mobicomkit {
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
+			}
+		}
+
+		static Delegate cb_setStorageServiceEnabled_Z;
+#pragma warning disable 0169
+		static Delegate GetSetStorageServiceEnabled_ZHandler ()
+		{
+			if (cb_setStorageServiceEnabled_Z == null)
+				cb_setStorageServiceEnabled_Z = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, bool, IntPtr>) n_SetStorageServiceEnabled_Z);
+			return cb_setStorageServiceEnabled_Z;
+		}
+
+		static IntPtr n_SetStorageServiceEnabled_Z (IntPtr jnienv, IntPtr native__this, bool p0)
+		{
+			global::Com.Applozic.Mobicomkit.ApplozicClient __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.ToLocalJniHandle (__this.SetStorageServiceEnabled (p0));
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_setStorageServiceEnabled_Z;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='ApplozicClient']/method[@name='setStorageServiceEnabled' and count(parameter)=1 and parameter[1][@type='boolean']]"
+		[Register ("setStorageServiceEnabled", "(Z)Lcom/applozic/mobicomkit/ApplozicClient;", "GetSetStorageServiceEnabled_ZHandler")]
+		public virtual unsafe global::Com.Applozic.Mobicomkit.ApplozicClient SetStorageServiceEnabled (bool p0)
+		{
+			if (id_setStorageServiceEnabled_Z == IntPtr.Zero)
+				id_setStorageServiceEnabled_Z = JNIEnv.GetMethodID (class_ref, "setStorageServiceEnabled", "(Z)Lcom/applozic/mobicomkit/ApplozicClient;");
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+
+				if (((object) this).GetType () == ThresholdType)
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_setStorageServiceEnabled_Z, __args), JniHandleOwnership.TransferLocalRef);
+				else
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.ApplozicClient> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setStorageServiceEnabled", "(Z)Lcom/applozic/mobicomkit/ApplozicClient;"), __args), JniHandleOwnership.TransferLocalRef);
+			} finally {
 			}
 		}
 

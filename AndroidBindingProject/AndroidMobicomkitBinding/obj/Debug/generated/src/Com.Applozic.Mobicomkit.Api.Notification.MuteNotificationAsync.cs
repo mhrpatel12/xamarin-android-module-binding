@@ -235,8 +235,8 @@ namespace Com.Applozic.Mobicomkit.Api.Notification {
 		}
 
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/notification/MuteNotificationAsync", ref java_class_handle);
 			}

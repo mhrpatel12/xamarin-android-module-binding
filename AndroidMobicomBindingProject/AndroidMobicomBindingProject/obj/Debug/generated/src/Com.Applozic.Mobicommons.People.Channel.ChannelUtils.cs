@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicommons.People.Channel {
 	[global::Android.Runtime.Register ("com/applozic/mobicommons/people/channel/ChannelUtils", DoNotGenerateAcw=true)]
 	public partial class ChannelUtils : global::Java.Lang.Object {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/people/channel/ChannelUtils", ref java_class_handle);
 			}

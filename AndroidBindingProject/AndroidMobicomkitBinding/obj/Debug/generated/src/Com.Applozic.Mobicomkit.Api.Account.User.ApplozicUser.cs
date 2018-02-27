@@ -51,8 +51,8 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.AuthenticationType> (__ret, JniHandleOwnership.TransferLocalRef);
 				}
 			}
-			internal static IntPtr java_class_handle;
-			internal static IntPtr class_ref {
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
 				get {
 					return JNIEnv.FindClass ("com/applozic/mobicomkit/api/account/user/ApplozicUser$AuthenticationType", ref java_class_handle);
 				}
@@ -145,8 +145,8 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.Features> (__ret, JniHandleOwnership.TransferLocalRef);
 				}
 			}
-			internal static IntPtr java_class_handle;
-			internal static IntPtr class_ref {
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
 				get {
 					return JNIEnv.FindClass ("com/applozic/mobicomkit/api/account/user/ApplozicUser$Features", ref java_class_handle);
 				}
@@ -209,8 +209,352 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 
 		}
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		// Metadata.xml XPath class reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleName']"
+		[global::Android.Runtime.Register ("com/applozic/mobicomkit/api/account/user/ApplozicUser$RoleName", DoNotGenerateAcw=true)]
+		public sealed partial class RoleName : global::Java.Lang.Enum {
+
+
+			static IntPtr ADMIN_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleName']/field[@name='ADMIN']"
+			[Register ("ADMIN")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName Admin {
+				get {
+					if (ADMIN_jfieldId == IntPtr.Zero)
+						ADMIN_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "ADMIN", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleName;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, ADMIN_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+			static IntPtr APPLICATION_ADMIN_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleName']/field[@name='APPLICATION_ADMIN']"
+			[Register ("APPLICATION_ADMIN")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName ApplicationAdmin {
+				get {
+					if (APPLICATION_ADMIN_jfieldId == IntPtr.Zero)
+						APPLICATION_ADMIN_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "APPLICATION_ADMIN", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleName;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, APPLICATION_ADMIN_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+			static IntPtr APPLICATION_BROADCASTER_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleName']/field[@name='APPLICATION_BROADCASTER']"
+			[Register ("APPLICATION_BROADCASTER")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName ApplicationBroadcaster {
+				get {
+					if (APPLICATION_BROADCASTER_jfieldId == IntPtr.Zero)
+						APPLICATION_BROADCASTER_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "APPLICATION_BROADCASTER", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleName;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, APPLICATION_BROADCASTER_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+			static IntPtr APPLICATION_WEB_ADMIN_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleName']/field[@name='APPLICATION_WEB_ADMIN']"
+			[Register ("APPLICATION_WEB_ADMIN")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName ApplicationWebAdmin {
+				get {
+					if (APPLICATION_WEB_ADMIN_jfieldId == IntPtr.Zero)
+						APPLICATION_WEB_ADMIN_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "APPLICATION_WEB_ADMIN", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleName;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, APPLICATION_WEB_ADMIN_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+			static IntPtr BOT_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleName']/field[@name='BOT']"
+			[Register ("BOT")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName Bot {
+				get {
+					if (BOT_jfieldId == IntPtr.Zero)
+						BOT_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "BOT", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleName;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, BOT_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+			static IntPtr BUSINESS_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleName']/field[@name='BUSINESS']"
+			[Register ("BUSINESS")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName Business {
+				get {
+					if (BUSINESS_jfieldId == IntPtr.Zero)
+						BUSINESS_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "BUSINESS", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleName;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, BUSINESS_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+			static IntPtr SUPPORT_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleName']/field[@name='SUPPORT']"
+			[Register ("SUPPORT")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName Support {
+				get {
+					if (SUPPORT_jfieldId == IntPtr.Zero)
+						SUPPORT_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "SUPPORT", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleName;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, SUPPORT_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+			static IntPtr USER_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleName']/field[@name='USER']"
+			[Register ("USER")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName User {
+				get {
+					if (USER_jfieldId == IntPtr.Zero)
+						USER_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "USER", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleName;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, USER_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
+				get {
+					return JNIEnv.FindClass ("com/applozic/mobicomkit/api/account/user/ApplozicUser$RoleName", ref java_class_handle);
+				}
+			}
+
+			protected override IntPtr ThresholdClass {
+				get { return class_ref; }
+			}
+
+			protected override global::System.Type ThresholdType {
+				get { return typeof (RoleName); }
+			}
+
+			internal RoleName (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
+
+			static IntPtr id_getValue;
+			public unsafe string Value {
+				// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleName']/method[@name='getValue' and count(parameter)=0]"
+				[Register ("getValue", "()Ljava/lang/String;", "GetGetValueHandler")]
+				get {
+					if (id_getValue == IntPtr.Zero)
+						id_getValue = JNIEnv.GetMethodID (class_ref, "getValue", "()Ljava/lang/String;");
+					try {
+						return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getValue), JniHandleOwnership.TransferLocalRef);
+					} finally {
+					}
+				}
+			}
+
+			static IntPtr id_valueOf_Ljava_lang_String_;
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleName']/method[@name='valueOf' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+			[Register ("valueOf", "(Ljava/lang/String;)Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleName;", "")]
+			public static unsafe global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName ValueOf (string p0)
+			{
+				if (id_valueOf_Ljava_lang_String_ == IntPtr.Zero)
+					id_valueOf_Ljava_lang_String_ = JNIEnv.GetStaticMethodID (class_ref, "valueOf", "(Ljava/lang/String;)Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleName;");
+				IntPtr native_p0 = JNIEnv.NewString (p0);
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (native_p0);
+					global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName __ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName> (JNIEnv.CallStaticObjectMethod  (class_ref, id_valueOf_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
+					return __ret;
+				} finally {
+					JNIEnv.DeleteLocalRef (native_p0);
+				}
+			}
+
+			static IntPtr id_values;
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleName']/method[@name='values' and count(parameter)=0]"
+			[Register ("values", "()[Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleName;", "")]
+			public static unsafe global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName[] Values ()
+			{
+				if (id_values == IntPtr.Zero)
+					id_values = JNIEnv.GetStaticMethodID (class_ref, "values", "()[Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleName;");
+				try {
+					return (global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName[]) JNIEnv.GetArray (JNIEnv.CallStaticObjectMethod  (class_ref, id_values), JniHandleOwnership.TransferLocalRef, typeof (global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleName));
+				} finally {
+				}
+			}
+
+		}
+
+		// Metadata.xml XPath class reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleType']"
+		[global::Android.Runtime.Register ("com/applozic/mobicomkit/api/account/user/ApplozicUser$RoleType", DoNotGenerateAcw=true)]
+		public sealed partial class RoleType : global::Java.Lang.Enum {
+
+
+			static IntPtr ADMIN_ROLE_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleType']/field[@name='ADMIN_ROLE']"
+			[Register ("ADMIN_ROLE")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType AdminRole {
+				get {
+					if (ADMIN_ROLE_jfieldId == IntPtr.Zero)
+						ADMIN_ROLE_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "ADMIN_ROLE", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleType;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, ADMIN_ROLE_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+			static IntPtr AGENT_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleType']/field[@name='AGENT']"
+			[Register ("AGENT")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType Agent {
+				get {
+					if (AGENT_jfieldId == IntPtr.Zero)
+						AGENT_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "AGENT", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleType;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, AGENT_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+			static IntPtr APPLICATION_ADMIN_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleType']/field[@name='APPLICATION_ADMIN']"
+			[Register ("APPLICATION_ADMIN")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType ApplicationAdmin {
+				get {
+					if (APPLICATION_ADMIN_jfieldId == IntPtr.Zero)
+						APPLICATION_ADMIN_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "APPLICATION_ADMIN", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleType;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, APPLICATION_ADMIN_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+			static IntPtr APPLICATION_BROADCASTER_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleType']/field[@name='APPLICATION_BROADCASTER']"
+			[Register ("APPLICATION_BROADCASTER")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType ApplicationBroadcaster {
+				get {
+					if (APPLICATION_BROADCASTER_jfieldId == IntPtr.Zero)
+						APPLICATION_BROADCASTER_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "APPLICATION_BROADCASTER", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleType;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, APPLICATION_BROADCASTER_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+			static IntPtr BOT_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleType']/field[@name='BOT']"
+			[Register ("BOT")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType Bot {
+				get {
+					if (BOT_jfieldId == IntPtr.Zero)
+						BOT_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "BOT", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleType;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, BOT_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+			static IntPtr BUSINESS_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleType']/field[@name='BUSINESS']"
+			[Register ("BUSINESS")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType Business {
+				get {
+					if (BUSINESS_jfieldId == IntPtr.Zero)
+						BUSINESS_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "BUSINESS", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleType;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, BUSINESS_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+			static IntPtr SUPPORT_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleType']/field[@name='SUPPORT']"
+			[Register ("SUPPORT")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType Support {
+				get {
+					if (SUPPORT_jfieldId == IntPtr.Zero)
+						SUPPORT_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "SUPPORT", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleType;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, SUPPORT_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+			static IntPtr USER_ROLE_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleType']/field[@name='USER_ROLE']"
+			[Register ("USER_ROLE")]
+			public static global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType UserRole {
+				get {
+					if (USER_ROLE_jfieldId == IntPtr.Zero)
+						USER_ROLE_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "USER_ROLE", "Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleType;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, USER_ROLE_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
+				get {
+					return JNIEnv.FindClass ("com/applozic/mobicomkit/api/account/user/ApplozicUser$RoleType", ref java_class_handle);
+				}
+			}
+
+			protected override IntPtr ThresholdClass {
+				get { return class_ref; }
+			}
+
+			protected override global::System.Type ThresholdType {
+				get { return typeof (RoleType); }
+			}
+
+			internal RoleType (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
+
+			static IntPtr id_getValue;
+			public unsafe global::Java.Lang.Short Value {
+				// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleType']/method[@name='getValue' and count(parameter)=0]"
+				[Register ("getValue", "()Ljava/lang/Short;", "GetGetValueHandler")]
+				get {
+					if (id_getValue == IntPtr.Zero)
+						id_getValue = JNIEnv.GetMethodID (class_ref, "getValue", "()Ljava/lang/Short;");
+					try {
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Short> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getValue), JniHandleOwnership.TransferLocalRef);
+					} finally {
+					}
+				}
+			}
+
+			static IntPtr id_valueOf_Ljava_lang_String_;
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleType']/method[@name='valueOf' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+			[Register ("valueOf", "(Ljava/lang/String;)Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleType;", "")]
+			public static unsafe global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType ValueOf (string p0)
+			{
+				if (id_valueOf_Ljava_lang_String_ == IntPtr.Zero)
+					id_valueOf_Ljava_lang_String_ = JNIEnv.GetStaticMethodID (class_ref, "valueOf", "(Ljava/lang/String;)Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleType;");
+				IntPtr native_p0 = JNIEnv.NewString (p0);
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (native_p0);
+					global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType __ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType> (JNIEnv.CallStaticObjectMethod  (class_ref, id_valueOf_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
+					return __ret;
+				} finally {
+					JNIEnv.DeleteLocalRef (native_p0);
+				}
+			}
+
+			static IntPtr id_values;
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser.RoleType']/method[@name='values' and count(parameter)=0]"
+			[Register ("values", "()[Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleType;", "")]
+			public static unsafe global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType[] Values ()
+			{
+				if (id_values == IntPtr.Zero)
+					id_values = JNIEnv.GetStaticMethodID (class_ref, "values", "()[Lcom/applozic/mobicomkit/api/account/user/ApplozicUser$RoleType;");
+				try {
+					return (global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType[]) JNIEnv.GetArray (JNIEnv.CallStaticObjectMethod  (class_ref, id_values), JniHandleOwnership.TransferLocalRef, typeof (global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser.RoleType));
+				} finally {
+				}
+			}
+
+		}
+
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/account/user/ApplozicUser", ref java_class_handle);
 			}
@@ -1082,6 +1426,144 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 			}
 		}
 
+		static Delegate cb_getLastMessageAtTime;
+#pragma warning disable 0169
+		static Delegate GetGetLastMessageAtTimeHandler ()
+		{
+			if (cb_getLastMessageAtTime == null)
+				cb_getLastMessageAtTime = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetLastMessageAtTime);
+			return cb_getLastMessageAtTime;
+		}
+
+		static IntPtr n_GetLastMessageAtTime (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.ToLocalJniHandle (__this.LastMessageAtTime);
+		}
+#pragma warning restore 0169
+
+		static Delegate cb_setLastMessageAtTime_Ljava_lang_Long_;
+#pragma warning disable 0169
+		static Delegate GetSetLastMessageAtTime_Ljava_lang_Long_Handler ()
+		{
+			if (cb_setLastMessageAtTime_Ljava_lang_Long_ == null)
+				cb_setLastMessageAtTime_Ljava_lang_Long_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SetLastMessageAtTime_Ljava_lang_Long_);
+			return cb_setLastMessageAtTime_Ljava_lang_Long_;
+		}
+
+		static void n_SetLastMessageAtTime_Ljava_lang_Long_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Long p0 = global::Java.Lang.Object.GetObject<global::Java.Lang.Long> (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.LastMessageAtTime = p0;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getLastMessageAtTime;
+		static IntPtr id_setLastMessageAtTime_Ljava_lang_Long_;
+		public virtual unsafe global::Java.Lang.Long LastMessageAtTime {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser']/method[@name='getLastMessageAtTime' and count(parameter)=0]"
+			[Register ("getLastMessageAtTime", "()Ljava/lang/Long;", "GetGetLastMessageAtTimeHandler")]
+			get {
+				if (id_getLastMessageAtTime == IntPtr.Zero)
+					id_getLastMessageAtTime = JNIEnv.GetMethodID (class_ref, "getLastMessageAtTime", "()Ljava/lang/Long;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Long> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getLastMessageAtTime), JniHandleOwnership.TransferLocalRef);
+					else
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Long> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLastMessageAtTime", "()Ljava/lang/Long;")), JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser']/method[@name='setLastMessageAtTime' and count(parameter)=1 and parameter[1][@type='java.lang.Long']]"
+			[Register ("setLastMessageAtTime", "(Ljava/lang/Long;)V", "GetSetLastMessageAtTime_Ljava_lang_Long_Handler")]
+			set {
+				if (id_setLastMessageAtTime_Ljava_lang_Long_ == IntPtr.Zero)
+					id_setLastMessageAtTime_Ljava_lang_Long_ = JNIEnv.GetMethodID (class_ref, "setLastMessageAtTime", "(Ljava/lang/Long;)V");
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (value);
+
+					if (((object) this).GetType () == ThresholdType)
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setLastMessageAtTime_Ljava_lang_Long_, __args);
+					else
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setLastMessageAtTime", "(Ljava/lang/Long;)V"), __args);
+				} finally {
+				}
+			}
+		}
+
+		static Delegate cb_getMetadata;
+#pragma warning disable 0169
+		static Delegate GetGetMetadataHandler ()
+		{
+			if (cb_getMetadata == null)
+				cb_getMetadata = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetMetadata);
+			return cb_getMetadata;
+		}
+
+		static IntPtr n_GetMetadata (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return global::Android.Runtime.JavaDictionary<string, string>.ToLocalJniHandle (__this.Metadata);
+		}
+#pragma warning restore 0169
+
+		static Delegate cb_setMetadata_Ljava_util_Map_;
+#pragma warning disable 0169
+		static Delegate GetSetMetadata_Ljava_util_Map_Handler ()
+		{
+			if (cb_setMetadata_Ljava_util_Map_ == null)
+				cb_setMetadata_Ljava_util_Map_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SetMetadata_Ljava_util_Map_);
+			return cb_setMetadata_Ljava_util_Map_;
+		}
+
+		static void n_SetMetadata_Ljava_util_Map_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			var p0 = global::Android.Runtime.JavaDictionary<string, string>.FromJniHandle (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.Metadata = p0;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getMetadata;
+		static IntPtr id_setMetadata_Ljava_util_Map_;
+		public virtual unsafe global::System.Collections.Generic.IDictionary<string, string> Metadata {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser']/method[@name='getMetadata' and count(parameter)=0]"
+			[Register ("getMetadata", "()Ljava/util/Map;", "GetGetMetadataHandler")]
+			get {
+				if (id_getMetadata == IntPtr.Zero)
+					id_getMetadata = JNIEnv.GetMethodID (class_ref, "getMetadata", "()Ljava/util/Map;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return global::Android.Runtime.JavaDictionary<string, string>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getMetadata), JniHandleOwnership.TransferLocalRef);
+					else
+						return global::Android.Runtime.JavaDictionary<string, string>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMetadata", "()Ljava/util/Map;")), JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser']/method[@name='setMetadata' and count(parameter)=1 and parameter[1][@type='java.util.Map&lt;java.lang.String, java.lang.String&gt;']]"
+			[Register ("setMetadata", "(Ljava/util/Map;)V", "GetSetMetadata_Ljava_util_Map_Handler")]
+			set {
+				if (id_setMetadata_Ljava_util_Map_ == IntPtr.Zero)
+					id_setMetadata_Ljava_util_Map_ = JNIEnv.GetMethodID (class_ref, "setMetadata", "(Ljava/util/Map;)V");
+				IntPtr native_value = global::Android.Runtime.JavaDictionary<string, string>.ToLocalJniHandle (value);
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (native_value);
+
+					if (((object) this).GetType () == ThresholdType)
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setMetadata_Ljava_util_Map_, __args);
+					else
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setMetadata", "(Ljava/util/Map;)V"), __args);
+				} finally {
+					JNIEnv.DeleteLocalRef (native_value);
+				}
+			}
+		}
+
 		static Delegate cb_getNotificationSoundFilePath;
 #pragma warning disable 0169
 		static Delegate GetGetNotificationSoundFilePathHandler ()
@@ -1290,6 +1772,74 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 			}
 		}
 
+		static Delegate cb_getPushNotificationFormat;
+#pragma warning disable 0169
+		static Delegate GetGetPushNotificationFormatHandler ()
+		{
+			if (cb_getPushNotificationFormat == null)
+				cb_getPushNotificationFormat = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetPushNotificationFormat);
+			return cb_getPushNotificationFormat;
+		}
+
+		static IntPtr n_GetPushNotificationFormat (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.ToLocalJniHandle (__this.PushNotificationFormat);
+		}
+#pragma warning restore 0169
+
+		static Delegate cb_setPushNotificationFormat_Ljava_lang_Short_;
+#pragma warning disable 0169
+		static Delegate GetSetPushNotificationFormat_Ljava_lang_Short_Handler ()
+		{
+			if (cb_setPushNotificationFormat_Ljava_lang_Short_ == null)
+				cb_setPushNotificationFormat_Ljava_lang_Short_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SetPushNotificationFormat_Ljava_lang_Short_);
+			return cb_setPushNotificationFormat_Ljava_lang_Short_;
+		}
+
+		static void n_SetPushNotificationFormat_Ljava_lang_Short_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Short p0 = global::Java.Lang.Object.GetObject<global::Java.Lang.Short> (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.PushNotificationFormat = p0;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getPushNotificationFormat;
+		static IntPtr id_setPushNotificationFormat_Ljava_lang_Short_;
+		public virtual unsafe global::Java.Lang.Short PushNotificationFormat {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser']/method[@name='getPushNotificationFormat' and count(parameter)=0]"
+			[Register ("getPushNotificationFormat", "()Ljava/lang/Short;", "GetGetPushNotificationFormatHandler")]
+			get {
+				if (id_getPushNotificationFormat == IntPtr.Zero)
+					id_getPushNotificationFormat = JNIEnv.GetMethodID (class_ref, "getPushNotificationFormat", "()Ljava/lang/Short;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Short> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getPushNotificationFormat), JniHandleOwnership.TransferLocalRef);
+					else
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Short> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getPushNotificationFormat", "()Ljava/lang/Short;")), JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser']/method[@name='setPushNotificationFormat' and count(parameter)=1 and parameter[1][@type='java.lang.Short']]"
+			[Register ("setPushNotificationFormat", "(Ljava/lang/Short;)V", "GetSetPushNotificationFormat_Ljava_lang_Short_Handler")]
+			set {
+				if (id_setPushNotificationFormat_Ljava_lang_Short_ == IntPtr.Zero)
+					id_setPushNotificationFormat_Ljava_lang_Short_ = JNIEnv.GetMethodID (class_ref, "setPushNotificationFormat", "(Ljava/lang/Short;)V");
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (value);
+
+					if (((object) this).GetType () == ThresholdType)
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setPushNotificationFormat_Ljava_lang_Short_, __args);
+					else
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setPushNotificationFormat", "(Ljava/lang/Short;)V"), __args);
+				} finally {
+				}
+			}
+		}
+
 		static Delegate cb_getRegistrationId;
 #pragma warning disable 0169
 		static Delegate GetGetRegistrationIdHandler ()
@@ -1354,76 +1904,6 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setRegistrationId_Ljava_lang_String_, __args);
 					else
 						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setRegistrationId", "(Ljava/lang/String;)V"), __args);
-				} finally {
-					JNIEnv.DeleteLocalRef (native_value);
-				}
-			}
-		}
-
-		static Delegate cb_getRoleName;
-#pragma warning disable 0169
-		static Delegate GetGetRoleNameHandler ()
-		{
-			if (cb_getRoleName == null)
-				cb_getRoleName = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetRoleName);
-			return cb_getRoleName;
-		}
-
-		static IntPtr n_GetRoleName (IntPtr jnienv, IntPtr native__this)
-		{
-			global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
-			return JNIEnv.NewString (__this.RoleName);
-		}
-#pragma warning restore 0169
-
-		static Delegate cb_setRoleName_Ljava_lang_String_;
-#pragma warning disable 0169
-		static Delegate GetSetRoleName_Ljava_lang_String_Handler ()
-		{
-			if (cb_setRoleName_Ljava_lang_String_ == null)
-				cb_setRoleName_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SetRoleName_Ljava_lang_String_);
-			return cb_setRoleName_Ljava_lang_String_;
-		}
-
-		static void n_SetRoleName_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
-		{
-			global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
-			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
-			__this.RoleName = p0;
-		}
-#pragma warning restore 0169
-
-		static IntPtr id_getRoleName;
-		static IntPtr id_setRoleName_Ljava_lang_String_;
-		public virtual unsafe string RoleName {
-			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser']/method[@name='getRoleName' and count(parameter)=0]"
-			[Register ("getRoleName", "()Ljava/lang/String;", "GetGetRoleNameHandler")]
-			get {
-				if (id_getRoleName == IntPtr.Zero)
-					id_getRoleName = JNIEnv.GetMethodID (class_ref, "getRoleName", "()Ljava/lang/String;");
-				try {
-
-					if (((object) this).GetType () == ThresholdType)
-						return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getRoleName), JniHandleOwnership.TransferLocalRef);
-					else
-						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getRoleName", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
-				} finally {
-				}
-			}
-			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser']/method[@name='setRoleName' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
-			[Register ("setRoleName", "(Ljava/lang/String;)V", "GetSetRoleName_Ljava_lang_String_Handler")]
-			set {
-				if (id_setRoleName_Ljava_lang_String_ == IntPtr.Zero)
-					id_setRoleName_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "setRoleName", "(Ljava/lang/String;)V");
-				IntPtr native_value = JNIEnv.NewString (value);
-				try {
-					JValue* __args = stackalloc JValue [1];
-					__args [0] = new JValue (native_value);
-
-					if (((object) this).GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setRoleName_Ljava_lang_String_, __args);
-					else
-						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setRoleName", "(Ljava/lang/String;)V"), __args);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -1671,6 +2151,72 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 			}
 		}
 
+		static Delegate cb_getRoleName;
+#pragma warning disable 0169
+		static Delegate GetGetRoleNameHandler ()
+		{
+			if (cb_getRoleName == null)
+				cb_getRoleName = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetRoleName);
+			return cb_getRoleName;
+		}
+
+		static IntPtr n_GetRoleName (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.NewString (__this.GetRoleName ());
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getRoleName;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser']/method[@name='getRoleName' and count(parameter)=0]"
+		[Register ("getRoleName", "()Ljava/lang/String;", "GetGetRoleNameHandler")]
+		public virtual unsafe string GetRoleName ()
+		{
+			if (id_getRoleName == IntPtr.Zero)
+				id_getRoleName = JNIEnv.GetMethodID (class_ref, "getRoleName", "()Ljava/lang/String;");
+			try {
+
+				if (((object) this).GetType () == ThresholdType)
+					return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getRoleName), JniHandleOwnership.TransferLocalRef);
+				else
+					return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getRoleName", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
+			} finally {
+			}
+		}
+
+		static Delegate cb_getRoleType;
+#pragma warning disable 0169
+		static Delegate GetGetRoleTypeHandler ()
+		{
+			if (cb_getRoleType == null)
+				cb_getRoleType = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetRoleType);
+			return cb_getRoleType;
+		}
+
+		static IntPtr n_GetRoleType (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.ToLocalJniHandle (__this.GetRoleType ());
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getRoleType;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser']/method[@name='getRoleType' and count(parameter)=0]"
+		[Register ("getRoleType", "()Ljava/lang/Short;", "GetGetRoleTypeHandler")]
+		public virtual unsafe global::Java.Lang.Short GetRoleType ()
+		{
+			if (id_getRoleType == IntPtr.Zero)
+				id_getRoleType = JNIEnv.GetMethodID (class_ref, "getRoleType", "()Ljava/lang/Short;");
+			try {
+
+				if (((object) this).GetType () == ThresholdType)
+					return global::Java.Lang.Object.GetObject<global::Java.Lang.Short> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getRoleType), JniHandleOwnership.TransferLocalRef);
+				else
+					return global::Java.Lang.Object.GetObject<global::Java.Lang.Short> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getRoleType", "()Ljava/lang/Short;")), JniHandleOwnership.TransferLocalRef);
+			} finally {
+			}
+		}
+
 		static Delegate cb_setFeatures_Ljava_util_List_;
 #pragma warning disable 0169
 		static Delegate GetSetFeatures_Ljava_util_List_Handler ()
@@ -1706,6 +2252,80 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setFeatures", "(Ljava/util/List;)V"), __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
+			}
+		}
+
+		static Delegate cb_setRoleName_Ljava_lang_String_;
+#pragma warning disable 0169
+		static Delegate GetSetRoleName_Ljava_lang_String_Handler ()
+		{
+			if (cb_setRoleName_Ljava_lang_String_ == null)
+				cb_setRoleName_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SetRoleName_Ljava_lang_String_);
+			return cb_setRoleName_Ljava_lang_String_;
+		}
+
+		static void n_SetRoleName_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.SetRoleName (p0);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_setRoleName_Ljava_lang_String_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser']/method[@name='setRoleName' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		[Register ("setRoleName", "(Ljava/lang/String;)V", "GetSetRoleName_Ljava_lang_String_Handler")]
+		public virtual unsafe void SetRoleName (string p0)
+		{
+			if (id_setRoleName_Ljava_lang_String_ == IntPtr.Zero)
+				id_setRoleName_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "setRoleName", "(Ljava/lang/String;)V");
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (native_p0);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setRoleName_Ljava_lang_String_, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setRoleName", "(Ljava/lang/String;)V"), __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+			}
+		}
+
+		static Delegate cb_setRoleType_Ljava_lang_Short_;
+#pragma warning disable 0169
+		static Delegate GetSetRoleType_Ljava_lang_Short_Handler ()
+		{
+			if (cb_setRoleType_Ljava_lang_Short_ == null)
+				cb_setRoleType_Ljava_lang_Short_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SetRoleType_Ljava_lang_Short_);
+			return cb_setRoleType_Ljava_lang_Short_;
+		}
+
+		static void n_SetRoleType_Ljava_lang_Short_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Short p0 = global::Java.Lang.Object.GetObject<global::Java.Lang.Short> (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.SetRoleType (p0);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_setRoleType_Ljava_lang_Short_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='ApplozicUser']/method[@name='setRoleType' and count(parameter)=1 and parameter[1][@type='java.lang.Short']]"
+		[Register ("setRoleType", "(Ljava/lang/Short;)V", "GetSetRoleType_Ljava_lang_Short_Handler")]
+		public virtual unsafe void SetRoleType (global::Java.Lang.Short p0)
+		{
+			if (id_setRoleType_Ljava_lang_Short_ == IntPtr.Zero)
+				id_setRoleType_Ljava_lang_Short_ = JNIEnv.GetMethodID (class_ref, "setRoleType", "(Ljava/lang/Short;)V");
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setRoleType_Ljava_lang_Short_, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setRoleType", "(Ljava/lang/Short;)V"), __args);
+			} finally {
 			}
 		}
 

@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicommons.Commons.Core.Utils {
 	[global::Android.Runtime.Register ("com/applozic/mobicommons/commons/core/utils/LocationUtils", DoNotGenerateAcw=true)]
 	public partial class LocationUtils : global::Java.Lang.Object {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/commons/core/utils/LocationUtils", ref java_class_handle);
 			}

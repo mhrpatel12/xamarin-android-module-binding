@@ -9,9 +9,29 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 	public partial class MobiComConversationService : global::Java.Lang.Object {
 
 
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MobiComConversationService']/field[@name='MESSAGE_SENT']"
+		[Register ("MESSAGE_SENT")]
+		public const int MessageSent = (int) 5;
+
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MobiComConversationService']/field[@name='SERVER_SYNC']"
 		[Register ("SERVER_SYNC")]
 		public const string ServerSync = (string) "SERVER_SYNC_[CONVERSATION]_[CONTACT]_[CHANNEL]";
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MobiComConversationService']/field[@name='UPLOAD_CANCELLED']"
+		[Register ("UPLOAD_CANCELLED")]
+		public const int UploadCancelled = (int) 3;
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MobiComConversationService']/field[@name='UPLOAD_COMPLETED']"
+		[Register ("UPLOAD_COMPLETED")]
+		public const int UploadCompleted = (int) 4;
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MobiComConversationService']/field[@name='UPLOAD_PROGRESS']"
+		[Register ("UPLOAD_PROGRESS")]
+		public const int UploadProgress = (int) 2;
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MobiComConversationService']/field[@name='UPLOAD_STARTED']"
+		[Register ("UPLOAD_STARTED")]
+		public const int UploadStarted = (int) 1;
 
 		static IntPtr context_jfieldId;
 
@@ -81,8 +101,8 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 				}
 			}
 		}
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/MobiComConversationService", ref java_class_handle);
 			}
@@ -936,6 +956,84 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_, __args);
 				else
 					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "sendMessage", "(Lcom/applozic/mobicomkit/api/conversation/Message;)V"), __args);
+			} finally {
+			}
+		}
+
+		static Delegate cb_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_;
+#pragma warning disable 0169
+		static Delegate GetSendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_Handler ()
+		{
+			if (cb_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_ == null)
+				cb_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr>) n_SendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_);
+			return cb_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_;
+		}
+
+		static void n_SendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Conversation.MobiComConversationService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.MobiComConversationService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0 = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message> (native_p0, JniHandleOwnership.DoNotTransfer);
+			global::Com.Applozic.Mobicomkit.Listners.IMediaUploadProgressHandler p1 = (global::Com.Applozic.Mobicomkit.Listners.IMediaUploadProgressHandler)global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Listners.IMediaUploadProgressHandler> (native_p1, JniHandleOwnership.DoNotTransfer);
+			__this.SendMessage (p0, p1);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MobiComConversationService']/method[@name='sendMessage' and count(parameter)=2 and parameter[1][@type='com.applozic.mobicomkit.api.conversation.Message'] and parameter[2][@type='com.applozic.mobicomkit.listners.MediaUploadProgressHandler']]"
+		[Register ("sendMessage", "(Lcom/applozic/mobicomkit/api/conversation/Message;Lcom/applozic/mobicomkit/listners/MediaUploadProgressHandler;)V", "GetSendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_Handler")]
+		public virtual unsafe void SendMessage (global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0, global::Com.Applozic.Mobicomkit.Listners.IMediaUploadProgressHandler p1)
+		{
+			if (id_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_ == IntPtr.Zero)
+				id_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_ = JNIEnv.GetMethodID (class_ref, "sendMessage", "(Lcom/applozic/mobicomkit/api/conversation/Message;Lcom/applozic/mobicomkit/listners/MediaUploadProgressHandler;)V");
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "sendMessage", "(Lcom/applozic/mobicomkit/api/conversation/Message;Lcom/applozic/mobicomkit/listners/MediaUploadProgressHandler;)V"), __args);
+			} finally {
+			}
+		}
+
+		static Delegate cb_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_Ljava_lang_Class_;
+#pragma warning disable 0169
+		static Delegate GetSendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_Ljava_lang_Class_Handler ()
+		{
+			if (cb_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_Ljava_lang_Class_ == null)
+				cb_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_Ljava_lang_Class_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_SendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_Ljava_lang_Class_);
+			return cb_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_Ljava_lang_Class_;
+		}
+
+		static void n_SendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_Ljava_lang_Class_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1, IntPtr native_p2)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Conversation.MobiComConversationService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.MobiComConversationService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0 = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message> (native_p0, JniHandleOwnership.DoNotTransfer);
+			global::Com.Applozic.Mobicomkit.Listners.IMediaUploadProgressHandler p1 = (global::Com.Applozic.Mobicomkit.Listners.IMediaUploadProgressHandler)global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Listners.IMediaUploadProgressHandler> (native_p1, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Class p2 = global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (native_p2, JniHandleOwnership.DoNotTransfer);
+			__this.SendMessage (p0, p1, p2);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_Ljava_lang_Class_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MobiComConversationService']/method[@name='sendMessage' and count(parameter)=3 and parameter[1][@type='com.applozic.mobicomkit.api.conversation.Message'] and parameter[2][@type='com.applozic.mobicomkit.listners.MediaUploadProgressHandler'] and parameter[3][@type='java.lang.Class']]"
+		[Register ("sendMessage", "(Lcom/applozic/mobicomkit/api/conversation/Message;Lcom/applozic/mobicomkit/listners/MediaUploadProgressHandler;Ljava/lang/Class;)V", "GetSendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_Ljava_lang_Class_Handler")]
+		public virtual unsafe void SendMessage (global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0, global::Com.Applozic.Mobicomkit.Listners.IMediaUploadProgressHandler p1, global::Java.Lang.Class p2)
+		{
+			if (id_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_Ljava_lang_Class_ == IntPtr.Zero)
+				id_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_Ljava_lang_Class_ = JNIEnv.GetMethodID (class_ref, "sendMessage", "(Lcom/applozic/mobicomkit/api/conversation/Message;Lcom/applozic/mobicomkit/listners/MediaUploadProgressHandler;Ljava/lang/Class;)V");
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				__args [2] = new JValue (p2);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaUploadProgressHandler_Ljava_lang_Class_, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "sendMessage", "(Lcom/applozic/mobicomkit/api/conversation/Message;Lcom/applozic/mobicomkit/listners/MediaUploadProgressHandler;Ljava/lang/Class;)V"), __args);
 			} finally {
 			}
 		}

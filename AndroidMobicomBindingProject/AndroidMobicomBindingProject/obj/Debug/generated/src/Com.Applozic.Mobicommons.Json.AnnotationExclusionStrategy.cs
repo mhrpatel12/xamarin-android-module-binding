@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicommons.Json {
 	[global::Android.Runtime.Register ("com/applozic/mobicommons/json/AnnotationExclusionStrategy", DoNotGenerateAcw=true)]
 	public partial class AnnotationExclusionStrategy : global::Java.Lang.Object, global::GoogleGson.IExclusionStrategy {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/json/AnnotationExclusionStrategy", ref java_class_handle);
 			}

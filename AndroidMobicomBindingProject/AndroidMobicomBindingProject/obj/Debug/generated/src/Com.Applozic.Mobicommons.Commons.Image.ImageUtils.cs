@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicommons.Commons.Image {
 	[global::Android.Runtime.Register ("com/applozic/mobicommons/commons/image/ImageUtils", DoNotGenerateAcw=true)]
 	public partial class ImageUtils : global::Java.Lang.Object {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/commons/image/ImageUtils", ref java_class_handle);
 			}
@@ -88,6 +88,24 @@ namespace Com.Applozic.Mobicommons.Commons.Image {
 				int __ret = JNIEnv.CallStaticIntMethod  (class_ref, id_calculateInSampleSize_Landroid_graphics_BitmapFactory_Options_II, __args);
 				return __ret;
 			} finally {
+			}
+		}
+
+		static IntPtr id_decodeSampledBitmapFromPath_Ljava_lang_String_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.commons.image']/class[@name='ImageUtils']/method[@name='decodeSampledBitmapFromPath' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		[Register ("decodeSampledBitmapFromPath", "(Ljava/lang/String;)Landroid/graphics/Bitmap;", "")]
+		public static unsafe global::Android.Graphics.Bitmap DecodeSampledBitmapFromPath (string p0)
+		{
+			if (id_decodeSampledBitmapFromPath_Ljava_lang_String_ == IntPtr.Zero)
+				id_decodeSampledBitmapFromPath_Ljava_lang_String_ = JNIEnv.GetStaticMethodID (class_ref, "decodeSampledBitmapFromPath", "(Ljava/lang/String;)Landroid/graphics/Bitmap;");
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (native_p0);
+				global::Android.Graphics.Bitmap __ret = global::Java.Lang.Object.GetObject<global::Android.Graphics.Bitmap> (JNIEnv.CallStaticObjectMethod  (class_ref, id_decodeSampledBitmapFromPath_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
+				return __ret;
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
 			}
 		}
 

@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicomkit.Feed {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/feed/GroupInfoUpdate", DoNotGenerateAcw=true)]
 	public partial class GroupInfoUpdate : global::Com.Applozic.Mobicommons.Json.JsonMarker {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/feed/GroupInfoUpdate", ref java_class_handle);
 			}
@@ -877,6 +877,76 @@ namespace Com.Applozic.Mobicomkit.Feed {
 					else
 						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setParentKey", "(Ljava/lang/Integer;)V"), __args);
 				} finally {
+				}
+			}
+		}
+
+		static Delegate cb_getUsers;
+#pragma warning disable 0169
+		static Delegate GetGetUsersHandler ()
+		{
+			if (cb_getUsers == null)
+				cb_getUsers = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetUsers);
+			return cb_getUsers;
+		}
+
+		static IntPtr n_GetUsers (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Feed.GroupInfoUpdate __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Feed.GroupInfoUpdate> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return global::Android.Runtime.JavaList<global::Com.Applozic.Mobicomkit.Feed.ChannelUsersFeed>.ToLocalJniHandle (__this.Users);
+		}
+#pragma warning restore 0169
+
+		static Delegate cb_setUsers_Ljava_util_List_;
+#pragma warning disable 0169
+		static Delegate GetSetUsers_Ljava_util_List_Handler ()
+		{
+			if (cb_setUsers_Ljava_util_List_ == null)
+				cb_setUsers_Ljava_util_List_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SetUsers_Ljava_util_List_);
+			return cb_setUsers_Ljava_util_List_;
+		}
+
+		static void n_SetUsers_Ljava_util_List_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicomkit.Feed.GroupInfoUpdate __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Feed.GroupInfoUpdate> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			var p0 = global::Android.Runtime.JavaList<global::Com.Applozic.Mobicomkit.Feed.ChannelUsersFeed>.FromJniHandle (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.Users = p0;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getUsers;
+		static IntPtr id_setUsers_Ljava_util_List_;
+		public virtual unsafe global::System.Collections.Generic.IList<global::Com.Applozic.Mobicomkit.Feed.ChannelUsersFeed> Users {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.feed']/class[@name='GroupInfoUpdate']/method[@name='getUsers' and count(parameter)=0]"
+			[Register ("getUsers", "()Ljava/util/List;", "GetGetUsersHandler")]
+			get {
+				if (id_getUsers == IntPtr.Zero)
+					id_getUsers = JNIEnv.GetMethodID (class_ref, "getUsers", "()Ljava/util/List;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return global::Android.Runtime.JavaList<global::Com.Applozic.Mobicomkit.Feed.ChannelUsersFeed>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getUsers), JniHandleOwnership.TransferLocalRef);
+					else
+						return global::Android.Runtime.JavaList<global::Com.Applozic.Mobicomkit.Feed.ChannelUsersFeed>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getUsers", "()Ljava/util/List;")), JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.feed']/class[@name='GroupInfoUpdate']/method[@name='setUsers' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;com.applozic.mobicomkit.feed.ChannelUsersFeed&gt;']]"
+			[Register ("setUsers", "(Ljava/util/List;)V", "GetSetUsers_Ljava_util_List_Handler")]
+			set {
+				if (id_setUsers_Ljava_util_List_ == IntPtr.Zero)
+					id_setUsers_Ljava_util_List_ = JNIEnv.GetMethodID (class_ref, "setUsers", "(Ljava/util/List;)V");
+				IntPtr native_value = global::Android.Runtime.JavaList<global::Com.Applozic.Mobicomkit.Feed.ChannelUsersFeed>.ToLocalJniHandle (value);
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (native_value);
+
+					if (((object) this).GetType () == ThresholdType)
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setUsers_Ljava_util_List_, __args);
+					else
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setUsers", "(Ljava/util/List;)V"), __args);
+				} finally {
+					JNIEnv.DeleteLocalRef (native_value);
 				}
 			}
 		}

@@ -21,8 +21,8 @@ namespace Com.Applozic.Mobicommons.Emoticon {
 				return global::Java.Lang.Object.GetObject<global::Android.Text.SpannableFactory> (__ret, JniHandleOwnership.TransferLocalRef);
 			}
 		}
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/emoticon/EmoticonUtils", ref java_class_handle);
 			}
@@ -90,8 +90,9 @@ namespace Com.Applozic.Mobicommons.Emoticon {
 		{
 			global::Java.Lang.String jls_p1 = p1 == null ? null : new global::Java.Lang.String (p1);
 			global::Android.Text.ISpannable __result = GetSmiledText (p0, jls_p1, p2);
-			if (jls_p1 != null) jls_p1.Dispose ();
-			return __result;
+			var __rsval = __result;
+			jls_p1?.Dispose ();
+			return __rsval;
 		}
 
 	}

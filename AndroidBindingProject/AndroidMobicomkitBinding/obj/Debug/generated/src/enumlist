@@ -1,14 +1,14 @@
-com.applozic.mobicomkit.api.ApplozicMqttService$NOTIFICATION_TYPE:Com.Applozic.Mobicomkit.Api:ApplozicMqttService.NOTIFICATION_TYPE
 com.applozic.mobicomkit.api.account.register.RegistrationResponse$PricingType:Com.Applozic.Mobicomkit.Api.Account.Register:RegistrationResponse.PricingType
 com.applozic.mobicomkit.api.account.user.ApplozicUser$AuthenticationType:Com.Applozic.Mobicomkit.Api.Account.User:ApplozicUser.AuthenticationType
 com.applozic.mobicomkit.api.account.user.ApplozicUser$Features:Com.Applozic.Mobicomkit.Api.Account.User:ApplozicUser.Features
+com.applozic.mobicomkit.api.account.user.ApplozicUser$RoleName:Com.Applozic.Mobicomkit.Api.Account.User:ApplozicUser.RoleName
+com.applozic.mobicomkit.api.account.user.ApplozicUser$RoleType:Com.Applozic.Mobicomkit.Api.Account.User:ApplozicUser.RoleType
 com.applozic.mobicomkit.api.conversation.Message$ContentType:Com.Applozic.Mobicomkit.Api.Conversation:Message.ContentType
 com.applozic.mobicomkit.api.conversation.Message$GroupMessageMetaData:Com.Applozic.Mobicomkit.Api.Conversation:Message.GroupMessageMetaData
 com.applozic.mobicomkit.api.conversation.Message$MessageType:Com.Applozic.Mobicomkit.Api.Conversation:Message.MessageType
 com.applozic.mobicomkit.api.conversation.Message$MetaDataType:Com.Applozic.Mobicomkit.Api.Conversation:Message.MetaDataType
-com.applozic.mobicomkit.api.conversation.Message$ReplyMessage:Com.Applozic.Mobicomkit.Api.Conversation:Message.ReplyMessage
+com.applozic.mobicomkit.api.conversation.Message$ReplyMessageEnum:Com.Applozic.Mobicomkit.Api.Conversation:Message.ReplyMessageEnum
 com.applozic.mobicomkit.api.conversation.Message$Source:Com.Applozic.Mobicomkit.Api.Conversation:Message.Source
 com.applozic.mobicomkit.api.conversation.Message$Status:Com.Applozic.Mobicomkit.Api.Conversation:Message.Status
 com.applozic.mobicomkit.broadcast.BroadcastService$INTENT_ACTIONS:Com.Applozic.Mobicomkit.Broadcast:BroadcastService.INTENT_ACTIONS
 com.applozic.mobicomkit.feed.ResultFeed$RestAPICodes:Com.Applozic.Mobicomkit.Feed:ResultFeed.RestAPICodes
-org.eclipse.paho.android.service.MqttAndroidClient$Ack:Org.Eclipse.Paho.Android.Service:MqttAndroidClient.Ack

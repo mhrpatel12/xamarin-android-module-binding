@@ -189,8 +189,8 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 		}
 
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/account/user/UserLogoutTask", ref java_class_handle);
 			}
@@ -233,6 +233,37 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lcom_applozic_mobicomkit_api_account_user_UserLogoutTask_TaskListener_Landroid_content_Context_, __args),
 						JniHandleOwnership.TransferLocalRef);
 				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lcom_applozic_mobicomkit_api_account_user_UserLogoutTask_TaskListener_Landroid_content_Context_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_ctor_Lcom_applozic_mobicomkit_listners_AlLogoutHandler_Landroid_content_Context_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='UserLogoutTask']/constructor[@name='UserLogoutTask' and count(parameter)=2 and parameter[1][@type='com.applozic.mobicomkit.listners.AlLogoutHandler'] and parameter[2][@type='android.content.Context']]"
+		[Register (".ctor", "(Lcom/applozic/mobicomkit/listners/AlLogoutHandler;Landroid/content/Context;)V", "")]
+		public unsafe UserLogoutTask (global::Com.Applozic.Mobicomkit.Listners.IAlLogoutHandler p0, global::Android.Content.Context p1)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				if (((object) this).GetType () != typeof (UserLogoutTask)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (((object) this).GetType (), "(Lcom/applozic/mobicomkit/listners/AlLogoutHandler;Landroid/content/Context;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lcom/applozic/mobicomkit/listners/AlLogoutHandler;Landroid/content/Context;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Lcom_applozic_mobicomkit_listners_AlLogoutHandler_Landroid_content_Context_ == IntPtr.Zero)
+					id_ctor_Lcom_applozic_mobicomkit_listners_AlLogoutHandler_Landroid_content_Context_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lcom/applozic/mobicomkit/listners/AlLogoutHandler;Landroid/content/Context;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lcom_applozic_mobicomkit_listners_AlLogoutHandler_Landroid_content_Context_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lcom_applozic_mobicomkit_listners_AlLogoutHandler_Landroid_content_Context_, __args);
 			} finally {
 			}
 		}

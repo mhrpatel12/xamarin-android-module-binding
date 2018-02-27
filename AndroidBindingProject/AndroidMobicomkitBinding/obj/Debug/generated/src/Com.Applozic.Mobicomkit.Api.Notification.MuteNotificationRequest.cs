@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicomkit.Api.Notification {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/api/notification/MuteNotificationRequest", DoNotGenerateAcw=true)]
 	public partial class MuteNotificationRequest : global::Com.Applozic.Mobicommons.Json.JsonMarker {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/notification/MuteNotificationRequest", ref java_class_handle);
 			}

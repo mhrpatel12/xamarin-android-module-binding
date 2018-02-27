@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation.Selfdestruct {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/api/conversation/selfdestruct/DisappearingMessageTask", DoNotGenerateAcw=true)]
 	public partial class DisappearingMessageTask : global::Java.Util.TimerTask {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/selfdestruct/DisappearingMessageTask", ref java_class_handle);
 			}

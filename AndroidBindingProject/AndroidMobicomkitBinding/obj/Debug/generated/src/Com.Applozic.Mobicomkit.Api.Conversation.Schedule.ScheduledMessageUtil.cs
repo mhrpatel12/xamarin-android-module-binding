@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation.Schedule {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/api/conversation/schedule/ScheduledMessageUtil", DoNotGenerateAcw=true)]
 	public partial class ScheduledMessageUtil : global::Java.Lang.Object {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/schedule/ScheduledMessageUtil", ref java_class_handle);
 			}

@@ -12,8 +12,8 @@ namespace Com.Applozic.Mobicommons.Commons.Core.Utils {
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicommons.commons.core.utils']/class[@name='Support']/field[@name='SUPPORT_INTENT_KEY']"
 		[Register ("SUPPORT_INTENT_KEY")]
 		public const string SupportIntentKey = (string) "SUPPORT_INTENT_KEY";
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/commons/core/utils/Support", ref java_class_handle);
 			}

@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicomkit.Channel.Service {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/channel/service/ApplozicAddMemberOfGroupType", DoNotGenerateAcw=true)]
 	public partial class ApplozicAddMemberOfGroupType : global::Java.Lang.Object {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/channel/service/ApplozicAddMemberOfGroupType", ref java_class_handle);
 			}

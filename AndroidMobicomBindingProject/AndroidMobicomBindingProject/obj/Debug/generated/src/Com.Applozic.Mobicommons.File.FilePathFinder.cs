@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicommons.File {
 	[global::Android.Runtime.Register ("com/applozic/mobicommons/file/FilePathFinder", DoNotGenerateAcw=true)]
 	public partial class FilePathFinder : global::Java.Lang.Object {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/file/FilePathFinder", ref java_class_handle);
 			}

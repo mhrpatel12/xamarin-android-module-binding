@@ -59,9 +59,9 @@ namespace Com.Applozic.Mobicomkit.Api.Notification {
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.notification']/class[@name='VideoCallNotificationHelper']/field[@name='NOTIFICATION_ACTIVITY_NAME']"
 		[Register ("NOTIFICATION_ACTIVITY_NAME")]
-		public const string NotificationActivityName = (string) "com.applozic.audiovideo.activity.CallActivity";
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		public const string NotificationActivityName = (string) "com.applozicInstance.audiovideo.activity.CallActivity";
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/notification/VideoCallNotificationHelper", ref java_class_handle);
 			}

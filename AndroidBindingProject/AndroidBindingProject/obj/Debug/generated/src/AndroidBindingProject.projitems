@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);ANDROID_1;ANDROID_2;ANDROID_3;ANDROID_4;ANDROID_5;ANDROID_6;ANDROID_7;ANDROID_8;ANDROID_9;ANDROID_10;ANDROID_11;ANDROID_12;ANDROID_13;ANDROID_14;ANDROID_15;ANDROID_16;ANDROID_17;ANDROID_18;ANDROID_19;ANDROID_20;ANDROID_21;ANDROID_22;ANDROID_23;ANDROID_24;ANDROID_25;ANDROID_26</DefineConstants>
+  </PropertyGroup>
+  <!-- Classes -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.ActivityLifecycleHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.AlCustomizationSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Alphanumbericcolor.AlphaNumberColorUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.ApplozicApplication.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.ApplozicSetting.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Async.ApplozicChannelDeleteTask.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Attachmentview.ApplozicAudioManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Attachmentview.ApplozicAudioRecordManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Attachmentview.ApplozicDocumentView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.BuildConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Activity.ChannelCreateActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Activity.ChannelNameActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Activity.ContactSelectionActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Activity.ConversationActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Activity.DividerItemDecoration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Activity.FullScreenImageActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Activity.IOnClickReplyInterface.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Activity.IRemoveInterfaceListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Activity.MobicomLocationActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Activity.RecyclerViewPositionHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Activity.SpinnerNavItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Adapter.ApplozicContextSpinnerAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Adapter.DetailedConversationAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Adapter.MobiComAttachmentGridViewAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Adapter.MobicomMultimediaPopupAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Adapter.TitleNavigationAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.AlLinearLayoutManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.ConversationListView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.ConversationUIService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Fragment.ApplozicAudioRecordAnimation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Fragment.AudioMessageFragment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Fragment.MultimediaOptionFragment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.Fragment.PictureUploadPopUpFragment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.IMessageCommunicator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.MobiComKitBroadcastReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.MobicomMessageTemplate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.MultimediaOptionsGridView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.TouchImageViewCustom.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Conversation.UIService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Instruction.ApplozicPermissions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Instruction.InstructionUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Notification.MTNotificationBroadcastReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.People.Fragment.ProfileFragment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.People.Fragment.UserProfileFragment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Schedule.ConversationScheduler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Schedule.ScheduledMessageAdapter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Schedule.ScheduledTimeHolder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Schedule.SelectDateFragment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Schedule.SelectTimeFragment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Uilistener.IContextMenuClickListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Uiwidgets.Uilistener.IMobicomkitUriListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Java.Interop.__TypeRegistrations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\__NamespaceMapping__.cs" />
+  </ItemGroup>
+  <!-- Enums -->
+  <ItemGroup />
+</Project>

@@ -205,8 +205,8 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 		}
 
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/account/user/UserLoginTask", ref java_class_handle);
 			}
@@ -250,6 +250,38 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lcom_applozic_mobicomkit_api_account_user_ApplozicUser_Lcom_applozic_mobicomkit_api_account_user_UserLoginTask_TaskListener_Landroid_content_Context_, __args),
 						JniHandleOwnership.TransferLocalRef);
 				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lcom_applozic_mobicomkit_api_account_user_ApplozicUser_Lcom_applozic_mobicomkit_api_account_user_UserLoginTask_TaskListener_Landroid_content_Context_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_ctor_Lcom_applozic_mobicomkit_api_account_user_ApplozicUser_Lcom_applozic_mobicomkit_listners_AlLoginHandler_Landroid_content_Context_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='UserLoginTask']/constructor[@name='UserLoginTask' and count(parameter)=3 and parameter[1][@type='com.applozic.mobicomkit.api.account.user.ApplozicUser'] and parameter[2][@type='com.applozic.mobicomkit.listners.AlLoginHandler'] and parameter[3][@type='android.content.Context']]"
+		[Register (".ctor", "(Lcom/applozic/mobicomkit/api/account/user/ApplozicUser;Lcom/applozic/mobicomkit/listners/AlLoginHandler;Landroid/content/Context;)V", "")]
+		public unsafe UserLoginTask (global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser p0, global::Com.Applozic.Mobicomkit.Listners.IAlLoginHandler p1, global::Android.Content.Context p2)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				__args [2] = new JValue (p2);
+				if (((object) this).GetType () != typeof (UserLoginTask)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (((object) this).GetType (), "(Lcom/applozic/mobicomkit/api/account/user/ApplozicUser;Lcom/applozic/mobicomkit/listners/AlLoginHandler;Landroid/content/Context;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Lcom/applozic/mobicomkit/api/account/user/ApplozicUser;Lcom/applozic/mobicomkit/listners/AlLoginHandler;Landroid/content/Context;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Lcom_applozic_mobicomkit_api_account_user_ApplozicUser_Lcom_applozic_mobicomkit_listners_AlLoginHandler_Landroid_content_Context_ == IntPtr.Zero)
+					id_ctor_Lcom_applozic_mobicomkit_api_account_user_ApplozicUser_Lcom_applozic_mobicomkit_listners_AlLoginHandler_Landroid_content_Context_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Lcom/applozic/mobicomkit/api/account/user/ApplozicUser;Lcom/applozic/mobicomkit/listners/AlLoginHandler;Landroid/content/Context;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Lcom_applozic_mobicomkit_api_account_user_ApplozicUser_Lcom_applozic_mobicomkit_listners_AlLoginHandler_Landroid_content_Context_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Lcom_applozic_mobicomkit_api_account_user_ApplozicUser_Lcom_applozic_mobicomkit_listners_AlLoginHandler_Landroid_content_Context_, __args);
 			} finally {
 			}
 		}

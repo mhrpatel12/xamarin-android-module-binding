@@ -227,6 +227,40 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 			}
 		}
 
+		static Delegate cb_getMessageMetadataUpdateUrl;
+#pragma warning disable 0169
+		static Delegate GetGetMessageMetadataUpdateUrlHandler ()
+		{
+			if (cb_getMessageMetadataUpdateUrl == null)
+				cb_getMessageMetadataUpdateUrl = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetMessageMetadataUpdateUrl);
+			return cb_getMessageMetadataUpdateUrl;
+		}
+
+		static IntPtr n_GetMessageMetadataUpdateUrl (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.NewString (__this.MessageMetadataUpdateUrl);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getMessageMetadataUpdateUrl;
+		public virtual unsafe string MessageMetadataUpdateUrl {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MessageClientService']/method[@name='getMessageMetadataUpdateUrl' and count(parameter)=0]"
+			[Register ("getMessageMetadataUpdateUrl", "()Ljava/lang/String;", "GetGetMessageMetadataUpdateUrlHandler")]
+			get {
+				if (id_getMessageMetadataUpdateUrl == IntPtr.Zero)
+					id_getMessageMetadataUpdateUrl = JNIEnv.GetMethodID (class_ref, "getMessageMetadataUpdateUrl", "()Ljava/lang/String;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getMessageMetadataUpdateUrl), JniHandleOwnership.TransferLocalRef);
+					else
+						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMessageMetadataUpdateUrl", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+		}
+
 		static Delegate cb_getMessageThreadDeleteUrl;
 #pragma warning disable 0169
 		static Delegate GetGetMessageThreadDeleteUrlHandler ()
@@ -903,41 +937,42 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 			}
 		}
 
-		static Delegate cb_getMessageFeed_Ljava_lang_String_;
+		static Delegate cb_getMessageFeed_Ljava_lang_String_Z;
 #pragma warning disable 0169
-		static Delegate GetGetMessageFeed_Ljava_lang_String_Handler ()
+		static Delegate GetGetMessageFeed_Ljava_lang_String_ZHandler ()
 		{
-			if (cb_getMessageFeed_Ljava_lang_String_ == null)
-				cb_getMessageFeed_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr>) n_GetMessageFeed_Ljava_lang_String_);
-			return cb_getMessageFeed_Ljava_lang_String_;
+			if (cb_getMessageFeed_Ljava_lang_String_Z == null)
+				cb_getMessageFeed_Ljava_lang_String_Z = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, bool, IntPtr>) n_GetMessageFeed_Ljava_lang_String_Z);
+			return cb_getMessageFeed_Ljava_lang_String_Z;
 		}
 
-		static IntPtr n_GetMessageFeed_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		static IntPtr n_GetMessageFeed_Ljava_lang_String_Z (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, bool p1)
 		{
 			global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
-			IntPtr __ret = JNIEnv.ToLocalJniHandle (__this.GetMessageFeed (p0));
+			IntPtr __ret = JNIEnv.ToLocalJniHandle (__this.GetMessageFeed (p0, p1));
 			return __ret;
 		}
 #pragma warning restore 0169
 
-		static IntPtr id_getMessageFeed_Ljava_lang_String_;
-		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MessageClientService']/method[@name='getMessageFeed' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
-		[Register ("getMessageFeed", "(Ljava/lang/String;)Lcom/applozic/mobicomkit/sync/SyncMessageFeed;", "GetGetMessageFeed_Ljava_lang_String_Handler")]
-		public virtual unsafe global::Com.Applozic.Mobicomkit.Sync.SyncMessageFeed GetMessageFeed (string p0)
+		static IntPtr id_getMessageFeed_Ljava_lang_String_Z;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MessageClientService']/method[@name='getMessageFeed' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='boolean']]"
+		[Register ("getMessageFeed", "(Ljava/lang/String;Z)Lcom/applozic/mobicomkit/sync/SyncMessageFeed;", "GetGetMessageFeed_Ljava_lang_String_ZHandler")]
+		public virtual unsafe global::Com.Applozic.Mobicomkit.Sync.SyncMessageFeed GetMessageFeed (string p0, bool p1)
 		{
-			if (id_getMessageFeed_Ljava_lang_String_ == IntPtr.Zero)
-				id_getMessageFeed_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "getMessageFeed", "(Ljava/lang/String;)Lcom/applozic/mobicomkit/sync/SyncMessageFeed;");
+			if (id_getMessageFeed_Ljava_lang_String_Z == IntPtr.Zero)
+				id_getMessageFeed_Ljava_lang_String_Z = JNIEnv.GetMethodID (class_ref, "getMessageFeed", "(Ljava/lang/String;Z)Lcom/applozic/mobicomkit/sync/SyncMessageFeed;");
 			IntPtr native_p0 = JNIEnv.NewString (p0);
 			try {
-				JValue* __args = stackalloc JValue [1];
+				JValue* __args = stackalloc JValue [2];
 				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (p1);
 
 				global::Com.Applozic.Mobicomkit.Sync.SyncMessageFeed __ret;
 				if (((object) this).GetType () == ThresholdType)
-					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Sync.SyncMessageFeed> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getMessageFeed_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
+					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Sync.SyncMessageFeed> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getMessageFeed_Ljava_lang_String_Z, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Sync.SyncMessageFeed> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMessageFeed", "(Ljava/lang/String;)Lcom/applozic/mobicomkit/sync/SyncMessageFeed;"), __args), JniHandleOwnership.TransferLocalRef);
+					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Sync.SyncMessageFeed> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMessageFeed", "(Ljava/lang/String;Z)Lcom/applozic/mobicomkit/sync/SyncMessageFeed;"), __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
@@ -1160,38 +1195,40 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 			}
 		}
 
-		static Delegate cb_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_;
+		static Delegate cb_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_;
 #pragma warning disable 0169
-		static Delegate GetProcessMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Handler ()
+		static Delegate GetProcessMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Handler ()
 		{
-			if (cb_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_ == null)
-				cb_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_ProcessMessage_Lcom_applozic_mobicomkit_api_conversation_Message_);
-			return cb_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_;
+			if (cb_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_ == null)
+				cb_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr>) n_ProcessMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_);
+			return cb_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_;
 		}
 
-		static void n_ProcessMessage_Lcom_applozic_mobicomkit_api_conversation_Message_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		static void n_ProcessMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1)
 		{
 			global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0 = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message> (native_p0, JniHandleOwnership.DoNotTransfer);
-			__this.ProcessMessage (p0);
+			global::Android.OS.Handler p1 = global::Java.Lang.Object.GetObject<global::Android.OS.Handler> (native_p1, JniHandleOwnership.DoNotTransfer);
+			__this.ProcessMessage (p0, p1);
 		}
 #pragma warning restore 0169
 
-		static IntPtr id_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_;
-		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MessageClientService']/method[@name='processMessage' and count(parameter)=1 and parameter[1][@type='com.applozic.mobicomkit.api.conversation.Message']]"
-		[Register ("processMessage", "(Lcom/applozic/mobicomkit/api/conversation/Message;)V", "GetProcessMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Handler")]
-		public virtual unsafe void ProcessMessage (global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0)
+		static IntPtr id_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MessageClientService']/method[@name='processMessage' and count(parameter)=2 and parameter[1][@type='com.applozic.mobicomkit.api.conversation.Message'] and parameter[2][@type='android.os.Handler']]"
+		[Register ("processMessage", "(Lcom/applozic/mobicomkit/api/conversation/Message;Landroid/os/Handler;)V", "GetProcessMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Handler")]
+		public virtual unsafe void ProcessMessage (global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0, global::Android.OS.Handler p1)
 		{
-			if (id_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_ == IntPtr.Zero)
-				id_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_ = JNIEnv.GetMethodID (class_ref, "processMessage", "(Lcom/applozic/mobicomkit/api/conversation/Message;)V");
+			if (id_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_ == IntPtr.Zero)
+				id_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_ = JNIEnv.GetMethodID (class_ref, "processMessage", "(Lcom/applozic/mobicomkit/api/conversation/Message;Landroid/os/Handler;)V");
 			try {
-				JValue* __args = stackalloc JValue [1];
+				JValue* __args = stackalloc JValue [2];
 				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
 
 				if (((object) this).GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_processMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "processMessage", "(Lcom/applozic/mobicomkit/api/conversation/Message;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "processMessage", "(Lcom/applozic/mobicomkit/api/conversation/Message;Landroid/os/Handler;)V"), __args);
 			} finally {
 			}
 		}
@@ -1270,6 +1307,45 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 			}
 		}
 
+		static Delegate cb_processUserStatus_Ljava_lang_String_Z;
+#pragma warning disable 0169
+		static Delegate GetProcessUserStatus_Ljava_lang_String_ZHandler ()
+		{
+			if (cb_processUserStatus_Ljava_lang_String_Z == null)
+				cb_processUserStatus_Ljava_lang_String_Z = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, bool>) n_ProcessUserStatus_Ljava_lang_String_Z);
+			return cb_processUserStatus_Ljava_lang_String_Z;
+		}
+
+		static void n_ProcessUserStatus_Ljava_lang_String_Z (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, bool p1)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.ProcessUserStatus (p0, p1);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_processUserStatus_Ljava_lang_String_Z;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MessageClientService']/method[@name='processUserStatus' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='boolean']]"
+		[Register ("processUserStatus", "(Ljava/lang/String;Z)V", "GetProcessUserStatus_Ljava_lang_String_ZHandler")]
+		public virtual unsafe void ProcessUserStatus (string p0, bool p1)
+		{
+			if (id_processUserStatus_Ljava_lang_String_Z == IntPtr.Zero)
+				id_processUserStatus_Ljava_lang_String_Z = JNIEnv.GetMethodID (class_ref, "processUserStatus", "(Ljava/lang/String;Z)V");
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (p1);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_processUserStatus_Ljava_lang_String_Z, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "processUserStatus", "(Ljava/lang/String;Z)V"), __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+			}
+		}
+
 		static Delegate cb_sendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_;
 #pragma warning disable 0169
 		static Delegate GetSendMessage_Lcom_applozic_mobicomkit_api_conversation_Message_Handler ()
@@ -1309,76 +1385,80 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 			}
 		}
 
-		static Delegate cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_;
+		static Delegate cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_;
 #pragma warning disable 0169
-		static Delegate GetSendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Handler ()
+		static Delegate GetSendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Handler ()
 		{
-			if (cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_ == null)
-				cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_);
-			return cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_;
+			if (cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_ == null)
+				cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr>) n_SendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_);
+			return cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_;
 		}
 
-		static void n_SendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		static void n_SendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1)
 		{
 			global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0 = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message> (native_p0, JniHandleOwnership.DoNotTransfer);
-			__this.SendMessageToServer (p0);
-		}
-#pragma warning restore 0169
-
-		static IntPtr id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_;
-		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MessageClientService']/method[@name='sendMessageToServer' and count(parameter)=1 and parameter[1][@type='com.applozic.mobicomkit.api.conversation.Message']]"
-		[Register ("sendMessageToServer", "(Lcom/applozic/mobicomkit/api/conversation/Message;)V", "GetSendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Handler")]
-		public virtual unsafe void SendMessageToServer (global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0)
-		{
-			if (id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_ == IntPtr.Zero)
-				id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_ = JNIEnv.GetMethodID (class_ref, "sendMessageToServer", "(Lcom/applozic/mobicomkit/api/conversation/Message;)V");
-			try {
-				JValue* __args = stackalloc JValue [1];
-				__args [0] = new JValue (p0);
-
-				if (((object) this).GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_, __args);
-				else
-					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "sendMessageToServer", "(Lcom/applozic/mobicomkit/api/conversation/Message;)V"), __args);
-			} finally {
-			}
-		}
-
-		static Delegate cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Ljava_lang_Class_;
-#pragma warning disable 0169
-		static Delegate GetSendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Ljava_lang_Class_Handler ()
-		{
-			if (cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Ljava_lang_Class_ == null)
-				cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Ljava_lang_Class_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr>) n_SendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Ljava_lang_Class_);
-			return cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Ljava_lang_Class_;
-		}
-
-		static void n_SendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Ljava_lang_Class_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1)
-		{
-			global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
-			global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0 = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message> (native_p0, JniHandleOwnership.DoNotTransfer);
-			global::Java.Lang.Class p1 = global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (native_p1, JniHandleOwnership.DoNotTransfer);
+			global::Android.OS.Handler p1 = global::Java.Lang.Object.GetObject<global::Android.OS.Handler> (native_p1, JniHandleOwnership.DoNotTransfer);
 			__this.SendMessageToServer (p0, p1);
 		}
 #pragma warning restore 0169
 
-		static IntPtr id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Ljava_lang_Class_;
-		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MessageClientService']/method[@name='sendMessageToServer' and count(parameter)=2 and parameter[1][@type='com.applozic.mobicomkit.api.conversation.Message'] and parameter[2][@type='java.lang.Class']]"
-		[Register ("sendMessageToServer", "(Lcom/applozic/mobicomkit/api/conversation/Message;Ljava/lang/Class;)V", "GetSendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Ljava_lang_Class_Handler")]
-		public virtual unsafe void SendMessageToServer (global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0, global::Java.Lang.Class p1)
+		static IntPtr id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MessageClientService']/method[@name='sendMessageToServer' and count(parameter)=2 and parameter[1][@type='com.applozic.mobicomkit.api.conversation.Message'] and parameter[2][@type='android.os.Handler']]"
+		[Register ("sendMessageToServer", "(Lcom/applozic/mobicomkit/api/conversation/Message;Landroid/os/Handler;)V", "GetSendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Handler")]
+		public virtual unsafe void SendMessageToServer (global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0, global::Android.OS.Handler p1)
 		{
-			if (id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Ljava_lang_Class_ == IntPtr.Zero)
-				id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Ljava_lang_Class_ = JNIEnv.GetMethodID (class_ref, "sendMessageToServer", "(Lcom/applozic/mobicomkit/api/conversation/Message;Ljava/lang/Class;)V");
+			if (id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_ == IntPtr.Zero)
+				id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_ = JNIEnv.GetMethodID (class_ref, "sendMessageToServer", "(Lcom/applozic/mobicomkit/api/conversation/Message;Landroid/os/Handler;)V");
 			try {
 				JValue* __args = stackalloc JValue [2];
 				__args [0] = new JValue (p0);
 				__args [1] = new JValue (p1);
 
 				if (((object) this).GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Ljava_lang_Class_, __args);
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_, __args);
 				else
-					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "sendMessageToServer", "(Lcom/applozic/mobicomkit/api/conversation/Message;Ljava/lang/Class;)V"), __args);
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "sendMessageToServer", "(Lcom/applozic/mobicomkit/api/conversation/Message;Landroid/os/Handler;)V"), __args);
+			} finally {
+			}
+		}
+
+		static Delegate cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Ljava_lang_Class_;
+#pragma warning disable 0169
+		static Delegate GetSendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Ljava_lang_Class_Handler ()
+		{
+			if (cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Ljava_lang_Class_ == null)
+				cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Ljava_lang_Class_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_SendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Ljava_lang_Class_);
+			return cb_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Ljava_lang_Class_;
+		}
+
+		static void n_SendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Ljava_lang_Class_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1, IntPtr native_p2)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0 = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message> (native_p0, JniHandleOwnership.DoNotTransfer);
+			global::Android.OS.Handler p1 = global::Java.Lang.Object.GetObject<global::Android.OS.Handler> (native_p1, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Class p2 = global::Java.Lang.Object.GetObject<global::Java.Lang.Class> (native_p2, JniHandleOwnership.DoNotTransfer);
+			__this.SendMessageToServer (p0, p1, p2);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Ljava_lang_Class_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MessageClientService']/method[@name='sendMessageToServer' and count(parameter)=3 and parameter[1][@type='com.applozic.mobicomkit.api.conversation.Message'] and parameter[2][@type='android.os.Handler'] and parameter[3][@type='java.lang.Class']]"
+		[Register ("sendMessageToServer", "(Lcom/applozic/mobicomkit/api/conversation/Message;Landroid/os/Handler;Ljava/lang/Class;)V", "GetSendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Ljava_lang_Class_Handler")]
+		public virtual unsafe void SendMessageToServer (global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0, global::Android.OS.Handler p1, global::Java.Lang.Class p2)
+		{
+			if (id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Ljava_lang_Class_ == IntPtr.Zero)
+				id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Ljava_lang_Class_ = JNIEnv.GetMethodID (class_ref, "sendMessageToServer", "(Lcom/applozic/mobicomkit/api/conversation/Message;Landroid/os/Handler;Ljava/lang/Class;)V");
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				__args [2] = new JValue (p2);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_sendMessageToServer_Lcom_applozic_mobicomkit_api_conversation_Message_Landroid_os_Handler_Ljava_lang_Class_, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "sendMessageToServer", "(Lcom/applozic/mobicomkit/api/conversation/Message;Landroid/os/Handler;Ljava/lang/Class;)V"), __args);
 			} finally {
 			}
 		}
@@ -1654,6 +1734,51 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 				JNIEnv.DeleteLocalRef (native_p0);
 				JNIEnv.DeleteLocalRef (native_p1);
 				JNIEnv.DeleteLocalRef (native_p2);
+			}
+		}
+
+		static Delegate cb_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_;
+#pragma warning disable 0169
+		static Delegate GetUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_Handler ()
+		{
+			if (cb_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_ == null)
+				cb_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_ = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_UpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_);
+			return cb_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_;
+		}
+
+		static IntPtr n_UpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
+			var p1 = global::Android.Runtime.JavaDictionary<string, string>.FromJniHandle (native_p1, JniHandleOwnership.DoNotTransfer);
+			IntPtr __ret = JNIEnv.ToLocalJniHandle (__this.UpdateMessageMetadata (p0, p1));
+			return __ret;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MessageClientService']/method[@name='updateMessageMetadata' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.util.Map&lt;java.lang.String, java.lang.String&gt;']]"
+		[Register ("updateMessageMetadata", "(Ljava/lang/String;Ljava/util/Map;)Lcom/applozic/mobicomkit/feed/ApiResponse;", "GetUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_Handler")]
+		public virtual unsafe global::Com.Applozic.Mobicomkit.Feed.ApiResponse UpdateMessageMetadata (string p0, global::System.Collections.Generic.IDictionary<string, string> p1)
+		{
+			if (id_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_ == IntPtr.Zero)
+				id_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_ = JNIEnv.GetMethodID (class_ref, "updateMessageMetadata", "(Ljava/lang/String;Ljava/util/Map;)Lcom/applozic/mobicomkit/feed/ApiResponse;");
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			IntPtr native_p1 = global::Android.Runtime.JavaDictionary<string, string>.ToLocalJniHandle (p1);
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (native_p1);
+
+				global::Com.Applozic.Mobicomkit.Feed.ApiResponse __ret;
+				if (((object) this).GetType () == ThresholdType)
+					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Feed.ApiResponse> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_, __args), JniHandleOwnership.TransferLocalRef);
+				else
+					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Feed.ApiResponse> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateMessageMetadata", "(Ljava/lang/String;Ljava/util/Map;)Lcom/applozic/mobicomkit/feed/ApiResponse;"), __args), JniHandleOwnership.TransferLocalRef);
+				return __ret;
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+				JNIEnv.DeleteLocalRef (native_p1);
 			}
 		}
 

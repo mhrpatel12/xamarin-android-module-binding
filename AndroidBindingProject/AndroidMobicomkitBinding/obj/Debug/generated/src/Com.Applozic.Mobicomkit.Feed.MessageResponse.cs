@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicomkit.Feed {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/feed/MessageResponse", DoNotGenerateAcw=true)]
 	public partial class MessageResponse : global::Com.Applozic.Mobicommons.Json.JsonMarker {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/feed/MessageResponse", ref java_class_handle);
 			}

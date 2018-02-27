@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicommons.Commons.Image {
 	[global::Android.Runtime.Register ("com/applozic/mobicommons/commons/image/BitmapDecodingException", DoNotGenerateAcw=true)]
 	public partial class BitmapDecodingException : global::Java.Lang.Throwable {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/commons/image/BitmapDecodingException", ref java_class_handle);
 			}

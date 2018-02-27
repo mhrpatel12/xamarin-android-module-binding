@@ -12,8 +12,8 @@ namespace Com.Applozic.Mobicommons.Commons.Image {
 		[global::Android.Runtime.Register ("com/applozic/mobicommons/commons/image/ImageCache$RetainFragment", DoNotGenerateAcw=true)]
 		public partial class RetainFragment : global::Android.Support.V4.App.Fragment {
 
-			internal static IntPtr java_class_handle;
-			internal static IntPtr class_ref {
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
 				get {
 					return JNIEnv.FindClass ("com/applozic/mobicommons/commons/image/ImageCache$RetainFragment", ref java_class_handle);
 				}
@@ -127,8 +127,8 @@ namespace Com.Applozic.Mobicommons.Commons.Image {
 
 		}
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/commons/image/ImageCache", ref java_class_handle);
 			}

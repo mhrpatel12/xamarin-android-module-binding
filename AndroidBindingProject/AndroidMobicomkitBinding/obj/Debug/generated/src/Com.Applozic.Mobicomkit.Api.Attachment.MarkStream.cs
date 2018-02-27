@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicomkit.Api.Attachment {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/api/attachment/MarkStream", DoNotGenerateAcw=true)]
 	public partial class MarkStream : global::Java.IO.InputStream {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/attachment/MarkStream", ref java_class_handle);
 			}

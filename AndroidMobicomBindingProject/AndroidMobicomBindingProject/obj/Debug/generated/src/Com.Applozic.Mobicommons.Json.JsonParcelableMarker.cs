@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicommons.Json {
 	[global::Android.Runtime.Register ("com/applozic/mobicommons/json/JsonParcelableMarker", DoNotGenerateAcw=true)]
 	public abstract partial class JsonParcelableMarker : global::Java.Lang.Object, global::Android.OS.IParcelable {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/json/JsonParcelableMarker", ref java_class_handle);
 			}

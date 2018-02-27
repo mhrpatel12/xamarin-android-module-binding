@@ -12,8 +12,8 @@ namespace Com.Applozic.Mobicomkit.Api.Notification {
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.notification']/class[@name='WearableNotificationWithVoice']/field[@name='EXTRA_VOICE_REPLY']"
 		[Register ("EXTRA_VOICE_REPLY")]
 		public const string ExtraVoiceReply = (string) "extra_voice_reply";
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/notification/WearableNotificationWithVoice", ref java_class_handle);
 			}

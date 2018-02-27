@@ -13,6 +13,10 @@ namespace Com.Applozic.Mobicomkit.Api.Attachment {
 		[Register ("AL_UPLOAD_FILE_URL")]
 		public const string AlUploadFileUrl = (string) "/rest/ws/upload/file";
 
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.attachment']/class[@name='FileClientService']/field[@name='CUSTOM_STORAGE_SERVICE_END_POINT']"
+		[Register ("CUSTOM_STORAGE_SERVICE_END_POINT")]
+		public const string CustomStorageServiceEndPoint = (string) "/rest/ws/upload/image";
+
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.attachment']/class[@name='FileClientService']/field[@name='IMAGE_DIR']"
 		[Register ("IMAGE_DIR")]
 		public const string ImageDir = (string) "image";
@@ -36,6 +40,10 @@ namespace Com.Applozic.Mobicomkit.Api.Attachment {
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.attachment']/class[@name='FileClientService']/field[@name='MOBI_COM_VIDEOS_FOLDER']"
 		[Register ("MOBI_COM_VIDEOS_FOLDER")]
 		public const string MobiComVideosFolder = (string) "/video";
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.attachment']/class[@name='FileClientService']/field[@name='THUMBNAIL_URL']"
+		[Register ("THUMBNAIL_URL")]
+		public const string ThumbnailUrl = (string) "/files/";
 		internal static new IntPtr java_class_handle;
 		internal static new IntPtr class_ref {
 			get {
@@ -317,6 +325,47 @@ namespace Com.Applozic.Mobicomkit.Api.Attachment {
 			}
 		}
 
+		static Delegate cb_getThumbnailUrl_Ljava_lang_String_;
+#pragma warning disable 0169
+		static Delegate GetGetThumbnailUrl_Ljava_lang_String_Handler ()
+		{
+			if (cb_getThumbnailUrl_Ljava_lang_String_ == null)
+				cb_getThumbnailUrl_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr>) n_GetThumbnailUrl_Ljava_lang_String_);
+			return cb_getThumbnailUrl_Ljava_lang_String_;
+		}
+
+		static IntPtr n_GetThumbnailUrl_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Attachment.FileClientService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Attachment.FileClientService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
+			IntPtr __ret = JNIEnv.NewString (__this.GetThumbnailUrl (p0));
+			return __ret;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getThumbnailUrl_Ljava_lang_String_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.attachment']/class[@name='FileClientService']/method[@name='getThumbnailUrl' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		[Register ("getThumbnailUrl", "(Ljava/lang/String;)Ljava/lang/String;", "GetGetThumbnailUrl_Ljava_lang_String_Handler")]
+		public virtual unsafe string GetThumbnailUrl (string p0)
+		{
+			if (id_getThumbnailUrl_Ljava_lang_String_ == IntPtr.Zero)
+				id_getThumbnailUrl_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "getThumbnailUrl", "(Ljava/lang/String;)Ljava/lang/String;");
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (native_p0);
+
+				string __ret;
+				if (((object) this).GetType () == ThresholdType)
+					__ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getThumbnailUrl_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
+				else
+					__ret = JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getThumbnailUrl", "(Ljava/lang/String;)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
+				return __ret;
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+			}
+		}
+
 		static Delegate cb_loadContactsvCard_Lcom_applozic_mobicomkit_api_conversation_Message_;
 #pragma warning disable 0169
 		static Delegate GetLoadContactsvCard_Lcom_applozic_mobicomkit_api_conversation_Message_Handler ()
@@ -513,41 +562,43 @@ namespace Com.Applozic.Mobicomkit.Api.Attachment {
 			}
 		}
 
-		static Delegate cb_uploadBlobImage_Ljava_lang_String_;
+		static Delegate cb_uploadBlobImage_Ljava_lang_String_Landroid_os_Handler_;
 #pragma warning disable 0169
-		static Delegate GetUploadBlobImage_Ljava_lang_String_Handler ()
+		static Delegate GetUploadBlobImage_Ljava_lang_String_Landroid_os_Handler_Handler ()
 		{
-			if (cb_uploadBlobImage_Ljava_lang_String_ == null)
-				cb_uploadBlobImage_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr>) n_UploadBlobImage_Ljava_lang_String_);
-			return cb_uploadBlobImage_Ljava_lang_String_;
+			if (cb_uploadBlobImage_Ljava_lang_String_Landroid_os_Handler_ == null)
+				cb_uploadBlobImage_Ljava_lang_String_Landroid_os_Handler_ = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_UploadBlobImage_Ljava_lang_String_Landroid_os_Handler_);
+			return cb_uploadBlobImage_Ljava_lang_String_Landroid_os_Handler_;
 		}
 
-		static IntPtr n_UploadBlobImage_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		static IntPtr n_UploadBlobImage_Ljava_lang_String_Landroid_os_Handler_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1)
 		{
 			global::Com.Applozic.Mobicomkit.Api.Attachment.FileClientService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Attachment.FileClientService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
-			IntPtr __ret = JNIEnv.NewString (__this.UploadBlobImage (p0));
+			global::Android.OS.Handler p1 = global::Java.Lang.Object.GetObject<global::Android.OS.Handler> (native_p1, JniHandleOwnership.DoNotTransfer);
+			IntPtr __ret = JNIEnv.NewString (__this.UploadBlobImage (p0, p1));
 			return __ret;
 		}
 #pragma warning restore 0169
 
-		static IntPtr id_uploadBlobImage_Ljava_lang_String_;
-		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.attachment']/class[@name='FileClientService']/method[@name='uploadBlobImage' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
-		[Register ("uploadBlobImage", "(Ljava/lang/String;)Ljava/lang/String;", "GetUploadBlobImage_Ljava_lang_String_Handler")]
-		public virtual unsafe string UploadBlobImage (string p0)
+		static IntPtr id_uploadBlobImage_Ljava_lang_String_Landroid_os_Handler_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.attachment']/class[@name='FileClientService']/method[@name='uploadBlobImage' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='android.os.Handler']]"
+		[Register ("uploadBlobImage", "(Ljava/lang/String;Landroid/os/Handler;)Ljava/lang/String;", "GetUploadBlobImage_Ljava_lang_String_Landroid_os_Handler_Handler")]
+		public virtual unsafe string UploadBlobImage (string p0, global::Android.OS.Handler p1)
 		{
-			if (id_uploadBlobImage_Ljava_lang_String_ == IntPtr.Zero)
-				id_uploadBlobImage_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "uploadBlobImage", "(Ljava/lang/String;)Ljava/lang/String;");
+			if (id_uploadBlobImage_Ljava_lang_String_Landroid_os_Handler_ == IntPtr.Zero)
+				id_uploadBlobImage_Ljava_lang_String_Landroid_os_Handler_ = JNIEnv.GetMethodID (class_ref, "uploadBlobImage", "(Ljava/lang/String;Landroid/os/Handler;)Ljava/lang/String;");
 			IntPtr native_p0 = JNIEnv.NewString (p0);
 			try {
-				JValue* __args = stackalloc JValue [1];
+				JValue* __args = stackalloc JValue [2];
 				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (p1);
 
 				string __ret;
 				if (((object) this).GetType () == ThresholdType)
-					__ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_uploadBlobImage_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
+					__ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_uploadBlobImage_Ljava_lang_String_Landroid_os_Handler_, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					__ret = JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "uploadBlobImage", "(Ljava/lang/String;)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
+					__ret = JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "uploadBlobImage", "(Ljava/lang/String;Landroid/os/Handler;)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);

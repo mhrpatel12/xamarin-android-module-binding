@@ -28,8 +28,8 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 				}
 			}
 		}
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/SyncCallService", ref java_class_handle);
 			}
@@ -397,6 +397,45 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 			}
 		}
 
+		static Delegate cb_syncMessageMetadataUpdate_Ljava_lang_String_Z;
+#pragma warning disable 0169
+		static Delegate GetSyncMessageMetadataUpdate_Ljava_lang_String_ZHandler ()
+		{
+			if (cb_syncMessageMetadataUpdate_Ljava_lang_String_Z == null)
+				cb_syncMessageMetadataUpdate_Ljava_lang_String_Z = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, bool>) n_SyncMessageMetadataUpdate_Ljava_lang_String_Z);
+			return cb_syncMessageMetadataUpdate_Ljava_lang_String_Z;
+		}
+
+		static void n_SyncMessageMetadataUpdate_Ljava_lang_String_Z (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, bool p1)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Conversation.SyncCallService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.SyncCallService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.SyncMessageMetadataUpdate (p0, p1);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_syncMessageMetadataUpdate_Ljava_lang_String_Z;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='SyncCallService']/method[@name='syncMessageMetadataUpdate' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='boolean']]"
+		[Register ("syncMessageMetadataUpdate", "(Ljava/lang/String;Z)V", "GetSyncMessageMetadataUpdate_Ljava_lang_String_ZHandler")]
+		public virtual unsafe void SyncMessageMetadataUpdate (string p0, bool p1)
+		{
+			if (id_syncMessageMetadataUpdate_Ljava_lang_String_Z == IntPtr.Zero)
+				id_syncMessageMetadataUpdate_Ljava_lang_String_Z = JNIEnv.GetMethodID (class_ref, "syncMessageMetadataUpdate", "(Ljava/lang/String;Z)V");
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (p1);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_syncMessageMetadataUpdate_Ljava_lang_String_Z, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "syncMessageMetadataUpdate", "(Ljava/lang/String;Z)V"), __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+			}
+		}
+
 		static Delegate cb_syncMessages_Ljava_lang_String_;
 #pragma warning disable 0169
 		static Delegate GetSyncMessages_Ljava_lang_String_Handler ()
@@ -430,6 +469,83 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_syncMessages_Ljava_lang_String_, __args);
 				else
 					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "syncMessages", "(Ljava/lang/String;)V"), __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+			}
+		}
+
+		static Delegate cb_syncMutedUserList_ZLjava_lang_String_;
+#pragma warning disable 0169
+		static Delegate GetSyncMutedUserList_ZLjava_lang_String_Handler ()
+		{
+			if (cb_syncMutedUserList_ZLjava_lang_String_ == null)
+				cb_syncMutedUserList_ZLjava_lang_String_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, bool, IntPtr>) n_SyncMutedUserList_ZLjava_lang_String_);
+			return cb_syncMutedUserList_ZLjava_lang_String_;
+		}
+
+		static void n_SyncMutedUserList_ZLjava_lang_String_ (IntPtr jnienv, IntPtr native__this, bool p0, IntPtr native_p1)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Conversation.SyncCallService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.SyncCallService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string p1 = JNIEnv.GetString (native_p1, JniHandleOwnership.DoNotTransfer);
+			__this.SyncMutedUserList (p0, p1);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_syncMutedUserList_ZLjava_lang_String_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='SyncCallService']/method[@name='syncMutedUserList' and count(parameter)=2 and parameter[1][@type='boolean'] and parameter[2][@type='java.lang.String']]"
+		[Register ("syncMutedUserList", "(ZLjava/lang/String;)V", "GetSyncMutedUserList_ZLjava_lang_String_Handler")]
+		public virtual unsafe void SyncMutedUserList (bool p0, string p1)
+		{
+			if (id_syncMutedUserList_ZLjava_lang_String_ == IntPtr.Zero)
+				id_syncMutedUserList_ZLjava_lang_String_ = JNIEnv.GetMethodID (class_ref, "syncMutedUserList", "(ZLjava/lang/String;)V");
+			IntPtr native_p1 = JNIEnv.NewString (p1);
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (native_p1);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_syncMutedUserList_ZLjava_lang_String_, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "syncMutedUserList", "(ZLjava/lang/String;)V"), __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p1);
+			}
+		}
+
+		static Delegate cb_syncUserDetail_Ljava_lang_String_;
+#pragma warning disable 0169
+		static Delegate GetSyncUserDetail_Ljava_lang_String_Handler ()
+		{
+			if (cb_syncUserDetail_Ljava_lang_String_ == null)
+				cb_syncUserDetail_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SyncUserDetail_Ljava_lang_String_);
+			return cb_syncUserDetail_Ljava_lang_String_;
+		}
+
+		static void n_SyncUserDetail_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Conversation.SyncCallService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.SyncCallService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.SyncUserDetail (p0);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_syncUserDetail_Ljava_lang_String_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='SyncCallService']/method[@name='syncUserDetail' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+		[Register ("syncUserDetail", "(Ljava/lang/String;)V", "GetSyncUserDetail_Ljava_lang_String_Handler")]
+		public virtual unsafe void SyncUserDetail (string p0)
+		{
+			if (id_syncUserDetail_Ljava_lang_String_ == IntPtr.Zero)
+				id_syncUserDetail_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "syncUserDetail", "(Ljava/lang/String;)V");
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (native_p0);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_syncUserDetail_Ljava_lang_String_, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "syncUserDetail", "(Ljava/lang/String;)V"), __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 			}

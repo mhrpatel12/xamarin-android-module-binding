@@ -90,8 +90,8 @@ namespace Com.Applozic.Mobicomkit.Api.Account.Register {
 					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.Register.RegistrationResponse.PricingType> (__ret, JniHandleOwnership.TransferLocalRef);
 				}
 			}
-			internal static IntPtr java_class_handle;
-			internal static IntPtr class_ref {
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
 				get {
 					return JNIEnv.FindClass ("com/applozic/mobicomkit/api/account/register/RegistrationResponse$PricingType", ref java_class_handle);
 				}
@@ -154,8 +154,8 @@ namespace Com.Applozic.Mobicomkit.Api.Account.Register {
 
 		}
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/account/register/RegistrationResponse", ref java_class_handle);
 			}

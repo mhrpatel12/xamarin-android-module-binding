@@ -103,11 +103,11 @@ namespace Com.Applozic.Mobicomkit.Database {
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='CREATE_SMS_TABLE']"
 		[Register ("CREATE_SMS_TABLE")]
-		public const string CreateSmsTable = (string) "create table sms ( id integer primary key autoincrement, keyString var(100), toNumbers varchar(1000), contactNumbers varchar(2000), message text not null, type integer, read integer default 0, delivered integer default 0, storeOnDevice integer default 1, sentToServer integer default 1, createdAt integer, scheduledAt integer, source integer, timeToLive integer, fileMetaKeyStrings varchar(2000), filePaths varchar(2000), metadata varchar(2000), thumbnailUrl varchar(2000), size integer, name varchar(2000), contentType varchar(200), metaFileKeyString varchar(2000), blobKeyString varchar(2000), canceled integer default 0, deleted integer default 0,applicationId varchar(2000) null,messageContentType integer default 0,conversationId integer default 0,topicId varchar(300) null,channelKey integer default 0,status varchar(200) default 0,clientGroupId varchar(1000) default null,hidden integer default 0,replyMessage INTEGER default 0,UNIQUE (keyString,contactNumbers,channelKey))";
+		public const string CreateSmsTable = (string) "create table sms ( id integer primary key autoincrement, keyString var(100), toNumbers varchar(1000), contactNumbers varchar(2000), message text not null, type integer, read integer default 0, delivered integer default 0, storeOnDevice integer default 1, sentToServer integer default 1, createdAt integer, scheduledAt integer, source integer, timeToLive integer, fileMetaKeyStrings varchar(2000), filePaths varchar(2000), metadata varchar(2000), thumbnailUrl varchar(2000), size integer, name varchar(2000), contentType varchar(200), metaFileKeyString varchar(2000), blobKeyString varchar(2000), canceled integer default 0, deleted integer default 0,applicationId varchar(2000) null,messageContentType integer default 0,conversationId integer default 0,topicId varchar(300) null,channelKey integer default 0,status varchar(200) default 0,clientGroupId varchar(1000) default null,hidden integer default 0,replyMessage INTEGER default 0,url varchar(2000),UNIQUE (keyString,contactNumbers,channelKey))";
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='DB_VERSION']"
 		[Register ("DB_VERSION")]
-		public const int DbVersion = (int) 26;
+		public const int DbVersion = (int) 30;
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='DELETED_AT']"
 		[Register ("DELETED_AT")]
@@ -131,11 +131,15 @@ namespace Com.Applozic.Mobicomkit.Database {
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='INSERT_INTO_SMS_FROM_SMS_BACKUP_QUERY']"
 		[Register ("INSERT_INTO_SMS_FROM_SMS_BACKUP_QUERY")]
-		public const string InsertIntoSmsFromSmsBackupQuery = (string) "INSERT INTO sms (id,keyString,toNumbers,contactNumbers,message,type,read,delivered,storeOnDevice,sentToServer,createdAt,scheduledAt,source,timeToLive,fileMetaKeyStrings,filePaths,metadata,thumbnailUrl,size,name,contentType,metaFileKeyString,blobKeyString,canceled,deleted,applicationId,messageContentType,conversationId,topicId,channelKey,status,hidden,replyMessage) SELECT id,keyString,toNumbers,contactNumbers,message,type,read,delivered,storeOnDevice,sentToServer,createdAt,scheduledAt,source,timeToLive,fileMetaKeyStrings,filePaths,metadata,thumbnailUrl,size,name,contentType,metaFileKeyString,blobKeyString,canceled,deleted,applicationId,messageContentType,conversationId,topicId,channelKey,status,hidden,replyMessage FROM sms_backup";
+		public const string InsertIntoSmsFromSmsBackupQuery = (string) "INSERT INTO sms (id,keyString,toNumbers,contactNumbers,message,type,read,delivered,storeOnDevice,sentToServer,createdAt,scheduledAt,source,timeToLive,fileMetaKeyStrings,filePaths,metadata,thumbnailUrl,size,name,contentType,metaFileKeyString,blobKeyString,canceled,deleted,applicationId,messageContentType,conversationId,topicId,channelKey,status,hidden,replyMessage,url) SELECT id,keyString,toNumbers,contactNumbers,message,type,read,delivered,storeOnDevice,sentToServer,createdAt,scheduledAt,source,timeToLive,fileMetaKeyStrings,filePaths,metadata,thumbnailUrl,size,name,contentType,metaFileKeyString,blobKeyString,canceled,deleted,applicationId,messageContentType,conversationId,topicId,channelKey,status,hidden,replyMessage,url FROM sms_backup";
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='KEY']"
 		[Register ("KEY")]
 		public const string Key = (string) "key";
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='LAST_MESSAGED_AT']"
+		[Register ("LAST_MESSAGED_AT")]
+		public const string LastMessagedAt = (string) "lastMessagedAt";
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='LAST_SEEN_AT_TIME']"
 		[Register ("LAST_SEEN_AT_TIME")]
@@ -156,6 +160,10 @@ namespace Com.Applozic.Mobicomkit.Database {
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='REPLY_MESSAGE']"
 		[Register ("REPLY_MESSAGE")]
 		public const string ReplyMessage = (string) "replyMessage";
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='ROLE']"
+		[Register ("ROLE")]
+		public const string Role = (string) "role";
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='SCHEDULE_SMS_TABLE_NAME']"
 		[Register ("SCHEDULE_SMS_TABLE_NAME")]
@@ -221,6 +229,10 @@ namespace Com.Applozic.Mobicomkit.Database {
 		[Register ("UNREAD_COUNT")]
 		public const string UnreadCount = (string) "unreadCount";
 
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='URL']"
+		[Register ("URL")]
+		public const string Url = (string) "url";
+
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='USERID']"
 		[Register ("USERID")]
 		public const string Userid = (string) "userId";
@@ -229,6 +241,14 @@ namespace Com.Applozic.Mobicomkit.Database {
 		[Register ("USER_COUNT")]
 		public const string UserCount = (string) "userCount";
 
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='USER_METADATA']"
+		[Register ("USER_METADATA")]
+		public const string UserMetadata = (string) "userMetadata";
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='USER_ROLE_TYPE']"
+		[Register ("USER_ROLE_TYPE")]
+		public const string UserRoleType = (string) "userRoleType";
+
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='USER_TYPE_ID']"
 		[Register ("USER_TYPE_ID")]
 		public const string UserTypeId = (string) "userTypeId";
@@ -236,8 +256,8 @@ namespace Com.Applozic.Mobicomkit.Database {
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.database']/class[@name='MobiComDatabaseHelper']/field[@name='_ID']"
 		[Register ("_ID")]
 		public const string Id = (string) "_id";
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/database/MobiComDatabaseHelper", ref java_class_handle);
 			}

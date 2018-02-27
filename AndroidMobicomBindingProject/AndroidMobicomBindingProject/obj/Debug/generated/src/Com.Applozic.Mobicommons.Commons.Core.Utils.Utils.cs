@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicommons.Commons.Core.Utils {
 	[global::Android.Runtime.Register ("com/applozic/mobicommons/commons/core/utils/Utils", DoNotGenerateAcw=true)]
 	public partial class Utils : global::Java.Lang.Object {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/commons/core/utils/Utils", ref java_class_handle);
 			}
@@ -160,6 +160,20 @@ namespace Com.Applozic.Mobicommons.Commons.Core.Utils {
 					id_hasNougat = JNIEnv.GetStaticMethodID (class_ref, "hasNougat", "()Z");
 				try {
 					return JNIEnv.CallStaticBooleanMethod  (class_ref, id_hasNougat);
+				} finally {
+				}
+			}
+		}
+
+		static IntPtr id_hasOreo;
+		public static unsafe bool HasOreo {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.commons.core.utils']/class[@name='Utils']/method[@name='hasOreo' and count(parameter)=0]"
+			[Register ("hasOreo", "()Z", "GetHasOreoHandler")]
+			get {
+				if (id_hasOreo == IntPtr.Zero)
+					id_hasOreo = JNIEnv.GetStaticMethodID (class_ref, "hasOreo", "()Z");
+				try {
+					return JNIEnv.CallStaticBooleanMethod  (class_ref, id_hasOreo);
 				} finally {
 				}
 			}
@@ -320,7 +334,8 @@ namespace Com.Applozic.Mobicommons.Commons.Core.Utils {
 		public static string GetStyleString (string p0)
 		{
 			global::Java.Lang.ICharSequence __result = GetStyleStringFormatted (p0);
-			return __result == null ? null : __result.ToString ();
+			var __rsval = __result?.ToString ();
+			return __rsval;
 		}
 
 		static IntPtr id_getStyleStringForMessage_Ljava_lang_String_;
@@ -344,7 +359,8 @@ namespace Com.Applozic.Mobicommons.Commons.Core.Utils {
 		public static string GetStyleStringForMessage (string p0)
 		{
 			global::Java.Lang.ICharSequence __result = GetStyleStringForMessageFormatted (p0);
-			return __result == null ? null : __result.ToString ();
+			var __rsval = __result?.ToString ();
+			return __rsval;
 		}
 
 		static IntPtr id_getStyledStringForChannel_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_;
@@ -374,7 +390,8 @@ namespace Com.Applozic.Mobicommons.Commons.Core.Utils {
 		public static string GetStyledStringForChannel (string p0, string p1, string p2)
 		{
 			global::Java.Lang.ICharSequence __result = GetStyledStringForChannelFormatted (p0, p1, p2);
-			return __result == null ? null : __result.ToString ();
+			var __rsval = __result?.ToString ();
+			return __rsval;
 		}
 
 		static IntPtr id_getStyledStringForContact_Ljava_lang_String_Ljava_lang_String_;
@@ -401,7 +418,8 @@ namespace Com.Applozic.Mobicommons.Commons.Core.Utils {
 		public static string GetStyledStringForContact (string p0, string p1)
 		{
 			global::Java.Lang.ICharSequence __result = GetStyledStringForContactFormatted (p0, p1);
-			return __result == null ? null : __result.ToString ();
+			var __rsval = __result?.ToString ();
+			return __rsval;
 		}
 
 		static IntPtr id_getTimeDurationInFormat_Ljava_lang_Long_;

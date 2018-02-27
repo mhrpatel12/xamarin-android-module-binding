@@ -242,8 +242,8 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 				}
 			}
 		}
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/MobiComMessageService", ref java_class_handle);
 			}
@@ -479,6 +479,51 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
+			}
+		}
+
+		static Delegate cb_getUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_;
+#pragma warning disable 0169
+		static Delegate GetGetUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_Handler ()
+		{
+			if (cb_getUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_ == null)
+				cb_getUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_ = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_GetUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_);
+			return cb_getUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_;
+		}
+
+		static IntPtr n_GetUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Conversation.MobiComMessageService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.MobiComMessageService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
+			var p1 = global::Android.Runtime.JavaDictionary<string, string>.FromJniHandle (native_p1, JniHandleOwnership.DoNotTransfer);
+			IntPtr __ret = JNIEnv.ToLocalJniHandle (__this.GetUpdateMessageMetadata (p0, p1));
+			return __ret;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MobiComMessageService']/method[@name='getUpdateMessageMetadata' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.util.Map&lt;java.lang.String, java.lang.String&gt;']]"
+		[Register ("getUpdateMessageMetadata", "(Ljava/lang/String;Ljava/util/Map;)Lcom/applozic/mobicomkit/feed/ApiResponse;", "GetGetUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_Handler")]
+		public virtual unsafe global::Com.Applozic.Mobicomkit.Feed.ApiResponse GetUpdateMessageMetadata (string p0, global::System.Collections.Generic.IDictionary<string, string> p1)
+		{
+			if (id_getUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_ == IntPtr.Zero)
+				id_getUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_ = JNIEnv.GetMethodID (class_ref, "getUpdateMessageMetadata", "(Ljava/lang/String;Ljava/util/Map;)Lcom/applozic/mobicomkit/feed/ApiResponse;");
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			IntPtr native_p1 = global::Android.Runtime.JavaDictionary<string, string>.ToLocalJniHandle (p1);
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (native_p1);
+
+				global::Com.Applozic.Mobicomkit.Feed.ApiResponse __ret;
+				if (((object) this).GetType () == ThresholdType)
+					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Feed.ApiResponse> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_, __args), JniHandleOwnership.TransferLocalRef);
+				else
+					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Feed.ApiResponse> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getUpdateMessageMetadata", "(Ljava/lang/String;Ljava/util/Map;)Lcom/applozic/mobicomkit/feed/ApiResponse;"), __args), JniHandleOwnership.TransferLocalRef);
+				return __ret;
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+				JNIEnv.DeleteLocalRef (native_p1);
 			}
 		}
 
@@ -791,6 +836,39 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_sendNotification_Lcom_applozic_mobicomkit_api_conversation_Message_, __args);
 				else
 					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "sendNotification", "(Lcom/applozic/mobicomkit/api/conversation/Message;)V"), __args);
+			} finally {
+			}
+		}
+
+		static Delegate cb_syncMessageForMetadataUpdate;
+#pragma warning disable 0169
+		static Delegate GetSyncMessageForMetadataUpdateHandler ()
+		{
+			if (cb_syncMessageForMetadataUpdate == null)
+				cb_syncMessageForMetadataUpdate = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr>) n_SyncMessageForMetadataUpdate);
+			return cb_syncMessageForMetadataUpdate;
+		}
+
+		static void n_SyncMessageForMetadataUpdate (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Conversation.MobiComMessageService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.MobiComMessageService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			__this.SyncMessageForMetadataUpdate ();
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_syncMessageForMetadataUpdate;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='MobiComMessageService']/method[@name='syncMessageForMetadataUpdate' and count(parameter)=0]"
+		[Register ("syncMessageForMetadataUpdate", "()V", "GetSyncMessageForMetadataUpdateHandler")]
+		public virtual unsafe void SyncMessageForMetadataUpdate ()
+		{
+			if (id_syncMessageForMetadataUpdate == IntPtr.Zero)
+				id_syncMessageForMetadataUpdate = JNIEnv.GetMethodID (class_ref, "syncMessageForMetadataUpdate", "()V");
+			try {
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_syncMessageForMetadataUpdate);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "syncMessageForMetadataUpdate", "()V"));
 			} finally {
 			}
 		}

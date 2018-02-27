@@ -8,6 +8,30 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/api/conversation/Message", DoNotGenerateAcw=true)]
 	public partial class Message : global::Com.Applozic.Mobicommons.Json.JsonMarker {
 
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message']/field[@name='AUDIO']"
+		[Register ("AUDIO")]
+		public const string Audio = (string) "audio";
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message']/field[@name='CONTACT']"
+		[Register ("CONTACT")]
+		public const string Contact = (string) "contact";
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message']/field[@name='IMAGE']"
+		[Register ("IMAGE")]
+		public const string Image = (string) "image";
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message']/field[@name='LOCATION']"
+		[Register ("LOCATION")]
+		public const string Location = (string) "location";
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message']/field[@name='OTHER']"
+		[Register ("OTHER")]
+		public const string Other = (string) "other";
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message']/field[@name='VIDEO']"
+		[Register ("VIDEO")]
+		public const string Video = (string) "video";
 		// Metadata.xml XPath class reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message.ContentType']"
 		[global::Android.Runtime.Register ("com/applozic/mobicomkit/api/conversation/Message$ContentType", DoNotGenerateAcw=true)]
 		public sealed partial class ContentType : global::Java.Lang.Enum {
@@ -194,8 +218,8 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ContentType> (__ret, JniHandleOwnership.TransferLocalRef);
 				}
 			}
-			internal static IntPtr java_class_handle;
-			internal static IntPtr class_ref {
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
 				get {
 					return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/Message$ContentType", ref java_class_handle);
 				}
@@ -314,8 +338,8 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message.GroupMessageMetaData> (__ret, JniHandleOwnership.TransferLocalRef);
 				}
 			}
-			internal static IntPtr java_class_handle;
-			internal static IntPtr class_ref {
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
 				get {
 					return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/Message$GroupMessageMetaData", ref java_class_handle);
 				}
@@ -499,8 +523,8 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message.MessageType> (__ret, JniHandleOwnership.TransferLocalRef);
 				}
 			}
-			internal static IntPtr java_class_handle;
-			internal static IntPtr class_ref {
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
 				get {
 					return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/Message$MessageType", ref java_class_handle);
 				}
@@ -632,8 +656,8 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message.MetaDataType> (__ret, JniHandleOwnership.TransferLocalRef);
 				}
 			}
-			internal static IntPtr java_class_handle;
-			internal static IntPtr class_ref {
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
 				get {
 					return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/Message$MetaDataType", ref java_class_handle);
 				}
@@ -696,53 +720,53 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 
 		}
 
-		// Metadata.xml XPath class reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message.ReplyMessage']"
-		[global::Android.Runtime.Register ("com/applozic/mobicomkit/api/conversation/Message$ReplyMessage", DoNotGenerateAcw=true)]
-		public sealed partial class ReplyMessage : global::Java.Lang.Enum {
+		// Metadata.xml XPath class reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message.ReplyMessageEnum']"
+		[global::Android.Runtime.Register ("com/applozic/mobicomkit/api/conversation/Message$ReplyMessageEnum", DoNotGenerateAcw=true)]
+		public sealed partial class ReplyMessageEnum : global::Java.Lang.Enum {
 
 
 			static IntPtr HIDE_MESSAGE_jfieldId;
 
-			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message.ReplyMessage']/field[@name='HIDE_MESSAGE']"
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message.ReplyMessageEnum']/field[@name='HIDE_MESSAGE']"
 			[Register ("HIDE_MESSAGE")]
-			public static global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessage HideMessage {
+			public static global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessageEnum HideMessage {
 				get {
 					if (HIDE_MESSAGE_jfieldId == IntPtr.Zero)
-						HIDE_MESSAGE_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "HIDE_MESSAGE", "Lcom/applozic/mobicomkit/api/conversation/Message$ReplyMessage;");
+						HIDE_MESSAGE_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "HIDE_MESSAGE", "Lcom/applozic/mobicomkit/api/conversation/Message$ReplyMessageEnum;");
 					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, HIDE_MESSAGE_jfieldId);
-					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessage> (__ret, JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessageEnum> (__ret, JniHandleOwnership.TransferLocalRef);
 				}
 			}
 
 			static IntPtr NON_HIDDEN_jfieldId;
 
-			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message.ReplyMessage']/field[@name='NON_HIDDEN']"
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message.ReplyMessageEnum']/field[@name='NON_HIDDEN']"
 			[Register ("NON_HIDDEN")]
-			public static global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessage NonHidden {
+			public static global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessageEnum NonHidden {
 				get {
 					if (NON_HIDDEN_jfieldId == IntPtr.Zero)
-						NON_HIDDEN_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "NON_HIDDEN", "Lcom/applozic/mobicomkit/api/conversation/Message$ReplyMessage;");
+						NON_HIDDEN_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "NON_HIDDEN", "Lcom/applozic/mobicomkit/api/conversation/Message$ReplyMessageEnum;");
 					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, NON_HIDDEN_jfieldId);
-					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessage> (__ret, JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessageEnum> (__ret, JniHandleOwnership.TransferLocalRef);
 				}
 			}
 
 			static IntPtr REPLY_MESSAGE_jfieldId;
 
-			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message.ReplyMessage']/field[@name='REPLY_MESSAGE']"
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message.ReplyMessageEnum']/field[@name='REPLY_MESSAGE']"
 			[Register ("REPLY_MESSAGE")]
-			public static global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessage ReplyMessage {
+			public static global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessageEnum ReplyMessage {
 				get {
 					if (REPLY_MESSAGE_jfieldId == IntPtr.Zero)
-						REPLY_MESSAGE_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "REPLY_MESSAGE", "Lcom/applozic/mobicomkit/api/conversation/Message$ReplyMessage;");
+						REPLY_MESSAGE_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "REPLY_MESSAGE", "Lcom/applozic/mobicomkit/api/conversation/Message$ReplyMessageEnum;");
 					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, REPLY_MESSAGE_jfieldId);
-					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessage> (__ret, JniHandleOwnership.TransferLocalRef);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessageEnum> (__ret, JniHandleOwnership.TransferLocalRef);
 				}
 			}
-			internal static IntPtr java_class_handle;
-			internal static IntPtr class_ref {
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
 				get {
-					return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/Message$ReplyMessage", ref java_class_handle);
+					return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/Message$ReplyMessageEnum", ref java_class_handle);
 				}
 			}
 
@@ -751,14 +775,14 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 			}
 
 			protected override global::System.Type ThresholdType {
-				get { return typeof (ReplyMessage); }
+				get { return typeof (ReplyMessageEnum); }
 			}
 
-			internal ReplyMessage (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
+			internal ReplyMessageEnum (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
 
 			static IntPtr id_getValue;
 			public unsafe global::Java.Lang.Integer Value {
-				// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message.ReplyMessage']/method[@name='getValue' and count(parameter)=0]"
+				// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message.ReplyMessageEnum']/method[@name='getValue' and count(parameter)=0]"
 				[Register ("getValue", "()Ljava/lang/Integer;", "GetGetValueHandler")]
 				get {
 					if (id_getValue == IntPtr.Zero)
@@ -771,17 +795,17 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 			}
 
 			static IntPtr id_valueOf_Ljava_lang_String_;
-			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message.ReplyMessage']/method[@name='valueOf' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
-			[Register ("valueOf", "(Ljava/lang/String;)Lcom/applozic/mobicomkit/api/conversation/Message$ReplyMessage;", "")]
-			public static unsafe global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessage ValueOf (string p0)
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message.ReplyMessageEnum']/method[@name='valueOf' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+			[Register ("valueOf", "(Ljava/lang/String;)Lcom/applozic/mobicomkit/api/conversation/Message$ReplyMessageEnum;", "")]
+			public static unsafe global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessageEnum ValueOf (string p0)
 			{
 				if (id_valueOf_Ljava_lang_String_ == IntPtr.Zero)
-					id_valueOf_Ljava_lang_String_ = JNIEnv.GetStaticMethodID (class_ref, "valueOf", "(Ljava/lang/String;)Lcom/applozic/mobicomkit/api/conversation/Message$ReplyMessage;");
+					id_valueOf_Ljava_lang_String_ = JNIEnv.GetStaticMethodID (class_ref, "valueOf", "(Ljava/lang/String;)Lcom/applozic/mobicomkit/api/conversation/Message$ReplyMessageEnum;");
 				IntPtr native_p0 = JNIEnv.NewString (p0);
 				try {
 					JValue* __args = stackalloc JValue [1];
 					__args [0] = new JValue (native_p0);
-					global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessage __ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessage> (JNIEnv.CallStaticObjectMethod  (class_ref, id_valueOf_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
+					global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessageEnum __ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessageEnum> (JNIEnv.CallStaticObjectMethod  (class_ref, id_valueOf_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
 					return __ret;
 				} finally {
 					JNIEnv.DeleteLocalRef (native_p0);
@@ -789,14 +813,14 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 			}
 
 			static IntPtr id_values;
-			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message.ReplyMessage']/method[@name='values' and count(parameter)=0]"
-			[Register ("values", "()[Lcom/applozic/mobicomkit/api/conversation/Message$ReplyMessage;", "")]
-			public static unsafe global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessage[] Values ()
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message.ReplyMessageEnum']/method[@name='values' and count(parameter)=0]"
+			[Register ("values", "()[Lcom/applozic/mobicomkit/api/conversation/Message$ReplyMessageEnum;", "")]
+			public static unsafe global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessageEnum[] Values ()
 			{
 				if (id_values == IntPtr.Zero)
-					id_values = JNIEnv.GetStaticMethodID (class_ref, "values", "()[Lcom/applozic/mobicomkit/api/conversation/Message$ReplyMessage;");
+					id_values = JNIEnv.GetStaticMethodID (class_ref, "values", "()[Lcom/applozic/mobicomkit/api/conversation/Message$ReplyMessageEnum;");
 				try {
-					return (global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessage[]) JNIEnv.GetArray (JNIEnv.CallStaticObjectMethod  (class_ref, id_values), JniHandleOwnership.TransferLocalRef, typeof (global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessage));
+					return (global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessageEnum[]) JNIEnv.GetArray (JNIEnv.CallStaticObjectMethod  (class_ref, id_values), JniHandleOwnership.TransferLocalRef, typeof (global::Com.Applozic.Mobicomkit.Api.Conversation.Message.ReplyMessageEnum));
 				} finally {
 				}
 			}
@@ -859,8 +883,8 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message.Source> (__ret, JniHandleOwnership.TransferLocalRef);
 				}
 			}
-			internal static IntPtr java_class_handle;
-			internal static IntPtr class_ref {
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
 				get {
 					return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/Message$Source", ref java_class_handle);
 				}
@@ -1005,8 +1029,8 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message.Status> (__ret, JniHandleOwnership.TransferLocalRef);
 				}
 			}
-			internal static IntPtr java_class_handle;
-			internal static IntPtr class_ref {
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
 				get {
 					return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/Message$Status", ref java_class_handle);
 				}
@@ -1069,8 +1093,8 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 
 		}
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/Message", ref java_class_handle);
 			}
@@ -1311,6 +1335,40 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation {
 						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setAttDownloadInProgress_Z, __args);
 					else
 						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setAttDownloadInProgress", "(Z)V"), __args);
+				} finally {
+				}
+			}
+		}
+
+		static Delegate cb_getAttachmentType;
+#pragma warning disable 0169
+		static Delegate GetGetAttachmentTypeHandler ()
+		{
+			if (cb_getAttachmentType == null)
+				cb_getAttachmentType = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetAttachmentType);
+			return cb_getAttachmentType;
+		}
+
+		static IntPtr n_GetAttachmentType (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Conversation.Message __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.NewString (__this.AttachmentType);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getAttachmentType;
+		public virtual unsafe string AttachmentType {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation']/class[@name='Message']/method[@name='getAttachmentType' and count(parameter)=0]"
+			[Register ("getAttachmentType", "()Ljava/lang/String;", "GetGetAttachmentTypeHandler")]
+			get {
+				if (id_getAttachmentType == IntPtr.Zero)
+					id_getAttachmentType = JNIEnv.GetMethodID (class_ref, "getAttachmentType", "()Ljava/lang/String;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getAttachmentType), JniHandleOwnership.TransferLocalRef);
+					else
+						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getAttachmentType", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}

@@ -260,8 +260,8 @@ namespace Com.Applozic.Mobicomkit.Feed {
 					}
 				}
 			}
-			internal static IntPtr java_class_handle;
-			internal static IntPtr class_ref {
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
 				get {
 					return JNIEnv.FindClass ("com/applozic/mobicomkit/feed/ResultFeed$RestAPICodes", ref java_class_handle);
 				}
@@ -310,8 +310,8 @@ namespace Com.Applozic.Mobicomkit.Feed {
 
 		}
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/feed/ResultFeed", ref java_class_handle);
 			}

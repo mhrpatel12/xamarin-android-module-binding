@@ -103,7 +103,7 @@ namespace Com.Applozic.Mobicomkit.Api {
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitClientService']/field[@name='BASE_URL_METADATA']"
 		[Register ("BASE_URL_METADATA")]
-		public const string BaseUrlMetadata = (string) "com.applozic.server.url";
+		public const string BaseUrlMetadata = (string) "com.applozicInstance.server.url";
 
 		static IntPtr DEFAULT_MQTT_URL_jfieldId;
 
@@ -151,23 +151,69 @@ namespace Com.Applozic.Mobicomkit.Api {
 			}
 		}
 
-		static IntPtr FILE_BASE_URL_jfieldId;
+		static IntPtr FILE_BASE_URL_METADATA_KEY_jfieldId;
 
-		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitClientService']/field[@name='FILE_BASE_URL']"
-		[Register ("FILE_BASE_URL")]
-		protected string FileBaseUrl {
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitClientService']/field[@name='FILE_BASE_URL_METADATA_KEY']"
+		[Register ("FILE_BASE_URL_METADATA_KEY")]
+		public static string FileBaseUrlMetadataKey {
 			get {
-				if (FILE_BASE_URL_jfieldId == IntPtr.Zero)
-					FILE_BASE_URL_jfieldId = JNIEnv.GetFieldID (class_ref, "FILE_BASE_URL", "Ljava/lang/String;");
-				IntPtr __ret = JNIEnv.GetObjectField (((global::Java.Lang.Object) this).Handle, FILE_BASE_URL_jfieldId);
+				if (FILE_BASE_URL_METADATA_KEY_jfieldId == IntPtr.Zero)
+					FILE_BASE_URL_METADATA_KEY_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "FILE_BASE_URL_METADATA_KEY", "Ljava/lang/String;");
+				IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, FILE_BASE_URL_METADATA_KEY_jfieldId);
 				return JNIEnv.GetString (__ret, JniHandleOwnership.TransferLocalRef);
 			}
 			set {
-				if (FILE_BASE_URL_jfieldId == IntPtr.Zero)
-					FILE_BASE_URL_jfieldId = JNIEnv.GetFieldID (class_ref, "FILE_BASE_URL", "Ljava/lang/String;");
+				if (FILE_BASE_URL_METADATA_KEY_jfieldId == IntPtr.Zero)
+					FILE_BASE_URL_METADATA_KEY_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "FILE_BASE_URL_METADATA_KEY", "Ljava/lang/String;");
 				IntPtr native_value = JNIEnv.NewString (value);
 				try {
-					JNIEnv.SetField (((global::Java.Lang.Object) this).Handle, FILE_BASE_URL_jfieldId, native_value);
+					JNIEnv.SetStaticField (class_ref, FILE_BASE_URL_METADATA_KEY_jfieldId, native_value);
+				} finally {
+					JNIEnv.DeleteLocalRef (native_value);
+				}
+			}
+		}
+
+		static IntPtr FILE_DOWNLOAD_METADATA_KEY_jfieldId;
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitClientService']/field[@name='FILE_DOWNLOAD_METADATA_KEY']"
+		[Register ("FILE_DOWNLOAD_METADATA_KEY")]
+		public static string FileDownloadMetadataKey {
+			get {
+				if (FILE_DOWNLOAD_METADATA_KEY_jfieldId == IntPtr.Zero)
+					FILE_DOWNLOAD_METADATA_KEY_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "FILE_DOWNLOAD_METADATA_KEY", "Ljava/lang/String;");
+				IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, FILE_DOWNLOAD_METADATA_KEY_jfieldId);
+				return JNIEnv.GetString (__ret, JniHandleOwnership.TransferLocalRef);
+			}
+			set {
+				if (FILE_DOWNLOAD_METADATA_KEY_jfieldId == IntPtr.Zero)
+					FILE_DOWNLOAD_METADATA_KEY_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "FILE_DOWNLOAD_METADATA_KEY", "Ljava/lang/String;");
+				IntPtr native_value = JNIEnv.NewString (value);
+				try {
+					JNIEnv.SetStaticField (class_ref, FILE_DOWNLOAD_METADATA_KEY_jfieldId, native_value);
+				} finally {
+					JNIEnv.DeleteLocalRef (native_value);
+				}
+			}
+		}
+
+		static IntPtr FILE_UPLOAD_METADATA_KEY_jfieldId;
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitClientService']/field[@name='FILE_UPLOAD_METADATA_KEY']"
+		[Register ("FILE_UPLOAD_METADATA_KEY")]
+		public static string FileUploadMetadataKey {
+			get {
+				if (FILE_UPLOAD_METADATA_KEY_jfieldId == IntPtr.Zero)
+					FILE_UPLOAD_METADATA_KEY_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "FILE_UPLOAD_METADATA_KEY", "Ljava/lang/String;");
+				IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, FILE_UPLOAD_METADATA_KEY_jfieldId);
+				return JNIEnv.GetString (__ret, JniHandleOwnership.TransferLocalRef);
+			}
+			set {
+				if (FILE_UPLOAD_METADATA_KEY_jfieldId == IntPtr.Zero)
+					FILE_UPLOAD_METADATA_KEY_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "FILE_UPLOAD_METADATA_KEY", "Ljava/lang/String;");
+				IntPtr native_value = JNIEnv.NewString (value);
+				try {
+					JNIEnv.SetStaticField (class_ref, FILE_UPLOAD_METADATA_KEY_jfieldId, native_value);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
@@ -176,7 +222,7 @@ namespace Com.Applozic.Mobicomkit.Api {
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitClientService']/field[@name='MQTT_BASE_URL_METADATA']"
 		[Register ("MQTT_BASE_URL_METADATA")]
-		public const string MqttBaseUrlMetadata = (string) "com.applozic.mqtt.server.url";
+		public const string MqttBaseUrlMetadata = (string) "com.applozicInstance.mqtt.server.url";
 
 		static IntPtr context_jfieldId;
 
@@ -200,8 +246,8 @@ namespace Com.Applozic.Mobicomkit.Api {
 				}
 			}
 		}
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/MobiComKitClientService", ref java_class_handle);
 			}
@@ -338,6 +384,40 @@ namespace Com.Applozic.Mobicomkit.Api {
 						return global::Java.Lang.Object.GetObject<global::Java.Net.PasswordAuthentication> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getCredentials), JniHandleOwnership.TransferLocalRef);
 					else
 						return global::Java.Lang.Object.GetObject<global::Java.Net.PasswordAuthentication> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getCredentials", "()Ljava/net/PasswordAuthentication;")), JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+		}
+
+		static Delegate cb_getFileBaseUrl;
+#pragma warning disable 0169
+		static Delegate GetGetFileBaseUrlHandler ()
+		{
+			if (cb_getFileBaseUrl == null)
+				cb_getFileBaseUrl = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetFileBaseUrl);
+			return cb_getFileBaseUrl;
+		}
+
+		static IntPtr n_GetFileBaseUrl (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Api.MobiComKitClientService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.MobiComKitClientService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.NewString (__this.FileBaseUrl);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getFileBaseUrl;
+		public virtual unsafe string FileBaseUrl {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitClientService']/method[@name='getFileBaseUrl' and count(parameter)=0]"
+			[Register ("getFileBaseUrl", "()Ljava/lang/String;", "GetGetFileBaseUrlHandler")]
+			get {
+				if (id_getFileBaseUrl == IntPtr.Zero)
+					id_getFileBaseUrl = JNIEnv.GetMethodID (class_ref, "getFileBaseUrl", "()Ljava/lang/String;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getFileBaseUrl), JniHandleOwnership.TransferLocalRef);
+					else
+						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getFileBaseUrl", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}

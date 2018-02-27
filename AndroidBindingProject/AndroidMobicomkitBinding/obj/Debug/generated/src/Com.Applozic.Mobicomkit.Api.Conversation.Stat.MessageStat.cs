@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation.Stat {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/api/conversation/stat/MessageStat", DoNotGenerateAcw=true)]
 	public partial class MessageStat : global::Java.Lang.Object, global::Java.IO.ISerializable {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/stat/MessageStat", ref java_class_handle);
 			}

@@ -101,8 +101,8 @@ namespace Com.Applozic.Mobicommons.File {
 				}
 			}
 		}
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/file/FileUtils", ref java_class_handle);
 			}
@@ -682,19 +682,19 @@ namespace Com.Applozic.Mobicommons.File {
 			}
 		}
 
-		static IntPtr id_isMaxUploadSizeReached_Landroid_content_Context_Landroid_net_Uri_I;
-		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.file']/class[@name='FileUtils']/method[@name='isMaxUploadSizeReached' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='int']]"
-		[Register ("isMaxUploadSizeReached", "(Landroid/content/Context;Landroid/net/Uri;I)Z", "")]
-		public static unsafe bool IsMaxUploadSizeReached (global::Android.Content.Context p0, global::Android.Net.Uri p1, int p2)
+		static IntPtr id_isMaxUploadSizeReached_Landroid_content_Context_Landroid_net_Uri_J;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.file']/class[@name='FileUtils']/method[@name='isMaxUploadSizeReached' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='android.net.Uri'] and parameter[3][@type='long']]"
+		[Register ("isMaxUploadSizeReached", "(Landroid/content/Context;Landroid/net/Uri;J)Z", "")]
+		public static unsafe bool IsMaxUploadSizeReached (global::Android.Content.Context p0, global::Android.Net.Uri p1, long p2)
 		{
-			if (id_isMaxUploadSizeReached_Landroid_content_Context_Landroid_net_Uri_I == IntPtr.Zero)
-				id_isMaxUploadSizeReached_Landroid_content_Context_Landroid_net_Uri_I = JNIEnv.GetStaticMethodID (class_ref, "isMaxUploadSizeReached", "(Landroid/content/Context;Landroid/net/Uri;I)Z");
+			if (id_isMaxUploadSizeReached_Landroid_content_Context_Landroid_net_Uri_J == IntPtr.Zero)
+				id_isMaxUploadSizeReached_Landroid_content_Context_Landroid_net_Uri_J = JNIEnv.GetStaticMethodID (class_ref, "isMaxUploadSizeReached", "(Landroid/content/Context;Landroid/net/Uri;J)Z");
 			try {
 				JValue* __args = stackalloc JValue [3];
 				__args [0] = new JValue (p0);
 				__args [1] = new JValue (p1);
 				__args [2] = new JValue (p2);
-				bool __ret = JNIEnv.CallStaticBooleanMethod  (class_ref, id_isMaxUploadSizeReached_Landroid_content_Context_Landroid_net_Uri_I, __args);
+				bool __ret = JNIEnv.CallStaticBooleanMethod  (class_ref, id_isMaxUploadSizeReached_Landroid_content_Context_Landroid_net_Uri_J, __args);
 				return __ret;
 			} finally {
 			}

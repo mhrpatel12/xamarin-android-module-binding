@@ -8,12 +8,8 @@ namespace Com.Applozic.Mobicomkit.Broadcast {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/broadcast/ConnectivityReceiver", DoNotGenerateAcw=true)]
 	public partial class ConnectivityReceiver : global::Android.Content.BroadcastReceiver {
 
-
-		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.broadcast']/class[@name='ConnectivityReceiver']/field[@name='CONNECTIVITY_CHANGE']"
-		[Register ("CONNECTIVITY_CHANGE")]
-		public const string ConnectivityChange = (string) "android.net.conn.CONNECTIVITY_CHANGE";
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/broadcast/ConnectivityReceiver", ref java_class_handle);
 			}

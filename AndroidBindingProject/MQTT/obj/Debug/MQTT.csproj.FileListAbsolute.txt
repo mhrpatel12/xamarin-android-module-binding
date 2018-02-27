@@ -1,0 +1,6 @@
+/Users/mihir/xamarinApplozic/xamarin-android-module-binding/AndroidBindingProject/MQTT/bin/Debug/MQTT.dll
+/Users/mihir/xamarinApplozic/xamarin-android-module-binding/AndroidBindingProject/MQTT/bin/Debug/MQTT.pdb
+/Users/mihir/xamarinApplozic/xamarin-android-module-binding/AndroidBindingProject/MQTT/obj/Debug/MQTT.csprojResolveAssemblyReference.cache
+/Users/mihir/xamarinApplozic/xamarin-android-module-binding/AndroidBindingProject/MQTT/obj/Debug/MQTT.csproj.CoreCompileInputs.cache
+/Users/mihir/xamarinApplozic/xamarin-android-module-binding/AndroidBindingProject/MQTT/obj/Debug/MQTT.dll
+/Users/mihir/xamarinApplozic/xamarin-android-module-binding/AndroidBindingProject/MQTT/obj/Debug/MQTT.pdb

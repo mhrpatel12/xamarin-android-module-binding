@@ -31,8 +31,8 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation.Database {
 				}
 			}
 		}
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/database/MessageDatabaseService", ref java_class_handle);
 			}
@@ -654,6 +654,50 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation.Database {
 				else
 					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "deleteScheduledMessages", "(J)V"), __args);
 			} finally {
+			}
+		}
+
+		static Delegate cb_getAttachmentMessages_Ljava_lang_String_Ljava_lang_Integer_Z;
+#pragma warning disable 0169
+		static Delegate GetGetAttachmentMessages_Ljava_lang_String_Ljava_lang_Integer_ZHandler ()
+		{
+			if (cb_getAttachmentMessages_Ljava_lang_String_Ljava_lang_Integer_Z == null)
+				cb_getAttachmentMessages_Ljava_lang_String_Ljava_lang_Integer_Z = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr, bool, IntPtr>) n_GetAttachmentMessages_Ljava_lang_String_Ljava_lang_Integer_Z);
+			return cb_getAttachmentMessages_Ljava_lang_String_Ljava_lang_Integer_Z;
+		}
+
+		static IntPtr n_GetAttachmentMessages_Ljava_lang_String_Ljava_lang_Integer_Z (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1, bool p2)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Conversation.Database.MessageDatabaseService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Database.MessageDatabaseService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Integer p1 = global::Java.Lang.Object.GetObject<global::Java.Lang.Integer> (native_p1, JniHandleOwnership.DoNotTransfer);
+			IntPtr __ret = global::Android.Runtime.JavaList<global::Com.Applozic.Mobicomkit.Api.Conversation.Message>.ToLocalJniHandle (__this.GetAttachmentMessages (p0, p1, p2));
+			return __ret;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getAttachmentMessages_Ljava_lang_String_Ljava_lang_Integer_Z;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation.database']/class[@name='MessageDatabaseService']/method[@name='getAttachmentMessages' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.Integer'] and parameter[3][@type='boolean']]"
+		[Register ("getAttachmentMessages", "(Ljava/lang/String;Ljava/lang/Integer;Z)Ljava/util/List;", "GetGetAttachmentMessages_Ljava_lang_String_Ljava_lang_Integer_ZHandler")]
+		public virtual unsafe global::System.Collections.Generic.IList<global::Com.Applozic.Mobicomkit.Api.Conversation.Message> GetAttachmentMessages (string p0, global::Java.Lang.Integer p1, bool p2)
+		{
+			if (id_getAttachmentMessages_Ljava_lang_String_Ljava_lang_Integer_Z == IntPtr.Zero)
+				id_getAttachmentMessages_Ljava_lang_String_Ljava_lang_Integer_Z = JNIEnv.GetMethodID (class_ref, "getAttachmentMessages", "(Ljava/lang/String;Ljava/lang/Integer;Z)Ljava/util/List;");
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (p1);
+				__args [2] = new JValue (p2);
+
+				global::System.Collections.Generic.IList<global::Com.Applozic.Mobicomkit.Api.Conversation.Message> __ret;
+				if (((object) this).GetType () == ThresholdType)
+					__ret = global::Android.Runtime.JavaList<global::Com.Applozic.Mobicomkit.Api.Conversation.Message>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getAttachmentMessages_Ljava_lang_String_Ljava_lang_Integer_Z, __args), JniHandleOwnership.TransferLocalRef);
+				else
+					__ret = global::Android.Runtime.JavaList<global::Com.Applozic.Mobicomkit.Api.Conversation.Message>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getAttachmentMessages", "(Ljava/lang/String;Ljava/lang/Integer;Z)Ljava/util/List;"), __args), JniHandleOwnership.TransferLocalRef);
+				return __ret;
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
 			}
 		}
 
@@ -1768,6 +1812,48 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation.Database {
 				else
 					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateMessageFileMetas", "(JLcom/applozic/mobicomkit/api/conversation/Message;)V"), __args);
 			} finally {
+			}
+		}
+
+		static Delegate cb_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_;
+#pragma warning disable 0169
+		static Delegate GetUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_Handler ()
+		{
+			if (cb_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_ == null)
+				cb_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr>) n_UpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_);
+			return cb_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_;
+		}
+
+		static void n_UpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Conversation.Database.MessageDatabaseService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Database.MessageDatabaseService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
+			var p1 = global::Android.Runtime.JavaDictionary<string, string>.FromJniHandle (native_p1, JniHandleOwnership.DoNotTransfer);
+			__this.UpdateMessageMetadata (p0, p1);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.conversation.database']/class[@name='MessageDatabaseService']/method[@name='updateMessageMetadata' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.util.Map&lt;java.lang.String, java.lang.String&gt;']]"
+		[Register ("updateMessageMetadata", "(Ljava/lang/String;Ljava/util/Map;)V", "GetUpdateMessageMetadata_Ljava_lang_String_Ljava_util_Map_Handler")]
+		public virtual unsafe void UpdateMessageMetadata (string p0, global::System.Collections.Generic.IDictionary<string, string> p1)
+		{
+			if (id_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_ == IntPtr.Zero)
+				id_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_ = JNIEnv.GetMethodID (class_ref, "updateMessageMetadata", "(Ljava/lang/String;Ljava/util/Map;)V");
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			IntPtr native_p1 = global::Android.Runtime.JavaDictionary<string, string>.ToLocalJniHandle (p1);
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (native_p1);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_updateMessageMetadata_Ljava_lang_String_Ljava_util_Map_, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateMessageMetadata", "(Ljava/lang/String;Ljava/util/Map;)V"), __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+				JNIEnv.DeleteLocalRef (native_p1);
 			}
 		}
 

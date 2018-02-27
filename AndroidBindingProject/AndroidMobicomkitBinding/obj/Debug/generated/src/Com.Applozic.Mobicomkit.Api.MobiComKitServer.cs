@@ -31,7 +31,7 @@ namespace Com.Applozic.Mobicomkit.Api {
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitServer']/field[@name='PROD_DISPLAY_URL']"
 		[Register ("PROD_DISPLAY_URL")]
-		public const string ProdDisplayUrl = (string) "https://apps.applozic.com";
+		public const string ProdDisplayUrl = (string) "https://apps.applozicInstance.com";
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitServer']/field[@name='SERVER_CONTACT_SYNC_URL']"
 		[Register ("SERVER_CONTACT_SYNC_URL")]
@@ -67,8 +67,8 @@ namespace Com.Applozic.Mobicomkit.Api {
 				}
 			}
 		}
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/MobiComKitServer", ref java_class_handle);
 			}

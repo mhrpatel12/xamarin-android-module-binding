@@ -21,6 +21,10 @@ namespace Com.Applozic.Mobicommons.People.Channel {
 		[Register ("HIDE_METADATA_NOTIFICATION")]
 		public const string HideMetadataNotification = (string) "HIDE";
 
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicommons.people.channel']/class[@name='ChannelMetadata']/field[@name='MUTE']"
+		[Register ("MUTE")]
+		public const string Mute = (string) "MUTE";
+
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicommons.people.channel']/class[@name='ChannelMetadata']/field[@name='USER_NAME']"
 		[Register ("USER_NAME")]
 		public const string UserName = (string) ":userName";
@@ -205,6 +209,73 @@ namespace Com.Applozic.Mobicommons.People.Channel {
 						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setCreateGroupMessage", "(Ljava/lang/String;)V"), __args);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
+				}
+			}
+		}
+
+		static Delegate cb_isDefaultMute;
+#pragma warning disable 0169
+		static Delegate GetIsDefaultMuteHandler ()
+		{
+			if (cb_isDefaultMute == null)
+				cb_isDefaultMute = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, bool>) n_IsDefaultMute);
+			return cb_isDefaultMute;
+		}
+
+		static bool n_IsDefaultMute (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicommons.People.Channel.ChannelMetadata __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Channel.ChannelMetadata> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return __this.DefaultMute;
+		}
+#pragma warning restore 0169
+
+		static Delegate cb_setDefaultMute_Z;
+#pragma warning disable 0169
+		static Delegate GetSetDefaultMute_ZHandler ()
+		{
+			if (cb_setDefaultMute_Z == null)
+				cb_setDefaultMute_Z = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, bool>) n_SetDefaultMute_Z);
+			return cb_setDefaultMute_Z;
+		}
+
+		static void n_SetDefaultMute_Z (IntPtr jnienv, IntPtr native__this, bool p0)
+		{
+			global::Com.Applozic.Mobicommons.People.Channel.ChannelMetadata __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Channel.ChannelMetadata> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			__this.DefaultMute = p0;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_isDefaultMute;
+		static IntPtr id_setDefaultMute_Z;
+		public virtual unsafe bool DefaultMute {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.people.channel']/class[@name='ChannelMetadata']/method[@name='isDefaultMute' and count(parameter)=0]"
+			[Register ("isDefaultMute", "()Z", "GetIsDefaultMuteHandler")]
+			get {
+				if (id_isDefaultMute == IntPtr.Zero)
+					id_isDefaultMute = JNIEnv.GetMethodID (class_ref, "isDefaultMute", "()Z");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isDefaultMute);
+					else
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isDefaultMute", "()Z"));
+				} finally {
+				}
+			}
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.people.channel']/class[@name='ChannelMetadata']/method[@name='setDefaultMute' and count(parameter)=1 and parameter[1][@type='boolean']]"
+			[Register ("setDefaultMute", "(Z)V", "GetSetDefaultMute_ZHandler")]
+			set {
+				if (id_setDefaultMute_Z == IntPtr.Zero)
+					id_setDefaultMute_Z = JNIEnv.GetMethodID (class_ref, "setDefaultMute", "(Z)V");
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (value);
+
+					if (((object) this).GetType () == ThresholdType)
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setDefaultMute_Z, __args);
+					else
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setDefaultMute", "(Z)V"), __args);
+				} finally {
 				}
 			}
 		}

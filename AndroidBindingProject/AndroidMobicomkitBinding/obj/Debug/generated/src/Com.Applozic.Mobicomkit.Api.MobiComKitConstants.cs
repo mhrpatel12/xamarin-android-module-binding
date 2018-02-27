@@ -17,6 +17,14 @@ namespace Com.Applozic.Mobicomkit.Api {
 		[Register ("AL_MESSAGE")]
 		public const string AlMessage = (string) "AL_MESSAGE";
 
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitConstants']/field[@name='AL_MESSAGE_KEY']"
+		[Register ("AL_MESSAGE_KEY")]
+		public const string AlMessageKey = (string) "AL_MESSAGE_KEY";
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitConstants']/field[@name='AL_PUSH_NOTIFICATION']"
+		[Register ("AL_PUSH_NOTIFICATION")]
+		public const string AlPushNotification = (string) "AL_PUSH_NOTIFICATION";
+
 		static IntPtr APPLICATION_ACTIVITY_TO_OPEN_ON_CHAT_TOOLBAR_TAP_jfieldId;
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitConstants']/field[@name='APPLICATION_ACTIVITY_TO_OPEN_ON_CHAT_TOOLBAR_TAP']"
@@ -96,15 +104,15 @@ namespace Com.Applozic.Mobicomkit.Api {
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitConstants']/field[@name='APPLOZIC_VIDEO_CALL_ANSWER']"
 		[Register ("APPLOZIC_VIDEO_CALL_ANSWER")]
-		public const string ApplozicVideoCallAnswer = (string) "applozic.video.call.answer";
+		public const string ApplozicVideoCallAnswer = (string) "applozicInstance.video.call.answer";
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitConstants']/field[@name='APPLOZIC_VIDEO_CALL_REJECTED']"
 		[Register ("APPLOZIC_VIDEO_CALL_REJECTED")]
-		public const string ApplozicVideoCallRejected = (string) "applozic.video.call.rejected";
+		public const string ApplozicVideoCallRejected = (string) "applozicInstance.video.call.rejected";
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitConstants']/field[@name='APPLOZIC_VIDEO_DIALED']"
 		[Register ("APPLOZIC_VIDEO_DIALED")]
-		public const string ApplozicVideoDialed = (string) "applozic.video.call.dialed";
+		public const string ApplozicVideoDialed = (string) "applozicInstance.video.call.dialed";
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitConstants']/field[@name='ATTACHMENT']"
 		[Register ("ATTACHMENT")]
@@ -169,6 +177,14 @@ namespace Com.Applozic.Mobicomkit.Api {
 		[Register ("PUSH_NOTIFICATION")]
 		public const string PushNotification = (string) "PUSH_NOTIFICATION";
 
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitConstants']/field[@name='PUSH_NOTIFICATION_DISPATCHER']"
+		[Register ("PUSH_NOTIFICATION_DISPATCHER")]
+		public const string PushNotificationDispatcher = (string) "PUSH_NOTIFICATION_DISPATCHER";
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitConstants']/field[@name='PUSH_NOTIFICATION_NAME']"
+		[Register ("PUSH_NOTIFICATION_NAME")]
+		public const string PushNotificationName = (string) "Push Notification";
+
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitConstants']/field[@name='QUICK_LIST']"
 		[Register ("QUICK_LIST")]
 		public const string QuickList = (string) "QUICK_LIST";
@@ -177,11 +193,15 @@ namespace Com.Applozic.Mobicomkit.Api {
 		[Register ("SUCCESS")]
 		public const string Success = (string) "success";
 
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitConstants']/field[@name='TEMPLATE_MESSAGE_LIST']"
+		[Register ("TEMPLATE_MESSAGE_LIST")]
+		public const string TemplateMessageList = (string) "alMessageTemplates";
+
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.api']/class[@name='MobiComKitConstants']/field[@name='VIDEO']"
 		[Register ("VIDEO")]
 		public const string Video = (string) "Video";
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/MobiComKitConstants", ref java_class_handle);
 			}

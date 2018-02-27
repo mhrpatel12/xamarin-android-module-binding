@@ -12,8 +12,8 @@ namespace Com.Applozic.Mobicomkit.Contact.Database {
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.contact.database']/class[@name='ContactDatabase']/field[@name='CONTACT']"
 		[Register ("CONTACT")]
 		public const string Contact = (string) "contact";
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/contact/database/ContactDatabase", ref java_class_handle);
 			}
@@ -860,6 +860,46 @@ namespace Com.Applozic.Mobicomkit.Contact.Database {
 				else
 					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateLocalImageUri", "(Lcom/applozic/mobicommons/people/contact/Contact;)V"), __args);
 			} finally {
+			}
+		}
+
+		static Delegate cb_updateNotificationAfterTime_Ljava_lang_String_Ljava_lang_Long_;
+#pragma warning disable 0169
+		static Delegate GetUpdateNotificationAfterTime_Ljava_lang_String_Ljava_lang_Long_Handler ()
+		{
+			if (cb_updateNotificationAfterTime_Ljava_lang_String_Ljava_lang_Long_ == null)
+				cb_updateNotificationAfterTime_Ljava_lang_String_Ljava_lang_Long_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr>) n_UpdateNotificationAfterTime_Ljava_lang_String_Ljava_lang_Long_);
+			return cb_updateNotificationAfterTime_Ljava_lang_String_Ljava_lang_Long_;
+		}
+
+		static void n_UpdateNotificationAfterTime_Ljava_lang_String_Ljava_lang_Long_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1)
+		{
+			global::Com.Applozic.Mobicomkit.Contact.Database.ContactDatabase __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Contact.Database.ContactDatabase> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Long p1 = global::Java.Lang.Object.GetObject<global::Java.Lang.Long> (native_p1, JniHandleOwnership.DoNotTransfer);
+			__this.UpdateNotificationAfterTime (p0, p1);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_updateNotificationAfterTime_Ljava_lang_String_Ljava_lang_Long_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.contact.database']/class[@name='ContactDatabase']/method[@name='updateNotificationAfterTime' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.Long']]"
+		[Register ("updateNotificationAfterTime", "(Ljava/lang/String;Ljava/lang/Long;)V", "GetUpdateNotificationAfterTime_Ljava_lang_String_Ljava_lang_Long_Handler")]
+		public virtual unsafe void UpdateNotificationAfterTime (string p0, global::Java.Lang.Long p1)
+		{
+			if (id_updateNotificationAfterTime_Ljava_lang_String_Ljava_lang_Long_ == IntPtr.Zero)
+				id_updateNotificationAfterTime_Ljava_lang_String_Ljava_lang_Long_ = JNIEnv.GetMethodID (class_ref, "updateNotificationAfterTime", "(Ljava/lang/String;Ljava/lang/Long;)V");
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (p1);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_updateNotificationAfterTime_Ljava_lang_String_Ljava_lang_Long_, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateNotificationAfterTime", "(Ljava/lang/String;Ljava/lang/Long;)V"), __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
 			}
 		}
 

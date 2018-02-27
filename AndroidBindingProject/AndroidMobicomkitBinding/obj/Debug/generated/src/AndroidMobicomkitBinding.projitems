@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <DefineConstants>$(DefineConstants);ANDROID_1;ANDROID_2;ANDROID_3;ANDROID_4;ANDROID_5;ANDROID_6;ANDROID_7;ANDROID_8;ANDROID_9;ANDROID_10;ANDROID_11;ANDROID_12;ANDROID_13;ANDROID_14;ANDROID_15;ANDROID_16;ANDROID_17;ANDROID_18;ANDROID_19;ANDROID_20;ANDROID_21;ANDROID_22;ANDROID_23;ANDROID_24;ANDROID_25</DefineConstants>
+    <DefineConstants>$(DefineConstants);ANDROID_1;ANDROID_2;ANDROID_3;ANDROID_4;ANDROID_5;ANDROID_6;ANDROID_7;ANDROID_8;ANDROID_9;ANDROID_10;ANDROID_11;ANDROID_12;ANDROID_13;ANDROID_14;ANDROID_15;ANDROID_16;ANDROID_17;ANDROID_18;ANDROID_19;ANDROID_20;ANDROID_21;ANDROID_22;ANDROID_23;ANDROID_24;ANDROID_25;ANDROID_26</DefineConstants>
   </PropertyGroup>
   <!-- Classes -->
   <ItemGroup>
@@ -18,20 +18,23 @@
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Account.User.UserLoginTask.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Account.User.UserLogoutTask.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Account.User.UserService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.ApplozicMqttService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Attachment.ApplozicMultipartUtility.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Attachment.AttachmentManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Attachment.AttachmentTask.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Attachment.AttachmentView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Attachment.AttachmentViewProperties.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Attachment.FileClientService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Attachment.FileMeta.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Attachment.MarkStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Conversation.ApplozicConversation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Conversation.Database.ConversationDatabaseService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Conversation.Database.MessageDatabaseService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Conversation.Message.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Conversation.MessageBuilder.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Conversation.MessageClientService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Conversation.MessageInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Conversation.MessageInfoResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Conversation.MessageMetadataUpdate.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Conversation.MobiComConversationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Conversation.MobiComMessageService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Conversation.Schedule.MessageSenderTimerTask.cs" />
@@ -51,6 +54,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Notification.MobiComPushReceiver.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Notification.MuteNotificationAsync.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Notification.MuteNotificationRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Notification.MuteUserResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Notification.NotificationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Notification.VideoCallNotificationHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.Notification.WearableNotificationWithVoice.cs" />
@@ -62,6 +66,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Api.People.PeopleClientService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Applozic.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.ApplozicClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Broadcast.ApplozicBroadcastReceiver.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Broadcast.BroadcastService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Broadcast.ConnectivityReceiver.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Broadcast.NotificationBroadcastReceiver.cs" />
@@ -79,6 +84,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Contact.MobiComVCFParser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Contact.VCFContactData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Database.MobiComDatabaseHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Exception.ApplozicException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Exception.InvalidApplicationException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Exception.UnAuthoriseException.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Feed.ApiResponse.cs" />
@@ -86,6 +92,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Feed.ChannelFeedApiResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Feed.ChannelFeedListResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Feed.ChannelName.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Feed.ChannelUsersFeed.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Feed.ConversationFeed.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Feed.ErrorResponseFeed.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Feed.GcmMessageResponse.cs" />
@@ -99,6 +106,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Feed.TopicDetail.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Feed.UserDetailListFeed.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.GeneralConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Listners.IAlLoginHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Listners.IAlLogoutHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Listners.IAlPushNotificationHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Listners.IApplozicUIListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Listners.IMediaDownloadProgressHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Listners.IMediaUploadProgressHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Listners.IMessageListHandler.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.MultipleChannelFeedApiResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Sync.SmsSyncRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Sync.SyncChannelFeed.cs" />
@@ -107,81 +121,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Sync.SyncUserBlockListFeed.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Com.Applozic.Mobicomkit.Sync.SyncUserDetailsResponse.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\Java.Interop.__TypeRegistrations.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Android.Service.IMqttTraceHandler.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Android.Service.MqttAndroidClient.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Android.Service.MqttService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.IMqttActionListener.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.IMqttAsyncClient.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.IMqttCallback.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.IMqttClient.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.IMqttClientPersistence.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.IMqttDeliveryToken.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.IMqttPersistable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.IMqttPingSender.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.IMqttToken.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.ClientComms.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.ClientDefaults.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.ClientState.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.CommsCallback.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.CommsReceiver.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.CommsSender.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.CommsTokenStore.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.ConnectActionListener.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.ExceptionHelper.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.FileLock.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.IDestinationProvider.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.INetworkModule.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.LocalNetworkModule.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.MessageCatalog.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.MqttPersistentData.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.ResourceBundleCatalog.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Security.SimpleBase64Encoder.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Security.SSLSocketFactoryFactory.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.SSLNetworkModule.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.TCPNetworkModule.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Token.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.CountingInputStream.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttAck.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttConnack.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttConnect.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttDisconnect.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttInputStream.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttOutputStream.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttPersistableWireMessage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttPingReq.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttPingResp.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttPubAck.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttPubComp.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttPublish.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttPubRec.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttPubRel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttReceivedMessage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttSuback.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttSubscribe.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttUnsubAck.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttUnsubscribe.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MqttWireMessage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MultiByteArrayInputStream.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Internal.Wire.MultiByteInteger.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Logging.ILogger.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Logging.JSR47Logger.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Logging.LoggerFactory.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Logging.SimpleLogFormatter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.MqttAsyncClient.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.MqttClient.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.MqttConnectOptions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.MqttDeliveryToken.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.MqttException.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.MqttMessage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.MqttPersistenceException.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.MqttSecurityException.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.MqttToken.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.MqttTopic.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Persist.MemoryPersistence.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Persist.MqttDefaultFilePersistence.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.TimerPingSender.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Util.Debug.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)\Org.Eclipse.Paho.Client.Mqttv3.Util.Strings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)\__NamespaceMapping__.cs" />
   </ItemGroup>
   <!-- Enums -->

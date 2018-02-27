@@ -142,8 +142,8 @@ namespace Com.Applozic.Mobicommons.People.Channel {
 					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Channel.Channel.GroupType> (__ret, JniHandleOwnership.TransferLocalRef);
 				}
 			}
-			internal static IntPtr java_class_handle;
-			internal static IntPtr class_ref {
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
 				get {
 					return JNIEnv.FindClass ("com/applozic/mobicommons/people/channel/Channel$GroupType", ref java_class_handle);
 				}
@@ -834,6 +834,40 @@ namespace Com.Applozic.Mobicommons.People.Channel {
 						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isDeleted);
 					else
 						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isDeleted", "()Z"));
+				} finally {
+				}
+			}
+		}
+
+		static Delegate cb_isGroupDefaultMuted;
+#pragma warning disable 0169
+		static Delegate GetIsGroupDefaultMutedHandler ()
+		{
+			if (cb_isGroupDefaultMuted == null)
+				cb_isGroupDefaultMuted = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, bool>) n_IsGroupDefaultMuted);
+			return cb_isGroupDefaultMuted;
+		}
+
+		static bool n_IsGroupDefaultMuted (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicommons.People.Channel.Channel __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Channel.Channel> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return __this.IsGroupDefaultMuted;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_isGroupDefaultMuted;
+		public virtual unsafe bool IsGroupDefaultMuted {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.people.channel']/class[@name='Channel']/method[@name='isGroupDefaultMuted' and count(parameter)=0]"
+			[Register ("isGroupDefaultMuted", "()Z", "GetIsGroupDefaultMutedHandler")]
+			get {
+				if (id_isGroupDefaultMuted == IntPtr.Zero)
+					id_isGroupDefaultMuted = JNIEnv.GetMethodID (class_ref, "isGroupDefaultMuted", "()Z");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isGroupDefaultMuted);
+					else
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isGroupDefaultMuted", "()Z"));
 				} finally {
 				}
 			}

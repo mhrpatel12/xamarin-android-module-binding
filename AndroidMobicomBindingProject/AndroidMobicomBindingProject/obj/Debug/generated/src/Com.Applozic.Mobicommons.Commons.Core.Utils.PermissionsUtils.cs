@@ -153,6 +153,10 @@ namespace Com.Applozic.Mobicommons.Commons.Core.Utils {
 		[Register ("REQUEST_CAMERA")]
 		public const int RequestCamera = (int) 5;
 
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicommons.commons.core.utils']/class[@name='PermissionsUtils']/field[@name='REQUEST_CAMERA_AUDIO']"
+		[Register ("REQUEST_CAMERA_AUDIO")]
+		public const int RequestCameraAudio = (int) 9;
+
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicommons.commons.core.utils']/class[@name='PermissionsUtils']/field[@name='REQUEST_CAMERA_FOR_PROFILE_PHOTO']"
 		[Register ("REQUEST_CAMERA_FOR_PROFILE_PHOTO")]
 		public const int RequestCameraForProfilePhoto = (int) 7;
@@ -176,8 +180,8 @@ namespace Com.Applozic.Mobicommons.Commons.Core.Utils {
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicommons.commons.core.utils']/class[@name='PermissionsUtils']/field[@name='REQUEST_STORAGE_FOR_PROFILE_PHOTO']"
 		[Register ("REQUEST_STORAGE_FOR_PROFILE_PHOTO")]
 		public const int RequestStorageForProfilePhoto = (int) 8;
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/commons/core/utils/PermissionsUtils", ref java_class_handle);
 			}
@@ -217,6 +221,22 @@ namespace Com.Applozic.Mobicommons.Commons.Core.Utils {
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor),
 						JniHandleOwnership.TransferLocalRef);
 				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor);
+			} finally {
+			}
+		}
+
+		static IntPtr id_checkPermissionForCameraAndMicrophone_Landroid_content_Context_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.commons.core.utils']/class[@name='PermissionsUtils']/method[@name='checkPermissionForCameraAndMicrophone' and count(parameter)=1 and parameter[1][@type='android.content.Context']]"
+		[Register ("checkPermissionForCameraAndMicrophone", "(Landroid/content/Context;)Z", "")]
+		public static unsafe bool CheckPermissionForCameraAndMicrophone (global::Android.Content.Context p0)
+		{
+			if (id_checkPermissionForCameraAndMicrophone_Landroid_content_Context_ == IntPtr.Zero)
+				id_checkPermissionForCameraAndMicrophone_Landroid_content_Context_ = JNIEnv.GetStaticMethodID (class_ref, "checkPermissionForCameraAndMicrophone", "(Landroid/content/Context;)Z");
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+				bool __ret = JNIEnv.CallStaticBooleanMethod  (class_ref, id_checkPermissionForCameraAndMicrophone_Landroid_content_Context_, __args);
+				return __ret;
 			} finally {
 			}
 		}

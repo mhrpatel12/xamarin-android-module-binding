@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/api/account/user/UserService", DoNotGenerateAcw=true)]
 	public partial class UserService : global::Java.Lang.Object {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/account/user/UserService", ref java_class_handle);
 			}
@@ -24,6 +24,40 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 		}
 
 		protected UserService (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
+
+		static Delegate cb_getMutedUserList;
+#pragma warning disable 0169
+		static Delegate GetGetMutedUserListHandler ()
+		{
+			if (cb_getMutedUserList == null)
+				cb_getMutedUserList = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetMutedUserList);
+			return cb_getMutedUserList;
+		}
+
+		static IntPtr n_GetMutedUserList (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Account.User.UserService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.UserService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return global::Android.Runtime.JavaList<global::Com.Applozic.Mobicomkit.Api.Notification.MuteUserResponse>.ToLocalJniHandle (__this.MutedUserList);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getMutedUserList;
+		public virtual unsafe global::System.Collections.Generic.IList<global::Com.Applozic.Mobicomkit.Api.Notification.MuteUserResponse> MutedUserList {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='UserService']/method[@name='getMutedUserList' and count(parameter)=0]"
+			[Register ("getMutedUserList", "()Ljava/util/List;", "GetGetMutedUserListHandler")]
+			get {
+				if (id_getMutedUserList == IntPtr.Zero)
+					id_getMutedUserList = JNIEnv.GetMethodID (class_ref, "getMutedUserList", "()Ljava/util/List;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return global::Android.Runtime.JavaList<global::Com.Applozic.Mobicomkit.Api.Notification.MuteUserResponse>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getMutedUserList), JniHandleOwnership.TransferLocalRef);
+					else
+						return global::Android.Runtime.JavaList<global::Com.Applozic.Mobicomkit.Api.Notification.MuteUserResponse>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMutedUserList", "()Ljava/util/List;")), JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+		}
 
 		static IntPtr id_getInstance_Landroid_content_Context_;
 		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='UserService']/method[@name='getInstance' and count(parameter)=1 and parameter[1][@type='android.content.Context']]"
@@ -112,6 +146,85 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 				else
 					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Feed.RegisteredUsersApiResponse> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getRegisteredUsersList", "(Ljava/lang/Long;I)Lcom/applozic/mobicomkit/feed/RegisteredUsersApiResponse;"), __args), JniHandleOwnership.TransferLocalRef);
 				return __ret;
+			} finally {
+			}
+		}
+
+		static Delegate cb_muteUserNotifications_Ljava_lang_String_Ljava_lang_Long_;
+#pragma warning disable 0169
+		static Delegate GetMuteUserNotifications_Ljava_lang_String_Ljava_lang_Long_Handler ()
+		{
+			if (cb_muteUserNotifications_Ljava_lang_String_Ljava_lang_Long_ == null)
+				cb_muteUserNotifications_Ljava_lang_String_Ljava_lang_Long_ = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_MuteUserNotifications_Ljava_lang_String_Ljava_lang_Long_);
+			return cb_muteUserNotifications_Ljava_lang_String_Ljava_lang_Long_;
+		}
+
+		static IntPtr n_MuteUserNotifications_Ljava_lang_String_Ljava_lang_Long_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Account.User.UserService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.UserService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Long p1 = global::Java.Lang.Object.GetObject<global::Java.Lang.Long> (native_p1, JniHandleOwnership.DoNotTransfer);
+			IntPtr __ret = JNIEnv.ToLocalJniHandle (__this.MuteUserNotifications (p0, p1));
+			return __ret;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_muteUserNotifications_Ljava_lang_String_Ljava_lang_Long_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='UserService']/method[@name='muteUserNotifications' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.Long']]"
+		[Register ("muteUserNotifications", "(Ljava/lang/String;Ljava/lang/Long;)Lcom/applozic/mobicomkit/feed/ApiResponse;", "GetMuteUserNotifications_Ljava_lang_String_Ljava_lang_Long_Handler")]
+		public virtual unsafe global::Com.Applozic.Mobicomkit.Feed.ApiResponse MuteUserNotifications (string p0, global::Java.Lang.Long p1)
+		{
+			if (id_muteUserNotifications_Ljava_lang_String_Ljava_lang_Long_ == IntPtr.Zero)
+				id_muteUserNotifications_Ljava_lang_String_Ljava_lang_Long_ = JNIEnv.GetMethodID (class_ref, "muteUserNotifications", "(Ljava/lang/String;Ljava/lang/Long;)Lcom/applozic/mobicomkit/feed/ApiResponse;");
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (p1);
+
+				global::Com.Applozic.Mobicomkit.Feed.ApiResponse __ret;
+				if (((object) this).GetType () == ThresholdType)
+					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Feed.ApiResponse> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_muteUserNotifications_Ljava_lang_String_Ljava_lang_Long_, __args), JniHandleOwnership.TransferLocalRef);
+				else
+					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Feed.ApiResponse> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "muteUserNotifications", "(Ljava/lang/String;Ljava/lang/Long;)Lcom/applozic/mobicomkit/feed/ApiResponse;"), __args), JniHandleOwnership.TransferLocalRef);
+				return __ret;
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+			}
+		}
+
+		static Delegate cb_processMuteUserResponse_Lcom_applozic_mobicomkit_api_notification_MuteUserResponse_;
+#pragma warning disable 0169
+		static Delegate GetProcessMuteUserResponse_Lcom_applozic_mobicomkit_api_notification_MuteUserResponse_Handler ()
+		{
+			if (cb_processMuteUserResponse_Lcom_applozic_mobicomkit_api_notification_MuteUserResponse_ == null)
+				cb_processMuteUserResponse_Lcom_applozic_mobicomkit_api_notification_MuteUserResponse_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_ProcessMuteUserResponse_Lcom_applozic_mobicomkit_api_notification_MuteUserResponse_);
+			return cb_processMuteUserResponse_Lcom_applozic_mobicomkit_api_notification_MuteUserResponse_;
+		}
+
+		static void n_ProcessMuteUserResponse_Lcom_applozic_mobicomkit_api_notification_MuteUserResponse_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Account.User.UserService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.UserService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Com.Applozic.Mobicomkit.Api.Notification.MuteUserResponse p0 = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Notification.MuteUserResponse> (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.ProcessMuteUserResponse (p0);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_processMuteUserResponse_Lcom_applozic_mobicomkit_api_notification_MuteUserResponse_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='UserService']/method[@name='processMuteUserResponse' and count(parameter)=1 and parameter[1][@type='com.applozic.mobicomkit.api.notification.MuteUserResponse']]"
+		[Register ("processMuteUserResponse", "(Lcom/applozic/mobicomkit/api/notification/MuteUserResponse;)V", "GetProcessMuteUserResponse_Lcom_applozic_mobicomkit_api_notification_MuteUserResponse_Handler")]
+		public virtual unsafe void ProcessMuteUserResponse (global::Com.Applozic.Mobicomkit.Api.Notification.MuteUserResponse p0)
+		{
+			if (id_processMuteUserResponse_Lcom_applozic_mobicomkit_api_notification_MuteUserResponse_ == IntPtr.Zero)
+				id_processMuteUserResponse_Lcom_applozic_mobicomkit_api_notification_MuteUserResponse_ = JNIEnv.GetMethodID (class_ref, "processMuteUserResponse", "(Lcom/applozic/mobicomkit/api/notification/MuteUserResponse;)V");
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_processMuteUserResponse_Lcom_applozic_mobicomkit_api_notification_MuteUserResponse_, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "processMuteUserResponse", "(Lcom/applozic/mobicomkit/api/notification/MuteUserResponse;)V"), __args);
 			} finally {
 			}
 		}
@@ -533,28 +646,29 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 		static Delegate GetUpdateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Handler ()
 		{
 			if (cb_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ == null)
-				cb_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_UpdateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_);
+				cb_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_UpdateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_);
 			return cb_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_;
 		}
 
-		static void n_UpdateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1, IntPtr native_p2, IntPtr native_p3)
+		static IntPtr n_UpdateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1, IntPtr native_p2, IntPtr native_p3)
 		{
 			global::Com.Applozic.Mobicomkit.Api.Account.User.UserService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.UserService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
 			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
 			string p1 = JNIEnv.GetString (native_p1, JniHandleOwnership.DoNotTransfer);
 			string p2 = JNIEnv.GetString (native_p2, JniHandleOwnership.DoNotTransfer);
 			string p3 = JNIEnv.GetString (native_p3, JniHandleOwnership.DoNotTransfer);
-			__this.UpdateDisplayNameORImageLink (p0, p1, p2, p3);
+			IntPtr __ret = JNIEnv.NewString (__this.UpdateDisplayNameORImageLink (p0, p1, p2, p3));
+			return __ret;
 		}
 #pragma warning restore 0169
 
 		static IntPtr id_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_;
 		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='UserService']/method[@name='updateDisplayNameORImageLink' and count(parameter)=4 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String']]"
-		[Register ("updateDisplayNameORImageLink", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", "GetUpdateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Handler")]
-		public virtual unsafe void UpdateDisplayNameORImageLink (string p0, string p1, string p2, string p3)
+		[Register ("updateDisplayNameORImageLink", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", "GetUpdateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Handler")]
+		public virtual unsafe string UpdateDisplayNameORImageLink (string p0, string p1, string p2, string p3)
 		{
 			if (id_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ == IntPtr.Zero)
-				id_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "updateDisplayNameORImageLink", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V");
+				id_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "updateDisplayNameORImageLink", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;");
 			IntPtr native_p0 = JNIEnv.NewString (p0);
 			IntPtr native_p1 = JNIEnv.NewString (p1);
 			IntPtr native_p2 = JNIEnv.NewString (p2);
@@ -566,15 +680,74 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 				__args [2] = new JValue (native_p2);
 				__args [3] = new JValue (native_p3);
 
+				string __ret;
 				if (((object) this).GetType () == ThresholdType)
-					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_, __args);
+					__ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
 				else
-					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateDisplayNameORImageLink", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V"), __args);
+					__ret = JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateDisplayNameORImageLink", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
+				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 				JNIEnv.DeleteLocalRef (native_p1);
 				JNIEnv.DeleteLocalRef (native_p2);
 				JNIEnv.DeleteLocalRef (native_p3);
+			}
+		}
+
+		static Delegate cb_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_;
+#pragma warning disable 0169
+		static Delegate GetUpdateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Handler ()
+		{
+			if (cb_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ == null)
+				cb_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_UpdateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_);
+			return cb_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_;
+		}
+
+		static IntPtr n_UpdateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1, IntPtr native_p2, IntPtr native_p3, IntPtr native_p4)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Account.User.UserService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Account.User.UserService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
+			string p1 = JNIEnv.GetString (native_p1, JniHandleOwnership.DoNotTransfer);
+			string p2 = JNIEnv.GetString (native_p2, JniHandleOwnership.DoNotTransfer);
+			string p3 = JNIEnv.GetString (native_p3, JniHandleOwnership.DoNotTransfer);
+			string p4 = JNIEnv.GetString (native_p4, JniHandleOwnership.DoNotTransfer);
+			IntPtr __ret = JNIEnv.NewString (__this.UpdateDisplayNameORImageLink (p0, p1, p2, p3, p4));
+			return __ret;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='UserService']/method[@name='updateDisplayNameORImageLink' and count(parameter)=5 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String'] and parameter[4][@type='java.lang.String'] and parameter[5][@type='java.lang.String']]"
+		[Register ("updateDisplayNameORImageLink", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;", "GetUpdateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Handler")]
+		public virtual unsafe string UpdateDisplayNameORImageLink (string p0, string p1, string p2, string p3, string p4)
+		{
+			if (id_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ == IntPtr.Zero)
+				id_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "updateDisplayNameORImageLink", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;");
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			IntPtr native_p1 = JNIEnv.NewString (p1);
+			IntPtr native_p2 = JNIEnv.NewString (p2);
+			IntPtr native_p3 = JNIEnv.NewString (p3);
+			IntPtr native_p4 = JNIEnv.NewString (p4);
+			try {
+				JValue* __args = stackalloc JValue [5];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (native_p1);
+				__args [2] = new JValue (native_p2);
+				__args [3] = new JValue (native_p3);
+				__args [4] = new JValue (native_p4);
+
+				string __ret;
+				if (((object) this).GetType () == ThresholdType)
+					__ret = JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_updateDisplayNameORImageLink_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
+				else
+					__ret = JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateDisplayNameORImageLink", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;"), __args), JniHandleOwnership.TransferLocalRef);
+				return __ret;
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+				JNIEnv.DeleteLocalRef (native_p1);
+				JNIEnv.DeleteLocalRef (native_p2);
+				JNIEnv.DeleteLocalRef (native_p3);
+				JNIEnv.DeleteLocalRef (native_p4);
 			}
 		}
 

@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{7A77D1A2-67DA-4288-8559-4F2C0EFD9701}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AndroidMobicomkitBinding/obj/Debug/generated/src/Com.Applozic.Mobicomkit.Api.Conversation.Message.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AndroidBindingProject/Transforms/Metadata.xml">
     <Files>
-      <File FileName="AndroidMobicomkitBinding/obj/Debug/generated/src/Com.Applozic.Mobicomkit.Api.Conversation.Message.cs" Line="734" Column="101" />
+      <File FileName="AndroidBindingProject/Transforms/Metadata.xml" Line="40" Column="53" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.AndroidBindingProject PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.AndroidBindingProject PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>

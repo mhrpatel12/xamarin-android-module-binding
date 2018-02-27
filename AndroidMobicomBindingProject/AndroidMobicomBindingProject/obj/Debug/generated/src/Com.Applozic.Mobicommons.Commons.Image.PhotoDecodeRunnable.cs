@@ -254,8 +254,8 @@ namespace Com.Applozic.Mobicommons.Commons.Image {
 		}
 
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/commons/image/PhotoDecodeRunnable", ref java_class_handle);
 			}

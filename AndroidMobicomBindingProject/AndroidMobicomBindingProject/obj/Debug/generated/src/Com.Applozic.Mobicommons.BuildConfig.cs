@@ -15,11 +15,19 @@ namespace Com.Applozic.Mobicommons {
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicommons']/class[@name='BuildConfig']/field[@name='BUILD_TYPE']"
 		[Register ("BUILD_TYPE")]
-		public const string BuildType = (string) "release";
+		public const string BuildType = (string) "debug";
+
+		static IntPtr DEBUG_jfieldId;
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicommons']/class[@name='BuildConfig']/field[@name='DEBUG']"
 		[Register ("DEBUG")]
-		public const bool Debug = (bool) false;
+		public static bool Debug {
+			get {
+				if (DEBUG_jfieldId == IntPtr.Zero)
+					DEBUG_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "DEBUG", "Z");
+				return JNIEnv.GetStaticBooleanField (class_ref, DEBUG_jfieldId);
+			}
+		}
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicommons']/class[@name='BuildConfig']/field[@name='FLAVOR']"
 		[Register ("FLAVOR")]
@@ -31,9 +39,9 @@ namespace Com.Applozic.Mobicommons {
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicommons']/class[@name='BuildConfig']/field[@name='VERSION_NAME']"
 		[Register ("VERSION_NAME")]
-		public const string VersionName = (string) "4.93";
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		public const string VersionName = (string) "5.6.4";
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/BuildConfig", ref java_class_handle);
 			}

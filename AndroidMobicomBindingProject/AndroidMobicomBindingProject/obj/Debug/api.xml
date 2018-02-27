@@ -6,15 +6,15 @@
 </constructor>
 <field deprecated="not deprecated" final="true" name="APPLICATION_ID" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;com.applozic.mobicommons&quot;" visibility="public" volatile="false">
 </field>
-<field deprecated="not deprecated" final="true" name="BUILD_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;release&quot;" visibility="public" volatile="false">
+<field deprecated="not deprecated" final="true" name="BUILD_TYPE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;debug&quot;" visibility="public" volatile="false">
 </field>
-<field deprecated="not deprecated" final="true" name="DEBUG" static="true" transient="false" type="boolean" type-generic-aware="boolean" value="false" visibility="public" volatile="false">
+<field deprecated="not deprecated" final="true" name="DEBUG" static="true" transient="false" type="boolean" type-generic-aware="boolean" visibility="public" volatile="false">
 </field>
 <field deprecated="not deprecated" final="true" name="FLAVOR" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;&quot;" visibility="public" volatile="false">
 </field>
 <field deprecated="not deprecated" final="true" name="VERSION_CODE" static="true" transient="false" type="int" type-generic-aware="int" value="1" visibility="public" volatile="false">
 </field>
-<field deprecated="not deprecated" final="true" name="VERSION_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;4.93&quot;" visibility="public" volatile="false">
+<field deprecated="not deprecated" final="true" name="VERSION_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;5.6.4&quot;" visibility="public" volatile="false">
 </field>
 </class>
 </package>
@@ -130,6 +130,10 @@
 <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="PermissionsUtils" static="false" visibility="public">
 <constructor deprecated="not deprecated" final="false" name="PermissionsUtils" static="false" type="com.applozic.mobicommons.commons.core.utils.PermissionsUtils" visibility="public">
 </constructor>
+<method abstract="false" deprecated="not deprecated" final="false" name="checkPermissionForCameraAndMicrophone" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="android.content.Context">
+</parameter>
+</method>
 <method abstract="false" deprecated="not deprecated" final="false" name="checkSelfForCallPermission" native="false" return="boolean" static="true" synchronized="false" visibility="public">
 <parameter name="p0" type="android.app.Activity">
 </parameter>
@@ -219,6 +223,8 @@
 <field deprecated="not deprecated" final="true" name="REQUEST_CALL_PHONE" static="true" transient="false" type="int" type-generic-aware="int" value="4" visibility="public" volatile="false">
 </field>
 <field deprecated="not deprecated" final="true" name="REQUEST_CAMERA" static="true" transient="false" type="int" type-generic-aware="int" value="5" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="REQUEST_CAMERA_AUDIO" static="true" transient="false" type="int" type-generic-aware="int" value="9" visibility="public" volatile="false">
 </field>
 <field deprecated="not deprecated" final="true" name="REQUEST_CAMERA_FOR_PROFILE_PHOTO" static="true" transient="false" type="int" type-generic-aware="int" value="7" visibility="public" volatile="false">
 </field>
@@ -349,6 +355,8 @@
 <method abstract="false" deprecated="not deprecated" final="false" name="hasMarshmallow" native="false" return="boolean" static="true" synchronized="false" visibility="public">
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="hasNougat" native="false" return="boolean" static="true" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="hasOreo" native="false" return="boolean" static="true" synchronized="false" visibility="public">
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="isBetweenGingerBreadAndKitKat" native="false" return="boolean" static="true" synchronized="false" visibility="public">
 </method>
@@ -602,6 +610,10 @@
 <parameter name="p1" type="int">
 </parameter>
 <parameter name="p2" type="int">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="decodeSampledBitmapFromPath" native="false" return="android.graphics.Bitmap" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
 </parameter>
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="getBitMapFromLocalPath" native="false" return="android.graphics.Bitmap" static="true" synchronized="false" visibility="public">
@@ -943,7 +955,7 @@
 </parameter>
 <parameter name="p1" type="android.net.Uri">
 </parameter>
-<parameter name="p2" type="int">
+<parameter name="p2" type="long">
 </parameter>
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="isMediaDocument" native="false" return="boolean" static="true" synchronized="false" visibility="public">
@@ -1240,6 +1252,8 @@
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="isDeleted" native="false" return="boolean" static="false" synchronized="false" visibility="public">
 </method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isGroupDefaultMuted" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
 <method abstract="false" deprecated="not deprecated" final="false" name="isNotificationMuted" native="false" return="boolean" static="false" synchronized="false" visibility="public">
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="setAdminKey" native="false" return="void" static="false" synchronized="false" visibility="public">
@@ -1350,12 +1364,18 @@
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="getRemoveMemberMessage" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
 </method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isDefaultMute" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
 <method abstract="false" deprecated="not deprecated" final="false" name="setAddMemberMessage" native="false" return="void" static="false" synchronized="false" visibility="public">
 <parameter name="p0" type="java.lang.String">
 </parameter>
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="setCreateGroupMessage" native="false" return="void" static="false" synchronized="false" visibility="public">
 <parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setDefaultMute" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="boolean">
 </parameter>
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="setDeletedGroupMessage" native="false" return="void" static="false" synchronized="false" visibility="public">
@@ -1406,6 +1426,8 @@
 </field>
 <field deprecated="not deprecated" final="true" name="JOIN_MEMBER_MESSAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;JOIN_MEMBER_MESSAGE&quot;" visibility="public" volatile="false">
 </field>
+<field deprecated="not deprecated" final="true" name="MUTE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;MUTE&quot;" visibility="public" volatile="false">
+</field>
 <field deprecated="not deprecated" final="true" name="REMOVE_MEMBER_MESSAGE" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;REMOVE_MEMBER_MESSAGE&quot;" visibility="public" volatile="false">
 </field>
 <field deprecated="not deprecated" final="true" name="USER_NAME" static="true" transient="false" type="java.lang.String" type-generic-aware="java.lang.String" value="&quot;:userName&quot;" visibility="public" volatile="false">
@@ -1430,6 +1452,8 @@
 </constructor>
 <method abstract="false" deprecated="not deprecated" final="false" name="getKey" native="false" return="java.lang.Integer" static="false" synchronized="false" visibility="public">
 </method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getRole" native="false" return="java.lang.Integer" static="false" synchronized="false" visibility="public">
+</method>
 <method abstract="false" deprecated="not deprecated" final="false" name="getStatus" native="false" return="short" static="false" synchronized="false" visibility="public">
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="getUnreadCount" native="false" return="int" static="false" synchronized="false" visibility="public">
@@ -1437,6 +1461,10 @@
 <method abstract="false" deprecated="not deprecated" final="false" name="getUserKey" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="setKey" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Integer">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setRole" native="false" return="void" static="false" synchronized="false" visibility="public">
 <parameter name="p0" type="java.lang.Integer">
 </parameter>
 </method>
@@ -1452,6 +1480,22 @@
 <parameter name="p0" type="java.lang.String">
 </parameter>
 </method>
+</class>
+<class abstract="false" deprecated="not deprecated" extends="java.lang.Enum" extends-generic-aware="java.lang.Enum&lt;com.applozic.mobicommons.people.channel.ChannelUserMapper.UserRole&gt;" final="true" name="ChannelUserMapper.UserRole" static="true" visibility="public">
+<method abstract="false" deprecated="not deprecated" final="false" name="getValue" native="false" return="java.lang.Integer" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="valueOf" native="false" return="com.applozic.mobicommons.people.channel.ChannelUserMapper.UserRole" static="true" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.String">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="values" native="false" return="com.applozic.mobicommons.people.channel.ChannelUserMapper.UserRole[]" static="true" synchronized="false" visibility="public">
+</method>
+<field deprecated="not deprecated" final="true" name="ADMIN" static="true" transient="false" type="com.applozic.mobicommons.people.channel.ChannelUserMapper.UserRole" type-generic-aware="com.applozic.mobicommons.people.channel.ChannelUserMapper.UserRole" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MEMBER" static="true" transient="false" type="com.applozic.mobicommons.people.channel.ChannelUserMapper.UserRole" type-generic-aware="com.applozic.mobicommons.people.channel.ChannelUserMapper.UserRole" visibility="public" volatile="false">
+</field>
+<field deprecated="not deprecated" final="true" name="MODERATOR" static="true" transient="false" type="com.applozic.mobicommons.people.channel.ChannelUserMapper.UserRole" type-generic-aware="com.applozic.mobicommons.people.channel.ChannelUserMapper.UserRole" visibility="public" volatile="false">
+</field>
 </class>
 <class abstract="false" deprecated="not deprecated" extends="java.lang.Object" extends-generic-aware="java.lang.Object" final="false" name="ChannelUtils" static="false" visibility="public">
 <constructor deprecated="not deprecated" final="false" name="ChannelUtils" static="false" type="com.applozic.mobicommons.people.channel.ChannelUtils" visibility="public">
@@ -1628,6 +1672,8 @@
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="getContactType" native="false" return="short" static="false" synchronized="false" visibility="public">
 </method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getDeletedAtTime" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+</method>
 <method abstract="false" deprecated="not deprecated" final="false" name="getDisplayName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="getEmailId" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
@@ -1642,15 +1688,23 @@
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="getImageURL" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
 </method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getLastMessageAtTime" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+</method>
 <method abstract="false" deprecated="not deprecated" final="false" name="getLastName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="getLastSeenAt" native="false" return="long" static="false" synchronized="false" visibility="public">
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="getLocalImageUrl" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
 </method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getMetadata" native="false" return="java.util.Map&lt;java.lang.String, java.lang.String&gt;" static="false" synchronized="false" visibility="public">
+</method>
 <method abstract="false" deprecated="not deprecated" final="false" name="getMiddleName" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
 </method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getNotificationAfterTime" native="false" return="java.lang.Long" static="false" synchronized="false" visibility="public">
+</method>
 <method abstract="false" deprecated="not deprecated" final="false" name="getPhoneNumbers" native="false" return="java.util.Map&lt;java.lang.String, java.lang.String&gt;" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="getRoleType" native="false" return="java.lang.Short" static="false" synchronized="false" visibility="public">
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="getStatus" native="false" return="java.lang.String" static="false" synchronized="false" visibility="public">
 </method>
@@ -1672,7 +1726,11 @@
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="isConnected" native="false" return="boolean" static="false" synchronized="false" visibility="public">
 </method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isDeleted" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
 <method abstract="false" deprecated="not deprecated" final="false" name="isDrawableResources" native="false" return="boolean" static="false" synchronized="false" visibility="public">
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="isNotificationMuted" native="false" return="boolean" static="false" synchronized="false" visibility="public">
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="isOnline" native="false" return="boolean" static="false" synchronized="false" visibility="public">
 </method>
@@ -1720,6 +1778,10 @@
 <parameter name="p0" type="short">
 </parameter>
 </method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setDeletedAtTime" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Long">
+</parameter>
+</method>
 <method abstract="false" deprecated="not deprecated" final="false" name="setEmailId" native="false" return="void" static="false" synchronized="false" visibility="public">
 <parameter name="p0" type="java.lang.String">
 </parameter>
@@ -1744,6 +1806,10 @@
 <parameter name="p0" type="java.lang.String">
 </parameter>
 </method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setLastMessageAtTime" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Long">
+</parameter>
+</method>
 <method abstract="false" deprecated="not deprecated" final="false" name="setLastName" native="false" return="void" static="false" synchronized="false" visibility="public">
 <parameter name="p0" type="java.lang.String">
 </parameter>
@@ -1756,12 +1822,24 @@
 <parameter name="p0" type="java.lang.String">
 </parameter>
 </method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setMetadata" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.String&gt;">
+</parameter>
+</method>
 <method abstract="false" deprecated="not deprecated" final="false" name="setMiddleName" native="false" return="void" static="false" synchronized="false" visibility="public">
 <parameter name="p0" type="java.lang.String">
 </parameter>
 </method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setNotificationAfterTime" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Long">
+</parameter>
+</method>
 <method abstract="false" deprecated="not deprecated" final="false" name="setPhoneNumbers" native="false" return="void" static="false" synchronized="false" visibility="public">
 <parameter name="p0" type="java.util.Map&lt;java.lang.String, java.lang.String&gt;">
+</parameter>
+</method>
+<method abstract="false" deprecated="not deprecated" final="false" name="setRoleType" native="false" return="void" static="false" synchronized="false" visibility="public">
+<parameter name="p0" type="java.lang.Short">
 </parameter>
 </method>
 <method abstract="false" deprecated="not deprecated" final="false" name="setStatus" native="false" return="void" static="false" synchronized="false" visibility="public">

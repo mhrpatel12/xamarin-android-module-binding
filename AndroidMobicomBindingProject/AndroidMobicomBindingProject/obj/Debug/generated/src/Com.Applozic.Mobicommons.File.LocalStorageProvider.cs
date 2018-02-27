@@ -12,8 +12,8 @@ namespace Com.Applozic.Mobicommons.File {
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicommons.file']/class[@name='LocalStorageProvider']/field[@name='AUTHORITY']"
 		[Register ("AUTHORITY")]
 		public const string Authority = (string) "com.ianhanniballake.localstorage.documents";
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/file/LocalStorageProvider", ref java_class_handle);
 			}

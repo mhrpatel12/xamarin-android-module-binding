@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicomkit.Exception {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/exception/UnAuthoriseException", DoNotGenerateAcw=true)]
 	public partial class UnAuthoriseException : global::Java.Lang.Exception {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/exception/UnAuthoriseException", ref java_class_handle);
 			}

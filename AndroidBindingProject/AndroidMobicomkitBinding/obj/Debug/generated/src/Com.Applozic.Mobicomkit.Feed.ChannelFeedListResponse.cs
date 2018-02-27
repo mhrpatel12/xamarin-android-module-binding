@@ -12,8 +12,8 @@ namespace Com.Applozic.Mobicomkit.Feed {
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.feed']/class[@name='ChannelFeedListResponse']/field[@name='SUCCESS']"
 		[Register ("SUCCESS")]
 		public const string Success = (string) "success";
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/feed/ChannelFeedListResponse", ref java_class_handle);
 			}

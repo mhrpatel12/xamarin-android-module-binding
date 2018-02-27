@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicomkit {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/MultipleChannelFeedApiResponse", DoNotGenerateAcw=true)]
 	public partial class MultipleChannelFeedApiResponse : global::Com.Applozic.Mobicommons.Json.JsonMarker {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/MultipleChannelFeedApiResponse", ref java_class_handle);
 			}

@@ -98,6 +98,29 @@ namespace Com.Applozic.Mobicomkit.Broadcast {
 			}
 		}
 
+		static IntPtr currentUserProfileUserId_jfieldId;
+
+		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.broadcast']/class[@name='BroadcastService']/field[@name='currentUserProfileUserId']"
+		[Register ("currentUserProfileUserId")]
+		public static string CurrentUserProfileUserId {
+			get {
+				if (currentUserProfileUserId_jfieldId == IntPtr.Zero)
+					currentUserProfileUserId_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "currentUserProfileUserId", "Ljava/lang/String;");
+				IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, currentUserProfileUserId_jfieldId);
+				return JNIEnv.GetString (__ret, JniHandleOwnership.TransferLocalRef);
+			}
+			set {
+				if (currentUserProfileUserId_jfieldId == IntPtr.Zero)
+					currentUserProfileUserId_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "currentUserProfileUserId", "Ljava/lang/String;");
+				IntPtr native_value = JNIEnv.NewString (value);
+				try {
+					JNIEnv.SetStaticField (class_ref, currentUserProfileUserId_jfieldId, native_value);
+				} finally {
+					JNIEnv.DeleteLocalRef (native_value);
+				}
+			}
+		}
+
 		static IntPtr lastIndexForChats_jfieldId;
 
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.broadcast']/class[@name='BroadcastService']/field[@name='lastIndexForChats']"
@@ -318,6 +341,19 @@ namespace Com.Applozic.Mobicomkit.Broadcast {
 				}
 			}
 
+			static IntPtr MESSAGE_METADATA_UPDATE_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.broadcast']/class[@name='BroadcastService.INTENT_ACTIONS']/field[@name='MESSAGE_METADATA_UPDATE']"
+			[Register ("MESSAGE_METADATA_UPDATE")]
+			public static global::Com.Applozic.Mobicomkit.Broadcast.BroadcastService.INTENT_ACTIONS MessageMetadataUpdate {
+				get {
+					if (MESSAGE_METADATA_UPDATE_jfieldId == IntPtr.Zero)
+						MESSAGE_METADATA_UPDATE_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "MESSAGE_METADATA_UPDATE", "Lcom/applozic/mobicomkit/broadcast/BroadcastService$INTENT_ACTIONS;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, MESSAGE_METADATA_UPDATE_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Broadcast.BroadcastService.INTENT_ACTIONS> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
 			static IntPtr MESSAGE_READ_AND_DELIVERED_jfieldId;
 
 			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.broadcast']/class[@name='BroadcastService.INTENT_ACTIONS']/field[@name='MESSAGE_READ_AND_DELIVERED']"
@@ -366,6 +402,19 @@ namespace Com.Applozic.Mobicomkit.Broadcast {
 					if (MQTT_DISCONNECTED_jfieldId == IntPtr.Zero)
 						MQTT_DISCONNECTED_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "MQTT_DISCONNECTED", "Lcom/applozic/mobicomkit/broadcast/BroadcastService$INTENT_ACTIONS;");
 					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, MQTT_DISCONNECTED_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Broadcast.BroadcastService.INTENT_ACTIONS> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
+			static IntPtr MUTE_USER_CHAT_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.broadcast']/class[@name='BroadcastService.INTENT_ACTIONS']/field[@name='MUTE_USER_CHAT']"
+			[Register ("MUTE_USER_CHAT")]
+			public static global::Com.Applozic.Mobicomkit.Broadcast.BroadcastService.INTENT_ACTIONS MuteUserChat {
+				get {
+					if (MUTE_USER_CHAT_jfieldId == IntPtr.Zero)
+						MUTE_USER_CHAT_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "MUTE_USER_CHAT", "Lcom/applozic/mobicomkit/broadcast/BroadcastService$INTENT_ACTIONS;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, MUTE_USER_CHAT_jfieldId);
 					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Broadcast.BroadcastService.INTENT_ACTIONS> (__ret, JniHandleOwnership.TransferLocalRef);
 				}
 			}
@@ -448,6 +497,19 @@ namespace Com.Applozic.Mobicomkit.Broadcast {
 				}
 			}
 
+			static IntPtr UPDATE_USER_DETAIL_jfieldId;
+
+			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.broadcast']/class[@name='BroadcastService.INTENT_ACTIONS']/field[@name='UPDATE_USER_DETAIL']"
+			[Register ("UPDATE_USER_DETAIL")]
+			public static global::Com.Applozic.Mobicomkit.Broadcast.BroadcastService.INTENT_ACTIONS UpdateUserDetail {
+				get {
+					if (UPDATE_USER_DETAIL_jfieldId == IntPtr.Zero)
+						UPDATE_USER_DETAIL_jfieldId = JNIEnv.GetStaticFieldID (class_ref, "UPDATE_USER_DETAIL", "Lcom/applozic/mobicomkit/broadcast/BroadcastService$INTENT_ACTIONS;");
+					IntPtr __ret = JNIEnv.GetStaticObjectField (class_ref, UPDATE_USER_DETAIL_jfieldId);
+					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Broadcast.BroadcastService.INTENT_ACTIONS> (__ret, JniHandleOwnership.TransferLocalRef);
+				}
+			}
+
 			static IntPtr UPLOAD_ATTACHMENT_FAILED_jfieldId;
 
 			// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicomkit.broadcast']/class[@name='BroadcastService.INTENT_ACTIONS']/field[@name='UPLOAD_ATTACHMENT_FAILED']"
@@ -460,8 +522,8 @@ namespace Com.Applozic.Mobicomkit.Broadcast {
 					return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Broadcast.BroadcastService.INTENT_ACTIONS> (__ret, JniHandleOwnership.TransferLocalRef);
 				}
 			}
-			internal static IntPtr java_class_handle;
-			internal static IntPtr class_ref {
+			internal static new IntPtr java_class_handle;
+			internal static new IntPtr class_ref {
 				get {
 					return JNIEnv.FindClass ("com/applozic/mobicomkit/broadcast/BroadcastService$INTENT_ACTIONS", ref java_class_handle);
 				}
@@ -510,8 +572,8 @@ namespace Com.Applozic.Mobicomkit.Broadcast {
 
 		}
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/broadcast/BroadcastService", ref java_class_handle);
 			}
@@ -796,6 +858,28 @@ namespace Com.Applozic.Mobicomkit.Broadcast {
 			}
 		}
 
+		static IntPtr id_sendMuteUserBroadcast_Landroid_content_Context_Ljava_lang_String_ZLjava_lang_String_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.broadcast']/class[@name='BroadcastService']/method[@name='sendMuteUserBroadcast' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='boolean'] and parameter[4][@type='java.lang.String']]"
+		[Register ("sendMuteUserBroadcast", "(Landroid/content/Context;Ljava/lang/String;ZLjava/lang/String;)V", "")]
+		public static unsafe void SendMuteUserBroadcast (global::Android.Content.Context p0, string p1, bool p2, string p3)
+		{
+			if (id_sendMuteUserBroadcast_Landroid_content_Context_Ljava_lang_String_ZLjava_lang_String_ == IntPtr.Zero)
+				id_sendMuteUserBroadcast_Landroid_content_Context_Ljava_lang_String_ZLjava_lang_String_ = JNIEnv.GetStaticMethodID (class_ref, "sendMuteUserBroadcast", "(Landroid/content/Context;Ljava/lang/String;ZLjava/lang/String;)V");
+			IntPtr native_p1 = JNIEnv.NewString (p1);
+			IntPtr native_p3 = JNIEnv.NewString (p3);
+			try {
+				JValue* __args = stackalloc JValue [4];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (native_p1);
+				__args [2] = new JValue (p2);
+				__args [3] = new JValue (native_p3);
+				JNIEnv.CallStaticVoidMethod  (class_ref, id_sendMuteUserBroadcast_Landroid_content_Context_Ljava_lang_String_ZLjava_lang_String_, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p1);
+				JNIEnv.DeleteLocalRef (native_p3);
+			}
+		}
+
 		static IntPtr id_sendNotificationBroadcast_Landroid_content_Context_Lcom_applozic_mobicomkit_api_conversation_Message_;
 		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.broadcast']/class[@name='BroadcastService']/method[@name='sendNotificationBroadcast' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.applozic.mobicomkit.api.conversation.Message']]"
 		[Register ("sendNotificationBroadcast", "(Landroid/content/Context;Lcom/applozic/mobicomkit/api/conversation/Message;)V", "")]
@@ -878,6 +962,27 @@ namespace Com.Applozic.Mobicomkit.Broadcast {
 			}
 		}
 
+		static IntPtr id_sendUpdateUserDetailBroadcast_Landroid_content_Context_Ljava_lang_String_Ljava_lang_String_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.broadcast']/class[@name='BroadcastService']/method[@name='sendUpdateUserDetailBroadcast' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String']]"
+		[Register ("sendUpdateUserDetailBroadcast", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V", "")]
+		public static unsafe void SendUpdateUserDetailBroadcast (global::Android.Content.Context p0, string p1, string p2)
+		{
+			if (id_sendUpdateUserDetailBroadcast_Landroid_content_Context_Ljava_lang_String_Ljava_lang_String_ == IntPtr.Zero)
+				id_sendUpdateUserDetailBroadcast_Landroid_content_Context_Ljava_lang_String_Ljava_lang_String_ = JNIEnv.GetStaticMethodID (class_ref, "sendUpdateUserDetailBroadcast", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V");
+			IntPtr native_p1 = JNIEnv.NewString (p1);
+			IntPtr native_p2 = JNIEnv.NewString (p2);
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (native_p1);
+				__args [2] = new JValue (native_p2);
+				JNIEnv.CallStaticVoidMethod  (class_ref, id_sendUpdateUserDetailBroadcast_Landroid_content_Context_Ljava_lang_String_Ljava_lang_String_, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p1);
+				JNIEnv.DeleteLocalRef (native_p2);
+			}
+		}
+
 		static IntPtr id_setContextBasedChat_Z;
 		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.broadcast']/class[@name='BroadcastService']/method[@name='setContextBasedChat' and count(parameter)=1 and parameter[1][@type='boolean']]"
 		[Register ("setContextBasedChat", "(Z)Z", "")]
@@ -890,6 +995,27 @@ namespace Com.Applozic.Mobicomkit.Broadcast {
 				__args [0] = new JValue (p0);
 				return JNIEnv.CallStaticBooleanMethod  (class_ref, id_setContextBasedChat_Z, __args);
 			} finally {
+			}
+		}
+
+		static IntPtr id_updateMessageMetadata_Landroid_content_Context_Ljava_lang_String_Ljava_lang_String_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.broadcast']/class[@name='BroadcastService']/method[@name='updateMessageMetadata' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String']]"
+		[Register ("updateMessageMetadata", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V", "")]
+		public static unsafe void UpdateMessageMetadata (global::Android.Content.Context p0, string p1, string p2)
+		{
+			if (id_updateMessageMetadata_Landroid_content_Context_Ljava_lang_String_Ljava_lang_String_ == IntPtr.Zero)
+				id_updateMessageMetadata_Landroid_content_Context_Ljava_lang_String_Ljava_lang_String_ = JNIEnv.GetStaticMethodID (class_ref, "updateMessageMetadata", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V");
+			IntPtr native_p1 = JNIEnv.NewString (p1);
+			IntPtr native_p2 = JNIEnv.NewString (p2);
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (native_p1);
+				__args [2] = new JValue (native_p2);
+				JNIEnv.CallStaticVoidMethod  (class_ref, id_updateMessageMetadata_Landroid_content_Context_Ljava_lang_String_Ljava_lang_String_, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p1);
+				JNIEnv.DeleteLocalRef (native_p2);
 			}
 		}
 

@@ -54,8 +54,8 @@ namespace Com.Applozic.Mobicomkit {
 				}
 			}
 		}
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/Applozic", ref java_class_handle);
 			}
@@ -139,6 +139,57 @@ namespace Com.Applozic.Mobicomkit {
 			}
 		}
 
+		static IntPtr id_connectPublish_Landroid_content_Context_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='Applozic']/method[@name='connectPublish' and count(parameter)=1 and parameter[1][@type='android.content.Context']]"
+		[Register ("connectPublish", "(Landroid/content/Context;)V", "")]
+		public static unsafe void ConnectPublish (global::Android.Content.Context p0)
+		{
+			if (id_connectPublish_Landroid_content_Context_ == IntPtr.Zero)
+				id_connectPublish_Landroid_content_Context_ = JNIEnv.GetStaticMethodID (class_ref, "connectPublish", "(Landroid/content/Context;)V");
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+				JNIEnv.CallStaticVoidMethod  (class_ref, id_connectPublish_Landroid_content_Context_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_disconnectPublish_Landroid_content_Context_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='Applozic']/method[@name='disconnectPublish' and count(parameter)=1 and parameter[1][@type='android.content.Context']]"
+		[Register ("disconnectPublish", "(Landroid/content/Context;)V", "")]
+		public static unsafe void DisconnectPublish (global::Android.Content.Context p0)
+		{
+			if (id_disconnectPublish_Landroid_content_Context_ == IntPtr.Zero)
+				id_disconnectPublish_Landroid_content_Context_ = JNIEnv.GetStaticMethodID (class_ref, "disconnectPublish", "(Landroid/content/Context;)V");
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+				JNIEnv.CallStaticVoidMethod  (class_ref, id_disconnectPublish_Landroid_content_Context_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_disconnectPublish_Landroid_content_Context_Ljava_lang_String_Ljava_lang_String_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='Applozic']/method[@name='disconnectPublish' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String']]"
+		[Register ("disconnectPublish", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V", "")]
+		public static unsafe void DisconnectPublish (global::Android.Content.Context p0, string p1, string p2)
+		{
+			if (id_disconnectPublish_Landroid_content_Context_Ljava_lang_String_Ljava_lang_String_ == IntPtr.Zero)
+				id_disconnectPublish_Landroid_content_Context_Ljava_lang_String_Ljava_lang_String_ = JNIEnv.GetStaticMethodID (class_ref, "disconnectPublish", "(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V");
+			IntPtr native_p1 = JNIEnv.NewString (p1);
+			IntPtr native_p2 = JNIEnv.NewString (p2);
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (native_p1);
+				__args [2] = new JValue (native_p2);
+				JNIEnv.CallStaticVoidMethod  (class_ref, id_disconnectPublish_Landroid_content_Context_Ljava_lang_String_Ljava_lang_String_, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p1);
+				JNIEnv.DeleteLocalRef (native_p2);
+			}
+		}
+
 		static IntPtr id_getInstance_Landroid_content_Context_;
 		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='Applozic']/method[@name='getInstance' and count(parameter)=1 and parameter[1][@type='android.content.Context']]"
 		[Register ("getInstance", "(Landroid/content/Context;)Lcom/applozic/mobicomkit/Applozic;", "")]
@@ -171,6 +222,128 @@ namespace Com.Applozic.Mobicomkit {
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p1);
+			}
+		}
+
+		static IntPtr id_loginUser_Landroid_content_Context_Lcom_applozic_mobicomkit_api_account_user_ApplozicUser_Lcom_applozic_mobicomkit_listners_AlLoginHandler_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='Applozic']/method[@name='loginUser' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.applozic.mobicomkit.api.account.user.ApplozicUser'] and parameter[3][@type='com.applozic.mobicomkit.listners.AlLoginHandler']]"
+		[Register ("loginUser", "(Landroid/content/Context;Lcom/applozic/mobicomkit/api/account/user/ApplozicUser;Lcom/applozic/mobicomkit/listners/AlLoginHandler;)V", "")]
+		public static unsafe void LoginUser (global::Android.Content.Context p0, global::Com.Applozic.Mobicomkit.Api.Account.User.ApplozicUser p1, global::Com.Applozic.Mobicomkit.Listners.IAlLoginHandler p2)
+		{
+			if (id_loginUser_Landroid_content_Context_Lcom_applozic_mobicomkit_api_account_user_ApplozicUser_Lcom_applozic_mobicomkit_listners_AlLoginHandler_ == IntPtr.Zero)
+				id_loginUser_Landroid_content_Context_Lcom_applozic_mobicomkit_api_account_user_ApplozicUser_Lcom_applozic_mobicomkit_listners_AlLoginHandler_ = JNIEnv.GetStaticMethodID (class_ref, "loginUser", "(Landroid/content/Context;Lcom/applozic/mobicomkit/api/account/user/ApplozicUser;Lcom/applozic/mobicomkit/listners/AlLoginHandler;)V");
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				__args [2] = new JValue (p2);
+				JNIEnv.CallStaticVoidMethod  (class_ref, id_loginUser_Landroid_content_Context_Lcom_applozic_mobicomkit_api_account_user_ApplozicUser_Lcom_applozic_mobicomkit_listners_AlLoginHandler_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_logoutUser_Landroid_content_Context_Lcom_applozic_mobicomkit_listners_AlLogoutHandler_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='Applozic']/method[@name='logoutUser' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.applozic.mobicomkit.listners.AlLogoutHandler']]"
+		[Register ("logoutUser", "(Landroid/content/Context;Lcom/applozic/mobicomkit/listners/AlLogoutHandler;)V", "")]
+		public static unsafe void LogoutUser (global::Android.Content.Context p0, global::Com.Applozic.Mobicomkit.Listners.IAlLogoutHandler p1)
+		{
+			if (id_logoutUser_Landroid_content_Context_Lcom_applozic_mobicomkit_listners_AlLogoutHandler_ == IntPtr.Zero)
+				id_logoutUser_Landroid_content_Context_Lcom_applozic_mobicomkit_listners_AlLogoutHandler_ = JNIEnv.GetStaticMethodID (class_ref, "logoutUser", "(Landroid/content/Context;Lcom/applozic/mobicomkit/listners/AlLogoutHandler;)V");
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				JNIEnv.CallStaticVoidMethod  (class_ref, id_logoutUser_Landroid_content_Context_Lcom_applozic_mobicomkit_listners_AlLogoutHandler_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_publishTypingStatus_Landroid_content_Context_Lcom_applozic_mobicommons_people_channel_Channel_Lcom_applozic_mobicommons_people_contact_Contact_Z;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='Applozic']/method[@name='publishTypingStatus' and count(parameter)=4 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.applozic.mobicommons.people.channel.Channel'] and parameter[3][@type='com.applozic.mobicommons.people.contact.Contact'] and parameter[4][@type='boolean']]"
+		[Register ("publishTypingStatus", "(Landroid/content/Context;Lcom/applozic/mobicommons/people/channel/Channel;Lcom/applozic/mobicommons/people/contact/Contact;Z)V", "")]
+		public static unsafe void PublishTypingStatus (global::Android.Content.Context p0, global::Com.Applozic.Mobicommons.People.Channel.Channel p1, global::Com.Applozic.Mobicommons.People.Contact.Contact p2, bool p3)
+		{
+			if (id_publishTypingStatus_Landroid_content_Context_Lcom_applozic_mobicommons_people_channel_Channel_Lcom_applozic_mobicommons_people_contact_Contact_Z == IntPtr.Zero)
+				id_publishTypingStatus_Landroid_content_Context_Lcom_applozic_mobicommons_people_channel_Channel_Lcom_applozic_mobicommons_people_contact_Contact_Z = JNIEnv.GetStaticMethodID (class_ref, "publishTypingStatus", "(Landroid/content/Context;Lcom/applozic/mobicommons/people/channel/Channel;Lcom/applozic/mobicommons/people/contact/Contact;Z)V");
+			try {
+				JValue* __args = stackalloc JValue [4];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				__args [2] = new JValue (p2);
+				__args [3] = new JValue (p3);
+				JNIEnv.CallStaticVoidMethod  (class_ref, id_publishTypingStatus_Landroid_content_Context_Lcom_applozic_mobicommons_people_channel_Channel_Lcom_applozic_mobicommons_people_contact_Contact_Z, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_registerForPushNotification_Landroid_content_Context_Lcom_applozic_mobicomkit_listners_AlPushNotificationHandler_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='Applozic']/method[@name='registerForPushNotification' and count(parameter)=2 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.applozic.mobicomkit.listners.AlPushNotificationHandler']]"
+		[Register ("registerForPushNotification", "(Landroid/content/Context;Lcom/applozic/mobicomkit/listners/AlPushNotificationHandler;)V", "")]
+		public static unsafe void RegisterForPushNotification (global::Android.Content.Context p0, global::Com.Applozic.Mobicomkit.Listners.IAlPushNotificationHandler p1)
+		{
+			if (id_registerForPushNotification_Landroid_content_Context_Lcom_applozic_mobicomkit_listners_AlPushNotificationHandler_ == IntPtr.Zero)
+				id_registerForPushNotification_Landroid_content_Context_Lcom_applozic_mobicomkit_listners_AlPushNotificationHandler_ = JNIEnv.GetStaticMethodID (class_ref, "registerForPushNotification", "(Landroid/content/Context;Lcom/applozic/mobicomkit/listners/AlPushNotificationHandler;)V");
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				JNIEnv.CallStaticVoidMethod  (class_ref, id_registerForPushNotification_Landroid_content_Context_Lcom_applozic_mobicomkit_listners_AlPushNotificationHandler_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_registerForPushNotification_Landroid_content_Context_Ljava_lang_String_Lcom_applozic_mobicomkit_listners_AlPushNotificationHandler_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='Applozic']/method[@name='registerForPushNotification' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.applozic.mobicomkit.listners.AlPushNotificationHandler']]"
+		[Register ("registerForPushNotification", "(Landroid/content/Context;Ljava/lang/String;Lcom/applozic/mobicomkit/listners/AlPushNotificationHandler;)V", "")]
+		public static unsafe void RegisterForPushNotification (global::Android.Content.Context p0, string p1, global::Com.Applozic.Mobicomkit.Listners.IAlPushNotificationHandler p2)
+		{
+			if (id_registerForPushNotification_Landroid_content_Context_Ljava_lang_String_Lcom_applozic_mobicomkit_listners_AlPushNotificationHandler_ == IntPtr.Zero)
+				id_registerForPushNotification_Landroid_content_Context_Ljava_lang_String_Lcom_applozic_mobicomkit_listners_AlPushNotificationHandler_ = JNIEnv.GetStaticMethodID (class_ref, "registerForPushNotification", "(Landroid/content/Context;Ljava/lang/String;Lcom/applozic/mobicomkit/listners/AlPushNotificationHandler;)V");
+			IntPtr native_p1 = JNIEnv.NewString (p1);
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (native_p1);
+				__args [2] = new JValue (p2);
+				JNIEnv.CallStaticVoidMethod  (class_ref, id_registerForPushNotification_Landroid_content_Context_Ljava_lang_String_Lcom_applozic_mobicomkit_listners_AlPushNotificationHandler_, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p1);
+			}
+		}
+
+		static Delegate cb_registerUIListener_Lcom_applozic_mobicomkit_listners_ApplozicUIListener_;
+#pragma warning disable 0169
+		static Delegate GetRegisterUIListener_Lcom_applozic_mobicomkit_listners_ApplozicUIListener_Handler ()
+		{
+			if (cb_registerUIListener_Lcom_applozic_mobicomkit_listners_ApplozicUIListener_ == null)
+				cb_registerUIListener_Lcom_applozic_mobicomkit_listners_ApplozicUIListener_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_RegisterUIListener_Lcom_applozic_mobicomkit_listners_ApplozicUIListener_);
+			return cb_registerUIListener_Lcom_applozic_mobicomkit_listners_ApplozicUIListener_;
+		}
+
+		static void n_RegisterUIListener_Lcom_applozic_mobicomkit_listners_ApplozicUIListener_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicomkit.Applozic __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Applozic> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Com.Applozic.Mobicomkit.Listners.IApplozicUIListener p0 = (global::Com.Applozic.Mobicomkit.Listners.IApplozicUIListener)global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Listners.IApplozicUIListener> (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.RegisterUIListener (p0);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_registerUIListener_Lcom_applozic_mobicomkit_listners_ApplozicUIListener_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='Applozic']/method[@name='registerUIListener' and count(parameter)=1 and parameter[1][@type='com.applozic.mobicomkit.listners.ApplozicUIListener']]"
+		[Register ("registerUIListener", "(Lcom/applozic/mobicomkit/listners/ApplozicUIListener;)V", "GetRegisterUIListener_Lcom_applozic_mobicomkit_listners_ApplozicUIListener_Handler")]
+		public virtual unsafe void RegisterUIListener (global::Com.Applozic.Mobicomkit.Listners.IApplozicUIListener p0)
+		{
+			if (id_registerUIListener_Lcom_applozic_mobicomkit_listners_ApplozicUIListener_ == IntPtr.Zero)
+				id_registerUIListener_Lcom_applozic_mobicomkit_listners_ApplozicUIListener_ = JNIEnv.GetMethodID (class_ref, "registerUIListener", "(Lcom/applozic/mobicomkit/listners/ApplozicUIListener;)V");
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_registerUIListener_Lcom_applozic_mobicomkit_listners_ApplozicUIListener_, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "registerUIListener", "(Lcom/applozic/mobicomkit/listners/ApplozicUIListener;)V"), __args);
+			} finally {
 			}
 		}
 
@@ -253,6 +426,73 @@ namespace Com.Applozic.Mobicomkit {
 				return __ret;
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
+			}
+		}
+
+		static IntPtr id_subscribeToTyping_Landroid_content_Context_Lcom_applozic_mobicommons_people_channel_Channel_Lcom_applozic_mobicommons_people_contact_Contact_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='Applozic']/method[@name='subscribeToTyping' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.applozic.mobicommons.people.channel.Channel'] and parameter[3][@type='com.applozic.mobicommons.people.contact.Contact']]"
+		[Register ("subscribeToTyping", "(Landroid/content/Context;Lcom/applozic/mobicommons/people/channel/Channel;Lcom/applozic/mobicommons/people/contact/Contact;)V", "")]
+		public static unsafe void SubscribeToTyping (global::Android.Content.Context p0, global::Com.Applozic.Mobicommons.People.Channel.Channel p1, global::Com.Applozic.Mobicommons.People.Contact.Contact p2)
+		{
+			if (id_subscribeToTyping_Landroid_content_Context_Lcom_applozic_mobicommons_people_channel_Channel_Lcom_applozic_mobicommons_people_contact_Contact_ == IntPtr.Zero)
+				id_subscribeToTyping_Landroid_content_Context_Lcom_applozic_mobicommons_people_channel_Channel_Lcom_applozic_mobicommons_people_contact_Contact_ = JNIEnv.GetStaticMethodID (class_ref, "subscribeToTyping", "(Landroid/content/Context;Lcom/applozic/mobicommons/people/channel/Channel;Lcom/applozic/mobicommons/people/contact/Contact;)V");
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				__args [2] = new JValue (p2);
+				JNIEnv.CallStaticVoidMethod  (class_ref, id_subscribeToTyping_Landroid_content_Context_Lcom_applozic_mobicommons_people_channel_Channel_Lcom_applozic_mobicommons_people_contact_Contact_, __args);
+			} finally {
+			}
+		}
+
+		static IntPtr id_unSubscribeToTyping_Landroid_content_Context_Lcom_applozic_mobicommons_people_channel_Channel_Lcom_applozic_mobicommons_people_contact_Contact_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='Applozic']/method[@name='unSubscribeToTyping' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='com.applozic.mobicommons.people.channel.Channel'] and parameter[3][@type='com.applozic.mobicommons.people.contact.Contact']]"
+		[Register ("unSubscribeToTyping", "(Landroid/content/Context;Lcom/applozic/mobicommons/people/channel/Channel;Lcom/applozic/mobicommons/people/contact/Contact;)V", "")]
+		public static unsafe void UnSubscribeToTyping (global::Android.Content.Context p0, global::Com.Applozic.Mobicommons.People.Channel.Channel p1, global::Com.Applozic.Mobicommons.People.Contact.Contact p2)
+		{
+			if (id_unSubscribeToTyping_Landroid_content_Context_Lcom_applozic_mobicommons_people_channel_Channel_Lcom_applozic_mobicommons_people_contact_Contact_ == IntPtr.Zero)
+				id_unSubscribeToTyping_Landroid_content_Context_Lcom_applozic_mobicommons_people_channel_Channel_Lcom_applozic_mobicommons_people_contact_Contact_ = JNIEnv.GetStaticMethodID (class_ref, "unSubscribeToTyping", "(Landroid/content/Context;Lcom/applozic/mobicommons/people/channel/Channel;Lcom/applozic/mobicommons/people/contact/Contact;)V");
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				__args [2] = new JValue (p2);
+				JNIEnv.CallStaticVoidMethod  (class_ref, id_unSubscribeToTyping_Landroid_content_Context_Lcom_applozic_mobicommons_people_channel_Channel_Lcom_applozic_mobicommons_people_contact_Contact_, __args);
+			} finally {
+			}
+		}
+
+		static Delegate cb_unregisterUIListener;
+#pragma warning disable 0169
+		static Delegate GetUnregisterUIListenerHandler ()
+		{
+			if (cb_unregisterUIListener == null)
+				cb_unregisterUIListener = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr>) n_UnregisterUIListener);
+			return cb_unregisterUIListener;
+		}
+
+		static void n_UnregisterUIListener (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Applozic __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Applozic> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			__this.UnregisterUIListener ();
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_unregisterUIListener;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit']/class[@name='Applozic']/method[@name='unregisterUIListener' and count(parameter)=0]"
+		[Register ("unregisterUIListener", "()V", "GetUnregisterUIListenerHandler")]
+		public virtual unsafe void UnregisterUIListener ()
+		{
+			if (id_unregisterUIListener == IntPtr.Zero)
+				id_unregisterUIListener = JNIEnv.GetMethodID (class_ref, "unregisterUIListener", "()V");
+			try {
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_unregisterUIListener);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "unregisterUIListener", "()V"));
+			} finally {
 			}
 		}
 

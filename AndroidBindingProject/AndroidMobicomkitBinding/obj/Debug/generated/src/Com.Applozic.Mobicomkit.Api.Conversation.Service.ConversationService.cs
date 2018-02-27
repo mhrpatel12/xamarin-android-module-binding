@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicomkit.Api.Conversation.Service {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/api/conversation/service/ConversationService", DoNotGenerateAcw=true)]
 	public partial class ConversationService : global::Java.Lang.Object {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/conversation/service/ConversationService", ref java_class_handle);
 			}

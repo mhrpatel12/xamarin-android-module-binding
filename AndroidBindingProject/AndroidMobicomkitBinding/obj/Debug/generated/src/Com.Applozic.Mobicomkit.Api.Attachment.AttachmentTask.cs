@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicomkit.Api.Attachment {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/api/attachment/AttachmentTask", DoNotGenerateAcw=true)]
 	public partial class AttachmentTask : global::Java.Lang.Object, global::Com.Applozic.Mobicommons.Commons.Image.PhotoDecodeRunnable.ITaskRunnableDecodeMethods {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/attachment/AttachmentTask", ref java_class_handle);
 			}
@@ -24,6 +24,40 @@ namespace Com.Applozic.Mobicomkit.Api.Attachment {
 		}
 
 		protected AttachmentTask (IntPtr javaReference, JniHandleOwnership transfer) : base (javaReference, transfer) {}
+
+		static Delegate cb_getAttachmentView;
+#pragma warning disable 0169
+		static Delegate GetGetAttachmentViewHandler ()
+		{
+			if (cb_getAttachmentView == null)
+				cb_getAttachmentView = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetAttachmentView);
+			return cb_getAttachmentView;
+		}
+
+		static IntPtr n_GetAttachmentView (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentTask __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentTask> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.ToLocalJniHandle (__this.AttachmentView);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getAttachmentView;
+		public virtual unsafe global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentViewProperties AttachmentView {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.attachment']/class[@name='AttachmentTask']/method[@name='getAttachmentView' and count(parameter)=0]"
+			[Register ("getAttachmentView", "()Lcom/applozic/mobicomkit/api/attachment/AttachmentViewProperties;", "GetGetAttachmentViewHandler")]
+			get {
+				if (id_getAttachmentView == IntPtr.Zero)
+					id_getAttachmentView = JNIEnv.GetMethodID (class_ref, "getAttachmentView", "()Lcom/applozic/mobicomkit/api/attachment/AttachmentViewProperties;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentViewProperties> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getAttachmentView), JniHandleOwnership.TransferLocalRef);
+					else
+						return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentViewProperties> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getAttachmentView", "()Lcom/applozic/mobicomkit/api/attachment/AttachmentViewProperties;")), JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+		}
 
 		static Delegate cb_getContentType;
 #pragma warning disable 0169
@@ -156,6 +190,40 @@ namespace Com.Applozic.Mobicomkit.Api.Attachment {
 						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setCurrentThread_Ljava_lang_Thread_, __args);
 					else
 						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setCurrentThread", "(Ljava/lang/Thread;)V"), __args);
+				} finally {
+				}
+			}
+		}
+
+		static Delegate cb_getDownloadHandler;
+#pragma warning disable 0169
+		static Delegate GetGetDownloadHandlerHandler ()
+		{
+			if (cb_getDownloadHandler == null)
+				cb_getDownloadHandler = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetDownloadHandler);
+			return cb_getDownloadHandler;
+		}
+
+		static IntPtr n_GetDownloadHandler (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentTask __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentTask> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.ToLocalJniHandle (__this.DownloadHandler);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getDownloadHandler;
+		public virtual unsafe global::Com.Applozic.Mobicomkit.Listners.IMediaDownloadProgressHandler DownloadHandler {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.attachment']/class[@name='AttachmentTask']/method[@name='getDownloadHandler' and count(parameter)=0]"
+			[Register ("getDownloadHandler", "()Lcom/applozic/mobicomkit/listners/MediaDownloadProgressHandler;", "GetGetDownloadHandlerHandler")]
+			get {
+				if (id_getDownloadHandler == IntPtr.Zero)
+					id_getDownloadHandler = JNIEnv.GetMethodID (class_ref, "getDownloadHandler", "()Lcom/applozic/mobicomkit/listners/MediaDownloadProgressHandler;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Listners.IMediaDownloadProgressHandler> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getDownloadHandler), JniHandleOwnership.TransferLocalRef);
+					else
+						return global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Listners.IMediaDownloadProgressHandler> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDownloadHandler", "()Lcom/applozic/mobicomkit/listners/MediaDownloadProgressHandler;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -331,6 +399,40 @@ namespace Com.Applozic.Mobicomkit.Api.Attachment {
 			}
 		}
 
+		static Delegate cb_getProgress;
+#pragma warning disable 0169
+		static Delegate GetGetProgressHandler ()
+		{
+			if (cb_getProgress == null)
+				cb_getProgress = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, int>) n_GetProgress);
+			return cb_getProgress;
+		}
+
+		static int n_GetProgress (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentTask __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentTask> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return __this.Progress;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getProgress;
+		public virtual unsafe int Progress {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.attachment']/class[@name='AttachmentTask']/method[@name='getProgress' and count(parameter)=0]"
+			[Register ("getProgress", "()I", "GetGetProgressHandler")]
+			get {
+				if (id_getProgress == IntPtr.Zero)
+					id_getProgress = JNIEnv.GetMethodID (class_ref, "getProgress", "()I");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.CallIntMethod (((global::Java.Lang.Object) this).Handle, id_getProgress);
+					else
+						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getProgress", "()I"));
+				} finally {
+				}
+			}
+		}
+
 		static Delegate cb_getTargetHeight;
 #pragma warning disable 0169
 		static Delegate GetGetTargetHeightHandler ()
@@ -396,6 +498,41 @@ namespace Com.Applozic.Mobicomkit.Api.Attachment {
 						return JNIEnv.CallNonvirtualIntMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getTargetWidth", "()I"));
 				} finally {
 				}
+			}
+		}
+
+		static Delegate cb_downloadProgress_I;
+#pragma warning disable 0169
+		static Delegate GetDownloadProgress_IHandler ()
+		{
+			if (cb_downloadProgress_I == null)
+				cb_downloadProgress_I = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, int>) n_DownloadProgress_I);
+			return cb_downloadProgress_I;
+		}
+
+		static void n_DownloadProgress_I (IntPtr jnienv, IntPtr native__this, int p0)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentTask __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentTask> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			__this.DownloadProgress (p0);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_downloadProgress_I;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.attachment']/class[@name='AttachmentTask']/method[@name='downloadProgress' and count(parameter)=1 and parameter[1][@type='int']]"
+		[Register ("downloadProgress", "(I)V", "GetDownloadProgress_IHandler")]
+		public virtual unsafe void DownloadProgress (int p0)
+		{
+			if (id_downloadProgress_I == IntPtr.Zero)
+				id_downloadProgress_I = JNIEnv.GetMethodID (class_ref, "downloadProgress", "(I)V");
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_downloadProgress_I, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "downloadProgress", "(I)V"), __args);
+			} finally {
 			}
 		}
 
@@ -501,6 +638,82 @@ namespace Com.Applozic.Mobicomkit.Api.Attachment {
 					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setAttachementView_Lcom_applozic_mobicomkit_api_attachment_AttachmentView_, __args);
 				else
 					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setAttachementView", "(Lcom/applozic/mobicomkit/api/attachment/AttachmentView;)V"), __args);
+			} finally {
+			}
+		}
+
+		static Delegate cb_setAttachementViewNew_Lcom_applozic_mobicomkit_api_attachment_AttachmentViewProperties_;
+#pragma warning disable 0169
+		static Delegate GetSetAttachementViewNew_Lcom_applozic_mobicomkit_api_attachment_AttachmentViewProperties_Handler ()
+		{
+			if (cb_setAttachementViewNew_Lcom_applozic_mobicomkit_api_attachment_AttachmentViewProperties_ == null)
+				cb_setAttachementViewNew_Lcom_applozic_mobicomkit_api_attachment_AttachmentViewProperties_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SetAttachementViewNew_Lcom_applozic_mobicomkit_api_attachment_AttachmentViewProperties_);
+			return cb_setAttachementViewNew_Lcom_applozic_mobicomkit_api_attachment_AttachmentViewProperties_;
+		}
+
+		static void n_SetAttachementViewNew_Lcom_applozic_mobicomkit_api_attachment_AttachmentViewProperties_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentTask __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentTask> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentViewProperties p0 = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentViewProperties> (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.SetAttachementViewNew (p0);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_setAttachementViewNew_Lcom_applozic_mobicomkit_api_attachment_AttachmentViewProperties_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.attachment']/class[@name='AttachmentTask']/method[@name='setAttachementViewNew' and count(parameter)=1 and parameter[1][@type='com.applozic.mobicomkit.api.attachment.AttachmentViewProperties']]"
+		[Register ("setAttachementViewNew", "(Lcom/applozic/mobicomkit/api/attachment/AttachmentViewProperties;)V", "GetSetAttachementViewNew_Lcom_applozic_mobicomkit_api_attachment_AttachmentViewProperties_Handler")]
+		public virtual unsafe void SetAttachementViewNew (global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentViewProperties p0)
+		{
+			if (id_setAttachementViewNew_Lcom_applozic_mobicomkit_api_attachment_AttachmentViewProperties_ == IntPtr.Zero)
+				id_setAttachementViewNew_Lcom_applozic_mobicomkit_api_attachment_AttachmentViewProperties_ = JNIEnv.GetMethodID (class_ref, "setAttachementViewNew", "(Lcom/applozic/mobicomkit/api/attachment/AttachmentViewProperties;)V");
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setAttachementViewNew_Lcom_applozic_mobicomkit_api_attachment_AttachmentViewProperties_, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setAttachementViewNew", "(Lcom/applozic/mobicomkit/api/attachment/AttachmentViewProperties;)V"), __args);
+			} finally {
+			}
+		}
+
+		static Delegate cb_setAttachment_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaDownloadProgressHandler_Landroid_content_Context_;
+#pragma warning disable 0169
+		static Delegate GetSetAttachment_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaDownloadProgressHandler_Landroid_content_Context_Handler ()
+		{
+			if (cb_setAttachment_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaDownloadProgressHandler_Landroid_content_Context_ == null)
+				cb_setAttachment_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaDownloadProgressHandler_Landroid_content_Context_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_SetAttachment_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaDownloadProgressHandler_Landroid_content_Context_);
+			return cb_setAttachment_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaDownloadProgressHandler_Landroid_content_Context_;
+		}
+
+		static void n_SetAttachment_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaDownloadProgressHandler_Landroid_content_Context_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1, IntPtr native_p2)
+		{
+			global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentTask __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Attachment.AttachmentTask> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0 = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.Conversation.Message> (native_p0, JniHandleOwnership.DoNotTransfer);
+			global::Com.Applozic.Mobicomkit.Listners.IMediaDownloadProgressHandler p1 = (global::Com.Applozic.Mobicomkit.Listners.IMediaDownloadProgressHandler)global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Listners.IMediaDownloadProgressHandler> (native_p1, JniHandleOwnership.DoNotTransfer);
+			global::Android.Content.Context p2 = global::Java.Lang.Object.GetObject<global::Android.Content.Context> (native_p2, JniHandleOwnership.DoNotTransfer);
+			__this.SetAttachment (p0, p1, p2);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_setAttachment_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaDownloadProgressHandler_Landroid_content_Context_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.attachment']/class[@name='AttachmentTask']/method[@name='setAttachment' and count(parameter)=3 and parameter[1][@type='com.applozic.mobicomkit.api.conversation.Message'] and parameter[2][@type='com.applozic.mobicomkit.listners.MediaDownloadProgressHandler'] and parameter[3][@type='android.content.Context']]"
+		[Register ("setAttachment", "(Lcom/applozic/mobicomkit/api/conversation/Message;Lcom/applozic/mobicomkit/listners/MediaDownloadProgressHandler;Landroid/content/Context;)V", "GetSetAttachment_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaDownloadProgressHandler_Landroid_content_Context_Handler")]
+		public virtual unsafe void SetAttachment (global::Com.Applozic.Mobicomkit.Api.Conversation.Message p0, global::Com.Applozic.Mobicomkit.Listners.IMediaDownloadProgressHandler p1, global::Android.Content.Context p2)
+		{
+			if (id_setAttachment_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaDownloadProgressHandler_Landroid_content_Context_ == IntPtr.Zero)
+				id_setAttachment_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaDownloadProgressHandler_Landroid_content_Context_ = JNIEnv.GetMethodID (class_ref, "setAttachment", "(Lcom/applozic/mobicomkit/api/conversation/Message;Lcom/applozic/mobicomkit/listners/MediaDownloadProgressHandler;Landroid/content/Context;)V");
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (p1);
+				__args [2] = new JValue (p2);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setAttachment_Lcom_applozic_mobicomkit_api_conversation_Message_Lcom_applozic_mobicomkit_listners_MediaDownloadProgressHandler_Landroid_content_Context_, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setAttachment", "(Lcom/applozic/mobicomkit/api/conversation/Message;Lcom/applozic/mobicomkit/listners/MediaDownloadProgressHandler;Landroid/content/Context;)V"), __args);
 			} finally {
 			}
 		}

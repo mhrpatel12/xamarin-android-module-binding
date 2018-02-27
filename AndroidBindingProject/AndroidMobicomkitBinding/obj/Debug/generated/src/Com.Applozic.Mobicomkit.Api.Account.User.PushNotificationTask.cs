@@ -197,8 +197,8 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 		}
 
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/account/user/PushNotificationTask", ref java_class_handle);
 			}
@@ -245,6 +245,40 @@ namespace Com.Applozic.Mobicomkit.Api.Account.User {
 				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Ljava_lang_String_Lcom_applozic_mobicomkit_api_account_user_PushNotificationTask_TaskListener_Landroid_content_Context_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
+			}
+		}
+
+		static IntPtr id_ctor_Landroid_content_Context_Ljava_lang_String_Lcom_applozic_mobicomkit_listners_AlPushNotificationHandler_;
+		// Metadata.xml XPath constructor reference: path="/api/package[@name='com.applozic.mobicomkit.api.account.user']/class[@name='PushNotificationTask']/constructor[@name='PushNotificationTask' and count(parameter)=3 and parameter[1][@type='android.content.Context'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='com.applozic.mobicomkit.listners.AlPushNotificationHandler']]"
+		[Register (".ctor", "(Landroid/content/Context;Ljava/lang/String;Lcom/applozic/mobicomkit/listners/AlPushNotificationHandler;)V", "")]
+		public unsafe PushNotificationTask (global::Android.Content.Context p0, string p1, global::Com.Applozic.Mobicomkit.Listners.IAlPushNotificationHandler p2)
+			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
+		{
+			if (((global::Java.Lang.Object) this).Handle != IntPtr.Zero)
+				return;
+
+			IntPtr native_p1 = JNIEnv.NewString (p1);
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (native_p1);
+				__args [2] = new JValue (p2);
+				if (((object) this).GetType () != typeof (PushNotificationTask)) {
+					SetHandle (
+							global::Android.Runtime.JNIEnv.StartCreateInstance (((object) this).GetType (), "(Landroid/content/Context;Ljava/lang/String;Lcom/applozic/mobicomkit/listners/AlPushNotificationHandler;)V", __args),
+							JniHandleOwnership.TransferLocalRef);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, "(Landroid/content/Context;Ljava/lang/String;Lcom/applozic/mobicomkit/listners/AlPushNotificationHandler;)V", __args);
+					return;
+				}
+
+				if (id_ctor_Landroid_content_Context_Ljava_lang_String_Lcom_applozic_mobicomkit_listners_AlPushNotificationHandler_ == IntPtr.Zero)
+					id_ctor_Landroid_content_Context_Ljava_lang_String_Lcom_applozic_mobicomkit_listners_AlPushNotificationHandler_ = JNIEnv.GetMethodID (class_ref, "<init>", "(Landroid/content/Context;Ljava/lang/String;Lcom/applozic/mobicomkit/listners/AlPushNotificationHandler;)V");
+				SetHandle (
+						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Landroid_content_Context_Ljava_lang_String_Lcom_applozic_mobicomkit_listners_AlPushNotificationHandler_, __args),
+						JniHandleOwnership.TransferLocalRef);
+				JNIEnv.FinishCreateInstance (((global::Java.Lang.Object) this).Handle, class_ref, id_ctor_Landroid_content_Context_Ljava_lang_String_Lcom_applozic_mobicomkit_listners_AlPushNotificationHandler_, __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p1);
 			}
 		}
 

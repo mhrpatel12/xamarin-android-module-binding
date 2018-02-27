@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicomkit.Contact {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/contact/ContactService", DoNotGenerateAcw=true)]
 	public partial class ContactService : global::Java.Lang.Object {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/contact/ContactService", ref java_class_handle);
 			}

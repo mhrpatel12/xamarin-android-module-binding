@@ -12,8 +12,8 @@ namespace Com.Applozic.Mobicommons.People.Contact {
 		// Metadata.xml XPath field reference: path="/api/package[@name='com.applozic.mobicommons.people.contact']/class[@name='ContactUtils']/field[@name='UNKNOWN_NUMBER']"
 		[Register ("UNKNOWN_NUMBER")]
 		public const string UnknownNumber = (string) "UNKNOWN";
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicommons/people/contact/ContactUtils", ref java_class_handle);
 			}

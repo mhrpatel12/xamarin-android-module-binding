@@ -51,8 +51,8 @@ namespace Com.Applozic.Mobicomkit.Channel.Service {
 				}
 			}
 		}
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/channel/service/ChannelService", ref java_class_handle);
 			}
@@ -892,6 +892,88 @@ namespace Com.Applozic.Mobicomkit.Channel.Service {
 			}
 		}
 
+		static Delegate cb_getChannelUserMapper_Ljava_lang_Integer_;
+#pragma warning disable 0169
+		static Delegate GetGetChannelUserMapper_Ljava_lang_Integer_Handler ()
+		{
+			if (cb_getChannelUserMapper_Ljava_lang_Integer_ == null)
+				cb_getChannelUserMapper_Ljava_lang_Integer_ = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr>) n_GetChannelUserMapper_Ljava_lang_Integer_);
+			return cb_getChannelUserMapper_Ljava_lang_Integer_;
+		}
+
+		static IntPtr n_GetChannelUserMapper_Ljava_lang_Integer_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicomkit.Channel.Service.ChannelService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Channel.Service.ChannelService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Integer p0 = global::Java.Lang.Object.GetObject<global::Java.Lang.Integer> (native_p0, JniHandleOwnership.DoNotTransfer);
+			IntPtr __ret = JNIEnv.ToLocalJniHandle (__this.GetChannelUserMapper (p0));
+			return __ret;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getChannelUserMapper_Ljava_lang_Integer_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.channel.service']/class[@name='ChannelService']/method[@name='getChannelUserMapper' and count(parameter)=1 and parameter[1][@type='java.lang.Integer']]"
+		[Register ("getChannelUserMapper", "(Ljava/lang/Integer;)Lcom/applozic/mobicommons/people/channel/ChannelUserMapper;", "GetGetChannelUserMapper_Ljava_lang_Integer_Handler")]
+		public virtual unsafe global::Com.Applozic.Mobicommons.People.Channel.ChannelUserMapper GetChannelUserMapper (global::Java.Lang.Integer p0)
+		{
+			if (id_getChannelUserMapper_Ljava_lang_Integer_ == IntPtr.Zero)
+				id_getChannelUserMapper_Ljava_lang_Integer_ = JNIEnv.GetMethodID (class_ref, "getChannelUserMapper", "(Ljava/lang/Integer;)Lcom/applozic/mobicommons/people/channel/ChannelUserMapper;");
+			try {
+				JValue* __args = stackalloc JValue [1];
+				__args [0] = new JValue (p0);
+
+				global::Com.Applozic.Mobicommons.People.Channel.ChannelUserMapper __ret;
+				if (((object) this).GetType () == ThresholdType)
+					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Channel.ChannelUserMapper> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getChannelUserMapper_Ljava_lang_Integer_, __args), JniHandleOwnership.TransferLocalRef);
+				else
+					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Channel.ChannelUserMapper> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getChannelUserMapper", "(Ljava/lang/Integer;)Lcom/applozic/mobicommons/people/channel/ChannelUserMapper;"), __args), JniHandleOwnership.TransferLocalRef);
+				return __ret;
+			} finally {
+			}
+		}
+
+		static Delegate cb_getChannelUserMapperByUserId_Ljava_lang_Integer_Ljava_lang_String_;
+#pragma warning disable 0169
+		static Delegate GetGetChannelUserMapperByUserId_Ljava_lang_Integer_Ljava_lang_String_Handler ()
+		{
+			if (cb_getChannelUserMapperByUserId_Ljava_lang_Integer_Ljava_lang_String_ == null)
+				cb_getChannelUserMapperByUserId_Ljava_lang_Integer_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_GetChannelUserMapperByUserId_Ljava_lang_Integer_Ljava_lang_String_);
+			return cb_getChannelUserMapperByUserId_Ljava_lang_Integer_Ljava_lang_String_;
+		}
+
+		static IntPtr n_GetChannelUserMapperByUserId_Ljava_lang_Integer_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1)
+		{
+			global::Com.Applozic.Mobicomkit.Channel.Service.ChannelService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Channel.Service.ChannelService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Integer p0 = global::Java.Lang.Object.GetObject<global::Java.Lang.Integer> (native_p0, JniHandleOwnership.DoNotTransfer);
+			string p1 = JNIEnv.GetString (native_p1, JniHandleOwnership.DoNotTransfer);
+			IntPtr __ret = JNIEnv.ToLocalJniHandle (__this.GetChannelUserMapperByUserId (p0, p1));
+			return __ret;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getChannelUserMapperByUserId_Ljava_lang_Integer_Ljava_lang_String_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.channel.service']/class[@name='ChannelService']/method[@name='getChannelUserMapperByUserId' and count(parameter)=2 and parameter[1][@type='java.lang.Integer'] and parameter[2][@type='java.lang.String']]"
+		[Register ("getChannelUserMapperByUserId", "(Ljava/lang/Integer;Ljava/lang/String;)Lcom/applozic/mobicommons/people/channel/ChannelUserMapper;", "GetGetChannelUserMapperByUserId_Ljava_lang_Integer_Ljava_lang_String_Handler")]
+		public virtual unsafe global::Com.Applozic.Mobicommons.People.Channel.ChannelUserMapper GetChannelUserMapperByUserId (global::Java.Lang.Integer p0, string p1)
+		{
+			if (id_getChannelUserMapperByUserId_Ljava_lang_Integer_Ljava_lang_String_ == IntPtr.Zero)
+				id_getChannelUserMapperByUserId_Ljava_lang_Integer_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "getChannelUserMapperByUserId", "(Ljava/lang/Integer;Ljava/lang/String;)Lcom/applozic/mobicommons/people/channel/ChannelUserMapper;");
+			IntPtr native_p1 = JNIEnv.NewString (p1);
+			try {
+				JValue* __args = stackalloc JValue [2];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (native_p1);
+
+				global::Com.Applozic.Mobicommons.People.Channel.ChannelUserMapper __ret;
+				if (((object) this).GetType () == ThresholdType)
+					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Channel.ChannelUserMapper> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getChannelUserMapperByUserId_Ljava_lang_Integer_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
+				else
+					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Channel.ChannelUserMapper> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getChannelUserMapperByUserId", "(Ljava/lang/Integer;Ljava/lang/String;)Lcom/applozic/mobicommons/people/channel/ChannelUserMapper;"), __args), JniHandleOwnership.TransferLocalRef);
+				return __ret;
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p1);
+			}
+		}
+
 		static Delegate cb_getGroupInfoFromClientGroupIds_Ljava_util_List_;
 #pragma warning disable 0169
 		static Delegate GetGetGroupInfoFromClientGroupIds_Ljava_util_List_Handler ()
@@ -1155,6 +1237,55 @@ namespace Com.Applozic.Mobicomkit.Channel.Service {
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 				JNIEnv.DeleteLocalRef (native_p1);
+			}
+		}
+
+		static Delegate cb_getMembersFromContactGroupList_Ljava_util_List_Ljava_util_List_Ljava_lang_String_;
+#pragma warning disable 0169
+		static Delegate GetGetMembersFromContactGroupList_Ljava_util_List_Ljava_util_List_Ljava_lang_String_Handler ()
+		{
+			if (cb_getMembersFromContactGroupList_Ljava_util_List_Ljava_util_List_Ljava_lang_String_ == null)
+				cb_getMembersFromContactGroupList_Ljava_util_List_Ljava_util_List_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_GetMembersFromContactGroupList_Ljava_util_List_Ljava_util_List_Ljava_lang_String_);
+			return cb_getMembersFromContactGroupList_Ljava_util_List_Ljava_util_List_Ljava_lang_String_;
+		}
+
+		static IntPtr n_GetMembersFromContactGroupList_Ljava_util_List_Ljava_util_List_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1, IntPtr native_p2)
+		{
+			global::Com.Applozic.Mobicomkit.Channel.Service.ChannelService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Channel.Service.ChannelService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			var p0 = global::Android.Runtime.JavaList<string>.FromJniHandle (native_p0, JniHandleOwnership.DoNotTransfer);
+			var p1 = global::Android.Runtime.JavaList<string>.FromJniHandle (native_p1, JniHandleOwnership.DoNotTransfer);
+			string p2 = JNIEnv.GetString (native_p2, JniHandleOwnership.DoNotTransfer);
+			IntPtr __ret = JNIEnv.NewArray (__this.GetMembersFromContactGroupList (p0, p1, p2));
+			return __ret;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getMembersFromContactGroupList_Ljava_util_List_Ljava_util_List_Ljava_lang_String_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.channel.service']/class[@name='ChannelService']/method[@name='getMembersFromContactGroupList' and count(parameter)=3 and parameter[1][@type='java.util.List&lt;java.lang.String&gt;'] and parameter[2][@type='java.util.List&lt;java.lang.String&gt;'] and parameter[3][@type='java.lang.String']]"
+		[Register ("getMembersFromContactGroupList", "(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)[Lcom/applozic/mobicomkit/feed/ChannelFeed;", "GetGetMembersFromContactGroupList_Ljava_util_List_Ljava_util_List_Ljava_lang_String_Handler")]
+		public virtual unsafe global::Com.Applozic.Mobicomkit.Feed.ChannelFeed[] GetMembersFromContactGroupList (global::System.Collections.Generic.IList<string> p0, global::System.Collections.Generic.IList<string> p1, string p2)
+		{
+			if (id_getMembersFromContactGroupList_Ljava_util_List_Ljava_util_List_Ljava_lang_String_ == IntPtr.Zero)
+				id_getMembersFromContactGroupList_Ljava_util_List_Ljava_util_List_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "getMembersFromContactGroupList", "(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)[Lcom/applozic/mobicomkit/feed/ChannelFeed;");
+			IntPtr native_p0 = global::Android.Runtime.JavaList<string>.ToLocalJniHandle (p0);
+			IntPtr native_p1 = global::Android.Runtime.JavaList<string>.ToLocalJniHandle (p1);
+			IntPtr native_p2 = JNIEnv.NewString (p2);
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (native_p1);
+				__args [2] = new JValue (native_p2);
+
+				global::Com.Applozic.Mobicomkit.Feed.ChannelFeed[] __ret;
+				if (((object) this).GetType () == ThresholdType)
+					__ret = (global::Com.Applozic.Mobicomkit.Feed.ChannelFeed[]) JNIEnv.GetArray (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getMembersFromContactGroupList_Ljava_util_List_Ljava_util_List_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef, typeof (global::Com.Applozic.Mobicomkit.Feed.ChannelFeed));
+				else
+					__ret = (global::Com.Applozic.Mobicomkit.Feed.ChannelFeed[]) JNIEnv.GetArray (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMembersFromContactGroupList", "(Ljava/util/List;Ljava/util/List;Ljava/lang/String;)[Lcom/applozic/mobicomkit/feed/ChannelFeed;"), __args), JniHandleOwnership.TransferLocalRef, typeof (global::Com.Applozic.Mobicomkit.Feed.ChannelFeed));
+				return __ret;
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+				JNIEnv.DeleteLocalRef (native_p1);
+				JNIEnv.DeleteLocalRef (native_p2);
 			}
 		}
 
@@ -1701,6 +1832,55 @@ namespace Com.Applozic.Mobicomkit.Channel.Service {
 			}
 		}
 
+		static Delegate cb_removeMemberFromContactGroup_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_;
+#pragma warning disable 0169
+		static Delegate GetRemoveMemberFromContactGroup_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Handler ()
+		{
+			if (cb_removeMemberFromContactGroup_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ == null)
+				cb_removeMemberFromContactGroup_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_RemoveMemberFromContactGroup_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_);
+			return cb_removeMemberFromContactGroup_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_;
+		}
+
+		static IntPtr n_RemoveMemberFromContactGroup_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1, IntPtr native_p2)
+		{
+			global::Com.Applozic.Mobicomkit.Channel.Service.ChannelService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Channel.Service.ChannelService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
+			string p1 = JNIEnv.GetString (native_p1, JniHandleOwnership.DoNotTransfer);
+			string p2 = JNIEnv.GetString (native_p2, JniHandleOwnership.DoNotTransfer);
+			IntPtr __ret = JNIEnv.ToLocalJniHandle (__this.RemoveMemberFromContactGroup (p0, p1, p2));
+			return __ret;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_removeMemberFromContactGroup_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.channel.service']/class[@name='ChannelService']/method[@name='removeMemberFromContactGroup' and count(parameter)=3 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.String']]"
+		[Register ("removeMemberFromContactGroup", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/applozic/mobicomkit/feed/ApiResponse;", "GetRemoveMemberFromContactGroup_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_Handler")]
+		public virtual unsafe global::Com.Applozic.Mobicomkit.Feed.ApiResponse RemoveMemberFromContactGroup (string p0, string p1, string p2)
+		{
+			if (id_removeMemberFromContactGroup_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ == IntPtr.Zero)
+				id_removeMemberFromContactGroup_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "removeMemberFromContactGroup", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/applozic/mobicomkit/feed/ApiResponse;");
+			IntPtr native_p0 = JNIEnv.NewString (p0);
+			IntPtr native_p1 = JNIEnv.NewString (p1);
+			IntPtr native_p2 = JNIEnv.NewString (p2);
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (native_p0);
+				__args [1] = new JValue (native_p1);
+				__args [2] = new JValue (native_p2);
+
+				global::Com.Applozic.Mobicomkit.Feed.ApiResponse __ret;
+				if (((object) this).GetType () == ThresholdType)
+					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Feed.ApiResponse> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_removeMemberFromContactGroup_Ljava_lang_String_Ljava_lang_String_Ljava_lang_String_, __args), JniHandleOwnership.TransferLocalRef);
+				else
+					__ret = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Feed.ApiResponse> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "removeMemberFromContactGroup", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/applozic/mobicomkit/feed/ApiResponse;"), __args), JniHandleOwnership.TransferLocalRef);
+				return __ret;
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p0);
+				JNIEnv.DeleteLocalRef (native_p1);
+				JNIEnv.DeleteLocalRef (native_p2);
+			}
+		}
+
 		static Delegate cb_syncChannels;
 #pragma warning disable 0169
 		static Delegate GetSyncChannelsHandler ()
@@ -1844,6 +2024,48 @@ namespace Com.Applozic.Mobicomkit.Channel.Service {
 					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_updateChannelLocalImageURI_Ljava_lang_Integer_Ljava_lang_String_, __args);
 				else
 					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateChannelLocalImageURI", "(Ljava/lang/Integer;Ljava/lang/String;)V"), __args);
+			} finally {
+				JNIEnv.DeleteLocalRef (native_p1);
+			}
+		}
+
+		static Delegate cb_updateRoleInChannelUserMapper_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Integer_;
+#pragma warning disable 0169
+		static Delegate GetUpdateRoleInChannelUserMapper_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Integer_Handler ()
+		{
+			if (cb_updateRoleInChannelUserMapper_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Integer_ == null)
+				cb_updateRoleInChannelUserMapper_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Integer_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr, IntPtr, IntPtr>) n_UpdateRoleInChannelUserMapper_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Integer_);
+			return cb_updateRoleInChannelUserMapper_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Integer_;
+		}
+
+		static void n_UpdateRoleInChannelUserMapper_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Integer_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0, IntPtr native_p1, IntPtr native_p2)
+		{
+			global::Com.Applozic.Mobicomkit.Channel.Service.ChannelService __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Channel.Service.ChannelService> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Integer p0 = global::Java.Lang.Object.GetObject<global::Java.Lang.Integer> (native_p0, JniHandleOwnership.DoNotTransfer);
+			string p1 = JNIEnv.GetString (native_p1, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Integer p2 = global::Java.Lang.Object.GetObject<global::Java.Lang.Integer> (native_p2, JniHandleOwnership.DoNotTransfer);
+			__this.UpdateRoleInChannelUserMapper (p0, p1, p2);
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_updateRoleInChannelUserMapper_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Integer_;
+		// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.channel.service']/class[@name='ChannelService']/method[@name='updateRoleInChannelUserMapper' and count(parameter)=3 and parameter[1][@type='java.lang.Integer'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.Integer']]"
+		[Register ("updateRoleInChannelUserMapper", "(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)V", "GetUpdateRoleInChannelUserMapper_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Integer_Handler")]
+		public virtual unsafe void UpdateRoleInChannelUserMapper (global::Java.Lang.Integer p0, string p1, global::Java.Lang.Integer p2)
+		{
+			if (id_updateRoleInChannelUserMapper_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Integer_ == IntPtr.Zero)
+				id_updateRoleInChannelUserMapper_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Integer_ = JNIEnv.GetMethodID (class_ref, "updateRoleInChannelUserMapper", "(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)V");
+			IntPtr native_p1 = JNIEnv.NewString (p1);
+			try {
+				JValue* __args = stackalloc JValue [3];
+				__args [0] = new JValue (p0);
+				__args [1] = new JValue (native_p1);
+				__args [2] = new JValue (p2);
+
+				if (((object) this).GetType () == ThresholdType)
+					JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_updateRoleInChannelUserMapper_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Integer_, __args);
+				else
+					JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "updateRoleInChannelUserMapper", "(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Integer;)V"), __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p1);
 			}

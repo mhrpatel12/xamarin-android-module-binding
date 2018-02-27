@@ -8,8 +8,8 @@ namespace Com.Applozic.Mobicomkit.Api.People {
 	[global::Android.Runtime.Register ("com/applozic/mobicomkit/api/people/ChannelInfo", DoNotGenerateAcw=true)]
 	public partial class ChannelInfo : global::Com.Applozic.Mobicommons.Json.JsonMarker {
 
-		internal static IntPtr java_class_handle;
-		internal static IntPtr class_ref {
+		internal static new IntPtr java_class_handle;
+		internal static new IntPtr class_ref {
 			get {
 				return JNIEnv.FindClass ("com/applozic/mobicomkit/api/people/ChannelInfo", ref java_class_handle);
 			}
@@ -95,6 +95,76 @@ namespace Com.Applozic.Mobicomkit.Api.People {
 				JNIEnv.DeleteLocalRef (native_p0);
 				JNIEnv.DeleteLocalRef (native_p1);
 				JNIEnv.DeleteLocalRef (native_p2);
+			}
+		}
+
+		static Delegate cb_getAdmin;
+#pragma warning disable 0169
+		static Delegate GetGetAdminHandler ()
+		{
+			if (cb_getAdmin == null)
+				cb_getAdmin = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetAdmin);
+			return cb_getAdmin;
+		}
+
+		static IntPtr n_GetAdmin (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicomkit.Api.People.ChannelInfo __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.People.ChannelInfo> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.NewString (__this.Admin);
+		}
+#pragma warning restore 0169
+
+		static Delegate cb_setAdmin_Ljava_lang_String_;
+#pragma warning disable 0169
+		static Delegate GetSetAdmin_Ljava_lang_String_Handler ()
+		{
+			if (cb_setAdmin_Ljava_lang_String_ == null)
+				cb_setAdmin_Ljava_lang_String_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SetAdmin_Ljava_lang_String_);
+			return cb_setAdmin_Ljava_lang_String_;
+		}
+
+		static void n_SetAdmin_Ljava_lang_String_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicomkit.Api.People.ChannelInfo __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicomkit.Api.People.ChannelInfo> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			string p0 = JNIEnv.GetString (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.Admin = p0;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getAdmin;
+		static IntPtr id_setAdmin_Ljava_lang_String_;
+		public virtual unsafe string Admin {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.people']/class[@name='ChannelInfo']/method[@name='getAdmin' and count(parameter)=0]"
+			[Register ("getAdmin", "()Ljava/lang/String;", "GetGetAdminHandler")]
+			get {
+				if (id_getAdmin == IntPtr.Zero)
+					id_getAdmin = JNIEnv.GetMethodID (class_ref, "getAdmin", "()Ljava/lang/String;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.GetString (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getAdmin), JniHandleOwnership.TransferLocalRef);
+					else
+						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getAdmin", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicomkit.api.people']/class[@name='ChannelInfo']/method[@name='setAdmin' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"
+			[Register ("setAdmin", "(Ljava/lang/String;)V", "GetSetAdmin_Ljava_lang_String_Handler")]
+			set {
+				if (id_setAdmin_Ljava_lang_String_ == IntPtr.Zero)
+					id_setAdmin_Ljava_lang_String_ = JNIEnv.GetMethodID (class_ref, "setAdmin", "(Ljava/lang/String;)V");
+				IntPtr native_value = JNIEnv.NewString (value);
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (native_value);
+
+					if (((object) this).GetType () == ThresholdType)
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setAdmin_Ljava_lang_String_, __args);
+					else
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setAdmin", "(Ljava/lang/String;)V"), __args);
+				} finally {
+					JNIEnv.DeleteLocalRef (native_value);
+				}
 			}
 		}
 

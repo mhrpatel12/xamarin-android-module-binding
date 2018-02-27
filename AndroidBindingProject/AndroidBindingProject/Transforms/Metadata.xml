@@ -40,4 +40,11 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+
+   <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='AlGetMembersFromContactGroupListTask']" />
+   <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='AlGroupInformationAsyncTask']" />
+   <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='AlMessageMetadataUpdateTask']" />
+   <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.async']/class[@name='RemoveMemberFromContactGroupTask']" />
+   <remove-node path="/api/package[@name='com.applozic.mobicomkit.uiwidgets.conversation.adapter']/class[@name='MobicomMessageTemplateAdapter']" />
+
 </metadata>

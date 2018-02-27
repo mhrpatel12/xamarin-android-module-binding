@@ -872,6 +872,74 @@ namespace Com.Applozic.Mobicommons.People.Contact {
 			}
 		}
 
+		static Delegate cb_getDeletedAtTime;
+#pragma warning disable 0169
+		static Delegate GetGetDeletedAtTimeHandler ()
+		{
+			if (cb_getDeletedAtTime == null)
+				cb_getDeletedAtTime = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetDeletedAtTime);
+			return cb_getDeletedAtTime;
+		}
+
+		static IntPtr n_GetDeletedAtTime (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicommons.People.Contact.Contact __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Contact.Contact> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.ToLocalJniHandle (__this.DeletedAtTime);
+		}
+#pragma warning restore 0169
+
+		static Delegate cb_setDeletedAtTime_Ljava_lang_Long_;
+#pragma warning disable 0169
+		static Delegate GetSetDeletedAtTime_Ljava_lang_Long_Handler ()
+		{
+			if (cb_setDeletedAtTime_Ljava_lang_Long_ == null)
+				cb_setDeletedAtTime_Ljava_lang_Long_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SetDeletedAtTime_Ljava_lang_Long_);
+			return cb_setDeletedAtTime_Ljava_lang_Long_;
+		}
+
+		static void n_SetDeletedAtTime_Ljava_lang_Long_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicommons.People.Contact.Contact __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Contact.Contact> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Long p0 = global::Java.Lang.Object.GetObject<global::Java.Lang.Long> (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.DeletedAtTime = p0;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getDeletedAtTime;
+		static IntPtr id_setDeletedAtTime_Ljava_lang_Long_;
+		public virtual unsafe global::Java.Lang.Long DeletedAtTime {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.people.contact']/class[@name='Contact']/method[@name='getDeletedAtTime' and count(parameter)=0]"
+			[Register ("getDeletedAtTime", "()Ljava/lang/Long;", "GetGetDeletedAtTimeHandler")]
+			get {
+				if (id_getDeletedAtTime == IntPtr.Zero)
+					id_getDeletedAtTime = JNIEnv.GetMethodID (class_ref, "getDeletedAtTime", "()Ljava/lang/Long;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Long> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getDeletedAtTime), JniHandleOwnership.TransferLocalRef);
+					else
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Long> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getDeletedAtTime", "()Ljava/lang/Long;")), JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.people.contact']/class[@name='Contact']/method[@name='setDeletedAtTime' and count(parameter)=1 and parameter[1][@type='java.lang.Long']]"
+			[Register ("setDeletedAtTime", "(Ljava/lang/Long;)V", "GetSetDeletedAtTime_Ljava_lang_Long_Handler")]
+			set {
+				if (id_setDeletedAtTime_Ljava_lang_Long_ == IntPtr.Zero)
+					id_setDeletedAtTime_Ljava_lang_Long_ = JNIEnv.GetMethodID (class_ref, "setDeletedAtTime", "(Ljava/lang/Long;)V");
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (value);
+
+					if (((object) this).GetType () == ThresholdType)
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setDeletedAtTime_Ljava_lang_Long_, __args);
+					else
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setDeletedAtTime", "(Ljava/lang/Long;)V"), __args);
+				} finally {
+				}
+			}
+		}
+
 		static Delegate cb_getDisplayName;
 #pragma warning disable 0169
 		static Delegate GetGetDisplayNameHandler ()
@@ -1360,6 +1428,40 @@ namespace Com.Applozic.Mobicommons.People.Contact {
 			}
 		}
 
+		static Delegate cb_isDeleted;
+#pragma warning disable 0169
+		static Delegate GetIsDeletedHandler ()
+		{
+			if (cb_isDeleted == null)
+				cb_isDeleted = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, bool>) n_IsDeleted);
+			return cb_isDeleted;
+		}
+
+		static bool n_IsDeleted (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicommons.People.Contact.Contact __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Contact.Contact> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return __this.IsDeleted;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_isDeleted;
+		public virtual unsafe bool IsDeleted {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.people.contact']/class[@name='Contact']/method[@name='isDeleted' and count(parameter)=0]"
+			[Register ("isDeleted", "()Z", "GetIsDeletedHandler")]
+			get {
+				if (id_isDeleted == IntPtr.Zero)
+					id_isDeleted = JNIEnv.GetMethodID (class_ref, "isDeleted", "()Z");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isDeleted);
+					else
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isDeleted", "()Z"));
+				} finally {
+				}
+			}
+		}
+
 		static Delegate cb_isDrawableResources;
 #pragma warning disable 0169
 		static Delegate GetIsDrawableResourcesHandler ()
@@ -1394,6 +1496,40 @@ namespace Com.Applozic.Mobicommons.People.Contact {
 			}
 		}
 
+		static Delegate cb_isNotificationMuted;
+#pragma warning disable 0169
+		static Delegate GetIsNotificationMutedHandler ()
+		{
+			if (cb_isNotificationMuted == null)
+				cb_isNotificationMuted = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, bool>) n_IsNotificationMuted);
+			return cb_isNotificationMuted;
+		}
+
+		static bool n_IsNotificationMuted (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicommons.People.Contact.Contact __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Contact.Contact> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return __this.IsNotificationMuted;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_isNotificationMuted;
+		public virtual unsafe bool IsNotificationMuted {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.people.contact']/class[@name='Contact']/method[@name='isNotificationMuted' and count(parameter)=0]"
+			[Register ("isNotificationMuted", "()Z", "GetIsNotificationMutedHandler")]
+			get {
+				if (id_isNotificationMuted == IntPtr.Zero)
+					id_isNotificationMuted = JNIEnv.GetMethodID (class_ref, "isNotificationMuted", "()Z");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isNotificationMuted);
+					else
+						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isNotificationMuted", "()Z"));
+				} finally {
+				}
+			}
+		}
+
 		static Delegate cb_isOnline;
 #pragma warning disable 0169
 		static Delegate GetIsOnlineHandler ()
@@ -1423,6 +1559,74 @@ namespace Com.Applozic.Mobicommons.People.Contact {
 						return JNIEnv.CallBooleanMethod (((global::Java.Lang.Object) this).Handle, id_isOnline);
 					else
 						return JNIEnv.CallNonvirtualBooleanMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "isOnline", "()Z"));
+				} finally {
+				}
+			}
+		}
+
+		static Delegate cb_getLastMessageAtTime;
+#pragma warning disable 0169
+		static Delegate GetGetLastMessageAtTimeHandler ()
+		{
+			if (cb_getLastMessageAtTime == null)
+				cb_getLastMessageAtTime = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetLastMessageAtTime);
+			return cb_getLastMessageAtTime;
+		}
+
+		static IntPtr n_GetLastMessageAtTime (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicommons.People.Contact.Contact __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Contact.Contact> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.ToLocalJniHandle (__this.LastMessageAtTime);
+		}
+#pragma warning restore 0169
+
+		static Delegate cb_setLastMessageAtTime_Ljava_lang_Long_;
+#pragma warning disable 0169
+		static Delegate GetSetLastMessageAtTime_Ljava_lang_Long_Handler ()
+		{
+			if (cb_setLastMessageAtTime_Ljava_lang_Long_ == null)
+				cb_setLastMessageAtTime_Ljava_lang_Long_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SetLastMessageAtTime_Ljava_lang_Long_);
+			return cb_setLastMessageAtTime_Ljava_lang_Long_;
+		}
+
+		static void n_SetLastMessageAtTime_Ljava_lang_Long_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicommons.People.Contact.Contact __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Contact.Contact> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Long p0 = global::Java.Lang.Object.GetObject<global::Java.Lang.Long> (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.LastMessageAtTime = p0;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getLastMessageAtTime;
+		static IntPtr id_setLastMessageAtTime_Ljava_lang_Long_;
+		public virtual unsafe global::Java.Lang.Long LastMessageAtTime {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.people.contact']/class[@name='Contact']/method[@name='getLastMessageAtTime' and count(parameter)=0]"
+			[Register ("getLastMessageAtTime", "()Ljava/lang/Long;", "GetGetLastMessageAtTimeHandler")]
+			get {
+				if (id_getLastMessageAtTime == IntPtr.Zero)
+					id_getLastMessageAtTime = JNIEnv.GetMethodID (class_ref, "getLastMessageAtTime", "()Ljava/lang/Long;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Long> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getLastMessageAtTime), JniHandleOwnership.TransferLocalRef);
+					else
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Long> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getLastMessageAtTime", "()Ljava/lang/Long;")), JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.people.contact']/class[@name='Contact']/method[@name='setLastMessageAtTime' and count(parameter)=1 and parameter[1][@type='java.lang.Long']]"
+			[Register ("setLastMessageAtTime", "(Ljava/lang/Long;)V", "GetSetLastMessageAtTime_Ljava_lang_Long_Handler")]
+			set {
+				if (id_setLastMessageAtTime_Ljava_lang_Long_ == IntPtr.Zero)
+					id_setLastMessageAtTime_Ljava_lang_Long_ = JNIEnv.GetMethodID (class_ref, "setLastMessageAtTime", "(Ljava/lang/Long;)V");
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (value);
+
+					if (((object) this).GetType () == ThresholdType)
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setLastMessageAtTime_Ljava_lang_Long_, __args);
+					else
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setLastMessageAtTime", "(Ljava/lang/Long;)V"), __args);
 				} finally {
 				}
 			}
@@ -1602,6 +1806,76 @@ namespace Com.Applozic.Mobicommons.People.Contact {
 			}
 		}
 
+		static Delegate cb_getMetadata;
+#pragma warning disable 0169
+		static Delegate GetGetMetadataHandler ()
+		{
+			if (cb_getMetadata == null)
+				cb_getMetadata = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetMetadata);
+			return cb_getMetadata;
+		}
+
+		static IntPtr n_GetMetadata (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicommons.People.Contact.Contact __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Contact.Contact> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return global::Android.Runtime.JavaDictionary<string, string>.ToLocalJniHandle (__this.Metadata);
+		}
+#pragma warning restore 0169
+
+		static Delegate cb_setMetadata_Ljava_util_Map_;
+#pragma warning disable 0169
+		static Delegate GetSetMetadata_Ljava_util_Map_Handler ()
+		{
+			if (cb_setMetadata_Ljava_util_Map_ == null)
+				cb_setMetadata_Ljava_util_Map_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SetMetadata_Ljava_util_Map_);
+			return cb_setMetadata_Ljava_util_Map_;
+		}
+
+		static void n_SetMetadata_Ljava_util_Map_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicommons.People.Contact.Contact __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Contact.Contact> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			var p0 = global::Android.Runtime.JavaDictionary<string, string>.FromJniHandle (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.Metadata = p0;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getMetadata;
+		static IntPtr id_setMetadata_Ljava_util_Map_;
+		public virtual unsafe global::System.Collections.Generic.IDictionary<string, string> Metadata {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.people.contact']/class[@name='Contact']/method[@name='getMetadata' and count(parameter)=0]"
+			[Register ("getMetadata", "()Ljava/util/Map;", "GetGetMetadataHandler")]
+			get {
+				if (id_getMetadata == IntPtr.Zero)
+					id_getMetadata = JNIEnv.GetMethodID (class_ref, "getMetadata", "()Ljava/util/Map;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return global::Android.Runtime.JavaDictionary<string, string>.FromJniHandle (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getMetadata), JniHandleOwnership.TransferLocalRef);
+					else
+						return global::Android.Runtime.JavaDictionary<string, string>.FromJniHandle (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMetadata", "()Ljava/util/Map;")), JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.people.contact']/class[@name='Contact']/method[@name='setMetadata' and count(parameter)=1 and parameter[1][@type='java.util.Map&lt;java.lang.String, java.lang.String&gt;']]"
+			[Register ("setMetadata", "(Ljava/util/Map;)V", "GetSetMetadata_Ljava_util_Map_Handler")]
+			set {
+				if (id_setMetadata_Ljava_util_Map_ == IntPtr.Zero)
+					id_setMetadata_Ljava_util_Map_ = JNIEnv.GetMethodID (class_ref, "setMetadata", "(Ljava/util/Map;)V");
+				IntPtr native_value = global::Android.Runtime.JavaDictionary<string, string>.ToLocalJniHandle (value);
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (native_value);
+
+					if (((object) this).GetType () == ThresholdType)
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setMetadata_Ljava_util_Map_, __args);
+					else
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setMetadata", "(Ljava/util/Map;)V"), __args);
+				} finally {
+					JNIEnv.DeleteLocalRef (native_value);
+				}
+			}
+		}
+
 		static Delegate cb_getMiddleName;
 #pragma warning disable 0169
 		static Delegate GetGetMiddleNameHandler ()
@@ -1672,6 +1946,74 @@ namespace Com.Applozic.Mobicommons.People.Contact {
 			}
 		}
 
+		static Delegate cb_getNotificationAfterTime;
+#pragma warning disable 0169
+		static Delegate GetGetNotificationAfterTimeHandler ()
+		{
+			if (cb_getNotificationAfterTime == null)
+				cb_getNotificationAfterTime = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetNotificationAfterTime);
+			return cb_getNotificationAfterTime;
+		}
+
+		static IntPtr n_GetNotificationAfterTime (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicommons.People.Contact.Contact __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Contact.Contact> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.ToLocalJniHandle (__this.NotificationAfterTime);
+		}
+#pragma warning restore 0169
+
+		static Delegate cb_setNotificationAfterTime_Ljava_lang_Long_;
+#pragma warning disable 0169
+		static Delegate GetSetNotificationAfterTime_Ljava_lang_Long_Handler ()
+		{
+			if (cb_setNotificationAfterTime_Ljava_lang_Long_ == null)
+				cb_setNotificationAfterTime_Ljava_lang_Long_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SetNotificationAfterTime_Ljava_lang_Long_);
+			return cb_setNotificationAfterTime_Ljava_lang_Long_;
+		}
+
+		static void n_SetNotificationAfterTime_Ljava_lang_Long_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicommons.People.Contact.Contact __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Contact.Contact> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Long p0 = global::Java.Lang.Object.GetObject<global::Java.Lang.Long> (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.NotificationAfterTime = p0;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getNotificationAfterTime;
+		static IntPtr id_setNotificationAfterTime_Ljava_lang_Long_;
+		public virtual unsafe global::Java.Lang.Long NotificationAfterTime {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.people.contact']/class[@name='Contact']/method[@name='getNotificationAfterTime' and count(parameter)=0]"
+			[Register ("getNotificationAfterTime", "()Ljava/lang/Long;", "GetGetNotificationAfterTimeHandler")]
+			get {
+				if (id_getNotificationAfterTime == IntPtr.Zero)
+					id_getNotificationAfterTime = JNIEnv.GetMethodID (class_ref, "getNotificationAfterTime", "()Ljava/lang/Long;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Long> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getNotificationAfterTime), JniHandleOwnership.TransferLocalRef);
+					else
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Long> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getNotificationAfterTime", "()Ljava/lang/Long;")), JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.people.contact']/class[@name='Contact']/method[@name='setNotificationAfterTime' and count(parameter)=1 and parameter[1][@type='java.lang.Long']]"
+			[Register ("setNotificationAfterTime", "(Ljava/lang/Long;)V", "GetSetNotificationAfterTime_Ljava_lang_Long_Handler")]
+			set {
+				if (id_setNotificationAfterTime_Ljava_lang_Long_ == IntPtr.Zero)
+					id_setNotificationAfterTime_Ljava_lang_Long_ = JNIEnv.GetMethodID (class_ref, "setNotificationAfterTime", "(Ljava/lang/Long;)V");
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (value);
+
+					if (((object) this).GetType () == ThresholdType)
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setNotificationAfterTime_Ljava_lang_Long_, __args);
+					else
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setNotificationAfterTime", "(Ljava/lang/Long;)V"), __args);
+				} finally {
+				}
+			}
+		}
+
 		static Delegate cb_getPhoneNumbers;
 #pragma warning disable 0169
 		static Delegate GetGetPhoneNumbersHandler ()
@@ -1738,6 +2080,74 @@ namespace Com.Applozic.Mobicommons.People.Contact {
 						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setPhoneNumbers", "(Ljava/util/Map;)V"), __args);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
+				}
+			}
+		}
+
+		static Delegate cb_getRoleType;
+#pragma warning disable 0169
+		static Delegate GetGetRoleTypeHandler ()
+		{
+			if (cb_getRoleType == null)
+				cb_getRoleType = JNINativeWrapper.CreateDelegate ((Func<IntPtr, IntPtr, IntPtr>) n_GetRoleType);
+			return cb_getRoleType;
+		}
+
+		static IntPtr n_GetRoleType (IntPtr jnienv, IntPtr native__this)
+		{
+			global::Com.Applozic.Mobicommons.People.Contact.Contact __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Contact.Contact> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			return JNIEnv.ToLocalJniHandle (__this.RoleType);
+		}
+#pragma warning restore 0169
+
+		static Delegate cb_setRoleType_Ljava_lang_Short_;
+#pragma warning disable 0169
+		static Delegate GetSetRoleType_Ljava_lang_Short_Handler ()
+		{
+			if (cb_setRoleType_Ljava_lang_Short_ == null)
+				cb_setRoleType_Ljava_lang_Short_ = JNINativeWrapper.CreateDelegate ((Action<IntPtr, IntPtr, IntPtr>) n_SetRoleType_Ljava_lang_Short_);
+			return cb_setRoleType_Ljava_lang_Short_;
+		}
+
+		static void n_SetRoleType_Ljava_lang_Short_ (IntPtr jnienv, IntPtr native__this, IntPtr native_p0)
+		{
+			global::Com.Applozic.Mobicommons.People.Contact.Contact __this = global::Java.Lang.Object.GetObject<global::Com.Applozic.Mobicommons.People.Contact.Contact> (jnienv, native__this, JniHandleOwnership.DoNotTransfer);
+			global::Java.Lang.Short p0 = global::Java.Lang.Object.GetObject<global::Java.Lang.Short> (native_p0, JniHandleOwnership.DoNotTransfer);
+			__this.RoleType = p0;
+		}
+#pragma warning restore 0169
+
+		static IntPtr id_getRoleType;
+		static IntPtr id_setRoleType_Ljava_lang_Short_;
+		public virtual unsafe global::Java.Lang.Short RoleType {
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.people.contact']/class[@name='Contact']/method[@name='getRoleType' and count(parameter)=0]"
+			[Register ("getRoleType", "()Ljava/lang/Short;", "GetGetRoleTypeHandler")]
+			get {
+				if (id_getRoleType == IntPtr.Zero)
+					id_getRoleType = JNIEnv.GetMethodID (class_ref, "getRoleType", "()Ljava/lang/Short;");
+				try {
+
+					if (((object) this).GetType () == ThresholdType)
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Short> (JNIEnv.CallObjectMethod (((global::Java.Lang.Object) this).Handle, id_getRoleType), JniHandleOwnership.TransferLocalRef);
+					else
+						return global::Java.Lang.Object.GetObject<global::Java.Lang.Short> (JNIEnv.CallNonvirtualObjectMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getRoleType", "()Ljava/lang/Short;")), JniHandleOwnership.TransferLocalRef);
+				} finally {
+				}
+			}
+			// Metadata.xml XPath method reference: path="/api/package[@name='com.applozic.mobicommons.people.contact']/class[@name='Contact']/method[@name='setRoleType' and count(parameter)=1 and parameter[1][@type='java.lang.Short']]"
+			[Register ("setRoleType", "(Ljava/lang/Short;)V", "GetSetRoleType_Ljava_lang_Short_Handler")]
+			set {
+				if (id_setRoleType_Ljava_lang_Short_ == IntPtr.Zero)
+					id_setRoleType_Ljava_lang_Short_ = JNIEnv.GetMethodID (class_ref, "setRoleType", "(Ljava/lang/Short;)V");
+				try {
+					JValue* __args = stackalloc JValue [1];
+					__args [0] = new JValue (value);
+
+					if (((object) this).GetType () == ThresholdType)
+						JNIEnv.CallVoidMethod (((global::Java.Lang.Object) this).Handle, id_setRoleType_Ljava_lang_Short_, __args);
+					else
+						JNIEnv.CallNonvirtualVoidMethod (((global::Java.Lang.Object) this).Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setRoleType", "(Ljava/lang/Short;)V"), __args);
+				} finally {
 				}
 			}
 		}
